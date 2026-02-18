@@ -25,7 +25,7 @@ a {
 }
 
 .container {
-  width: min(1024px, 92vw);
+  width: min(1180px, 94vw);
   margin: 0 auto;
 }
 
@@ -62,7 +62,7 @@ a {
 .nav a {
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 6px 13px;
   font-size: 0.9rem;
 }
 
@@ -75,6 +75,125 @@ main {
   border-radius: 20px;
   padding: 30px;
   background: linear-gradient(130deg, #fff, #fff4eb);
+}
+
+.magazine-hero {
+  border: 1px solid #1d1a16;
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 44px);
+  background: linear-gradient(140deg, #12100d 0%, #241b14 60%, #513621 100%);
+  color: #fff9f2;
+  animation: fade-up 360ms ease both;
+}
+
+.magazine-kicker {
+  margin: 0 0 10px;
+  color: #f7a563;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.magazine-hero h1 {
+  margin: 0;
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  font-size: clamp(2rem, 5.5vw, 3.8rem);
+  line-height: 1.04;
+  max-width: 16ch;
+}
+
+.magazine-hero p {
+  margin: 16px 0 0;
+  color: #f0dfd0;
+  max-width: 68ch;
+}
+
+.magazine-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.mag-col {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  padding: 16px;
+  animation: fade-up 360ms ease both;
+}
+
+.mag-col-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+
+.mag-col-head h2 {
+  margin: 0;
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.mag-col-head a {
+  font-size: 0.82rem;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.mag-feature {
+  display: block;
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  background: #fffdf9;
+}
+
+.mag-thumb {
+  height: 150px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #33281f 0%, #8b5332 100%);
+  color: #ffdfc8;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 14px;
+}
+
+.mag-feature h3 {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.mag-list {
+  margin-top: 10px;
+  display: grid;
+}
+
+.mag-row {
+  display: grid;
+  gap: 6px;
+  padding: 12px 2px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.mag-row h3 {
+  margin: 0;
+  font-size: 1.03rem;
+}
+
+.mag-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .hero h1 {
@@ -184,6 +303,17 @@ footer {
   font-size: 0.88rem;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
     padding: 22px;
@@ -192,5 +322,11 @@ footer {
   .topbar-wrap {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 980px) {
+  .magazine-grid {
+    grid-template-columns: 1fr;
   }
 }

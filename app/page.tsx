@@ -1,39 +1,80 @@
 import Link from "next/link";
-import PostCard from "@/components/PostCard";
 import { getAllPosts } from "@/lib/content";
 
 export default function HomePage() {
-  const latestReviews = getAllPosts("reviews").slice(0, 3);
-  const latestArticles = getAllPosts("articles").slice(0, 3);
+  const latestReviews = getAllPosts("reviews");
+  const latestArticles = getAllPosts("articles");
+  const featureReview = latestReviews[0];
+  const featureArticle = latestArticles[0];
+  const reviewList = latestReviews.slice(1, 8);
+  const articleList = latestArticles.slice(1, 8);
 
   return (
     <>
-      <section className="hero">
-        <h1>오디오 경험을 기록하는 아카이브</h1>
+      <section className="magazine-hero">
+        <p className="magazine-kicker">AUDIO LIFE JOURNAL</p>
+        <h1>오디오 리뷰와 기사를 한 곳에서 읽는 매거진</h1>
         <p>
-          AudioLife는 헤드폰, 스피커, DAC, 앰프 등 실사용 기반 오디오 리뷰와
-          오디오 문화/시장 분석 기사를 발행합니다.
+          좌측은 최신 리뷰, 우측은 최신 기사가 날짜순으로 쌓입니다. 새 글이 올라오면 각 섹션 최상단에 자동 반영됩니다.
         </p>
       </section>
 
-      <div className="section-head">
-        <h2>최신 오디오 리뷰</h2>
-        <Link href="/reviews">전체 보기</Link>
-      </div>
-      <section className="grid">
-        {latestReviews.map((post) => (
-          <PostCard key={post.slug} post={post} basePath="/reviews" />
-        ))}
-      </section>
+      <section className="magazine-grid">
+        <div className="mag-col">
+          <div className="mag-col-head">
+            <h2>LATEST REVIEWS</h2>
+            <Link href="/reviews">ALL REVIEWS</Link>
+          </div>
 
-      <div className="section-head">
-        <h2>최신 기사</h2>
-        <Link href="/articles">전체 보기</Link>
-      </div>
-      <section className="grid">
-        {latestArticles.map((post) => (
-          <PostCard key={post.slug} post={post} basePath="/articles" />
-        ))}
+          {featureReview ? (
+            <Link className="mag-feature" href={`/reviews/${featureReview.slug}`}>
+              <div className="mag-thumb">{featureReview.category.toUpperCase()}</div>
+              <div className="meta">{featureReview.date}</div>
+              <h3>{featureReview.title}</h3>
+              <p className="description">{featureReview.excerpt}</p>
+            </Link>
+          ) : null}
+
+          <div className="mag-list">
+            {reviewList.map((post) => (
+              <Link key={post.slug} className="mag-row" href={`/reviews/${post.slug}`}>
+                <div>
+                  <div className="meta">{post.date}</div>
+                  <h3>{post.title}</h3>
+                </div>
+                <p>{post.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mag-col">
+          <div className="mag-col-head">
+            <h2>LATEST ARTICLES</h2>
+            <Link href="/articles">ALL ARTICLES</Link>
+          </div>
+
+          {featureArticle ? (
+            <Link className="mag-feature" href={`/articles/${featureArticle.slug}`}>
+              <div className="mag-thumb">{featureArticle.category.toUpperCase()}</div>
+              <div className="meta">{featureArticle.date}</div>
+              <h3>{featureArticle.title}</h3>
+              <p className="description">{featureArticle.excerpt}</p>
+            </Link>
+          ) : null}
+
+          <div className="mag-list">
+            {articleList.map((post) => (
+              <Link key={post.slug} className="mag-row" href={`/articles/${post.slug}`}>
+                <div>
+                  <div className="meta">{post.date}</div>
+                  <h3>{post.title}</h3>
+                </div>
+                <p>{post.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
     </>
   );
