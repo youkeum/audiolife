@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HeaderSearch from "@/components/HeaderSearch";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/reviews">REVIEWS</a>
               <a href="/articles">ARTICLES</a>
               <a href="/about">ABOUT</a>
+              <HeaderSearch />
             </nav>
           </div>
         </header>
