@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import GiscusComments from "@/components/GiscusComments";
 import { getAllPosts, getPostBySlug } from "@/lib/content";
 
 type Props = {
@@ -54,11 +55,7 @@ export default async function ArticleDetailPage({ params }: Props) {
         </div>
         <section className="comment-box" aria-label="댓글">
           <h2>댓글</h2>
-          <form className="comment-form">
-            <input type="text" name="name" placeholder="이름" />
-            <textarea name="comment" rows={5} placeholder="댓글을 입력하세요." />
-            <button type="button">댓글 남기기</button>
-          </form>
+          <GiscusComments term={`articles/${post.slug}`} />
         </section>
       </article>
     );
