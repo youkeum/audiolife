@@ -4,6 +4,8 @@ import { getAllPosts } from "@/lib/content";
 export default function HomePage() {
   const latestReviews = getAllPosts("reviews");
   const latestArticles = getAllPosts("articles");
+  const latestMixed = [...latestReviews, ...latestArticles].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const latestPost = latestMixed[0];
   const featureReview = latestReviews[0];
   const featureArticle = latestArticles[0];
   const reviewList = latestReviews.slice(1, 8);
@@ -14,9 +16,16 @@ export default function HomePage() {
       <section className="magazine-hero">
         <p className="magazine-kicker">AUDIO LIFE JOURNAL</p>
         <h1>오디오 리뷰와 기사를 한 곳에서 읽는 매거진</h1>
-        <p>
-          좌측은 최신 리뷰, 우측은 최신 기사가 날짜순으로 쌓입니다. 새 글이 올라오면 각 섹션 최상단에 자동 반영됩니다.
-        </p>
+        {latestPost ? (
+          <Link
+            className="latest-banner"
+            href={`${latestPost.type === "reviews" ? "/reviews" : "/articles"}/${latestPost.slug}`}
+          >
+            <span>LATEST</span>
+            <strong>{latestPost.title}</strong>
+            <em>{latestPost.type === "reviews" ? "리뷰" : "기사"} · {latestPost.date}</em>
+          </Link>
+        ) : null}
       </section>
 
       <section className="magazine-grid">
