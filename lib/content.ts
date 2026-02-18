@@ -93,6 +93,47 @@ function extractMeta(content: string, property: string): string | null {
   return match?.[1]?.trim() ?? null;
 }
 
+function normalizeCharset(label: string): string {
+  const charset = label.trim().toLowerCase().replaceAll("_", "-");
+  if (charset === "x-sjis" || charset === "ms932" || charset === "windows-31j") {
+    return "shift_jis";
+  }
+  if (charset === "sjis") {
+    return "shift_jis";
+  }
+  if (charset === "eucjp") {
+    return "euc-jp";
+  }
+  if (charset === "latin1") {
+    return "iso-8859-1";
+  }
+  return charset;
+}
+
+function detectCharsetFromBytes(bytes: Uint8Array): string | null {
+  const headerProbe = Buffer.from(bytes.subarray(0, Math.min(4096, bytes.length))).toString("latin1");
+  const metaCharset =
+    headerProbe.match(/<meta[^>]+charset=["']?\s*([a-zA-Z0-9._-]+)/i)?.[1] ??
+    headerProbe.match(/<meta[^>]+content=["'][^"']*charset=([a-zA-Z0-9._-]+)/i)?.[1];
+  return metaCharset ? normalizeCharset(metaCharset) : null;
+}
+
+function decodeHtmlBytes(bytes: Uint8Array, contentType: string | null): string {
+  const headerCharsetMatch = contentType?.match(/charset=([a-zA-Z0-9._-]+)/i)?.[1];
+  const detectedCharset = headerCharsetMatch ? normalizeCharset(headerCharsetMatch) : detectCharsetFromBytes(bytes);
+  const candidates = [detectedCharset, "utf-8"].filter(Boolean) as string[];
+
+  for (const charset of candidates) {
+    try {
+      return new TextDecoder(charset).decode(bytes);
+    } catch {
+      continue;
+    }
+  }
+
+  return new TextDecoder().decode(bytes);
+}
+
 function extractTitle(content: string): string | null {
   const ogTitle = extractMeta(content, "og:title");
   if (ogTitle) return ogTitle;
@@ -114,7 +155,8 @@ async function fetchLinkPreview(url: string): Promise<string | null> {
       return null;
     }
 
-    const htmlText = await response.text();
+    const bytes = new Uint8Array(await response.arrayBuffer());
+    const htmlText = decodeHtmlBytes(bytes, response.headers.get("content-type"));
     const title = extractTitle(htmlText);
     const description = extractMeta(htmlText, "og:description") ?? extractMeta(htmlText, "description");
     const image = extractMeta(htmlText, "og:image");
