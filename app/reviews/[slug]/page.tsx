@@ -31,17 +31,10 @@ export default async function ReviewDetailPage({ params }: Props) {
         {post.coverImage ? (
           <section className="post-hero">
             <img className="post-cover" src={post.coverImage} alt={post.title} />
-            <div className="post-hero-content">
+            <div className={`post-hero-content text-${post.heroTextColor ?? "white"}`}>
               <div className="meta post-hero-meta">{post.date} · {post.category}</div>
               <h1 className="page-title post-hero-title">{post.title}</h1>
               <p className="description post-hero-subtitle">{post.excerpt}</p>
-              <div className="pill-row">
-                {post.tags.map((tag) => (
-                  <span key={tag} className="pill">
-                    #{tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </section>
         ) : (
@@ -49,16 +42,16 @@ export default async function ReviewDetailPage({ params }: Props) {
             <div className="meta">{post.date} · {post.category}</div>
             <h1 className="page-title">{post.title}</h1>
             <p className="description">{post.excerpt}</p>
-            <div className="pill-row">
-              {post.tags.map((tag) => (
-                <span key={tag} className="pill">
-                  #{tag}
-                </span>
-              ))}
-            </div>
           </>
         )}
         <div className="prose" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+        <div className="pill-row">
+          {post.tags.map((tag) => (
+            <span key={tag} className="pill">
+              #{tag}
+            </span>
+          ))}
+        </div>
         <section className="comment-box" aria-label="댓글">
           <h2>댓글</h2>
           <form className="comment-form">

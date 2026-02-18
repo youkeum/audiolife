@@ -15,6 +15,7 @@ export type PostMeta = {
   tags: string[];
   type: PostType;
   coverImage?: string;
+  heroTextColor?: "white" | "black";
 };
 
 export type Post = PostMeta & {
@@ -28,6 +29,7 @@ type Frontmatter = {
   category: string;
   tags: string[];
   coverImage?: string;
+  heroTextColor?: "white" | "black";
 };
 
 function getContentDir(type: PostType) {
@@ -76,6 +78,90 @@ function withYoutubeEmbeds(markdown: string): string {
   });
 }
 
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function extractMeta(content: string, property: string): string | null {
+  const byProperty = new RegExp(`<meta[^>]+property=["']${property}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i");
+  const byName = new RegExp(`<meta[^>]+name=["']${property}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i");
+  const match = content.match(byProperty) ?? content.match(byName);
+  return match?.[1]?.trim() ?? null;
+}
+
+function extractTitle(content: string): string | null {
+  const ogTitle = extractMeta(content, "og:title");
+  if (ogTitle) return ogTitle;
+  const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
+  return titleMatch?.[1]?.trim() ?? null;
+}
+
+async function fetchLinkPreview(url: string): Promise<string | null> {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3500);
+    const response = await fetch(url, {
+      headers: { "user-agent": "Mozilla/5.0 (compatible; AudioLifeBot/1.0)" },
+      signal: controller.signal
+    });
+    clearTimeout(timeout);
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const htmlText = await response.text();
+    const title = extractTitle(htmlText);
+    const description = extractMeta(htmlText, "og:description") ?? extractMeta(htmlText, "description");
+    const image = extractMeta(htmlText, "og:image");
+    const siteName = extractMeta(htmlText, "og:site_name");
+    const hostname = new URL(url).hostname.replace("www.", "");
+
+    return [
+      `<div class="link-card">`,
+      `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">`,
+      image ? `<img class="link-card-image" src="${escapeHtml(image)}" alt="${escapeHtml(title ?? hostname)}" />` : "",
+      `<div class="link-card-body">`,
+      `<p class="link-card-domain">${escapeHtml(siteName ?? hostname)}</p>`,
+      title ? `<h4>${escapeHtml(title)}</h4>` : "",
+      description ? `<p class="link-card-description">${escapeHtml(description)}</p>` : "",
+      `</div>`,
+      `</a>`,
+      `</div>`
+    ].join("");
+  } catch {
+    return null;
+  }
+}
+
+async function withLinkCards(markdown: string): Promise<string> {
+  const lines = markdown.split("\n");
+  const result: string[] = [];
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    const isStandaloneUrl = /^https?:\/\/\S+$/i.test(trimmed);
+    const isYoutube = /(?:youtube\.com\/watch|youtu\.be\/)/i.test(trimmed);
+    const isImageUrl = /\.(?:png|jpe?g|gif|webp|svg)(\?.*)?$/i.test(trimmed);
+
+    if (isStandaloneUrl && !isYoutube && !isImageUrl) {
+      const card = await fetchLinkPreview(trimmed);
+      if (card) {
+        result.push(card);
+        continue;
+      }
+    }
+
+    result.push(line);
+  }
+
+  return result.join("\n");
+}
+
 function withSoftLineBreaks(markdown: string): string {
   return markdown
     .split("\n")
@@ -84,7 +170,7 @@ function withSoftLineBreaks(markdown: string): string {
       const isEmpty = line.trim() === "";
       const nextIsEmpty = next.trim() === "";
       const isMdSyntax =
-        /^(#{1,6}\s|>\s|[-*]\s|\d+\.\s|```|!\[|\[.*\]\(.*\)|\|)/.test(line.trim()) ||
+        /^(#{1,6}\s|>\s|[-*]\s|\d+\.\s|```|!\[|\[.*\]\(.*\)|\||<)/.test(line.trim()) ||
         line.trim().endsWith("|");
 
       if (isEmpty || nextIsEmpty || isMdSyntax) {
@@ -113,7 +199,8 @@ function parseFile(type: PostType, fileName: string): { meta: PostMeta; content:
       excerpt: frontmatter.excerpt,
       category: frontmatter.category,
       tags: frontmatter.tags ?? [],
-      coverImage: frontmatter.coverImage ?? firstImage
+      coverImage: frontmatter.coverImage ?? firstImage,
+      heroTextColor: frontmatter.heroTextColor ?? "white"
     },
     content
   };
@@ -133,7 +220,8 @@ export async function getPostBySlug(type: PostType, slug: string): Promise<Post>
   const { meta, content } = parseFile(type, `${slug}.md`);
   const contentWithoutCover = removeFirstImage(content);
   const markdownWithEmbeds = withYoutubeEmbeds(contentWithoutCover);
-  const markdownWithBreaks = withSoftLineBreaks(markdownWithEmbeds);
+  const markdownWithCards = await withLinkCards(markdownWithEmbeds);
+  const markdownWithBreaks = withSoftLineBreaks(markdownWithCards);
   const processed = await remark().use(html, { sanitize: false }).process(markdownWithBreaks);
 
   return {
