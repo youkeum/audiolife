@@ -28,6 +28,18 @@ export default function HomePage() {
         ) : null}
       </section>
 
+      <section className="banner-row" aria-label="배너 영역">
+        <a className="banner-slot" href="/about">
+          <span>SPONSOR BANNER 01</span>
+        </a>
+        <a className="banner-slot" href="/about">
+          <span>SPONSOR BANNER 02</span>
+        </a>
+        <a className="banner-slot" href="/about">
+          <span>SPONSOR BANNER 03</span>
+        </a>
+      </section>
+
       <section className="magazine-grid">
         <div className="mag-col">
           <div className="mag-col-head">

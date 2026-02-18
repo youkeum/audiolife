@@ -54,12 +54,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="topbar">
           <div className="container topbar-wrap">
             <div className="brand-wrap">
-              <a className="menu-mark" href="/" aria-label="홈으로 이동">
-                <span />
-                <span />
-                <span />
-              </a>
               <a className="brand" href="/">
+                <img className="brand-logo" src="/logo" alt="AudioLife logo" />
                 AudioLife
               </a>
             </div>
