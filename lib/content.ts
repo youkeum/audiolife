@@ -56,7 +56,7 @@ function parseFile(type: PostType, fileName: string): { meta: PostMeta; content:
 export function getAllPosts(type: PostType): PostMeta[] {
   const files = fs
     .readdirSync(getContentDir(type))
-    .filter((file) => file.endsWith(".md"));
+    .filter((file) => file.endsWith(".md") && !file.startsWith("_"));
 
   return files
     .map((file) => parseFile(type, file).meta)

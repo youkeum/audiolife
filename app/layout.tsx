@@ -8,13 +8,34 @@ export const metadata: Metadata = {
     template: "%s | AudioLife"
   },
   description: "오디오 리뷰와 기사 아카이브",
+  alternates: {
+    canonical: "https://audiolife.kr"
+  },
+  keywords: ["오디오", "헤드폰", "스피커", "DAC", "앰프", "오디오 리뷰", "오디오 기사"],
   openGraph: {
     title: "AudioLife",
     description: "오디오 리뷰와 기사 아카이브",
     url: "https://audiolife.kr",
     siteName: "AudioLife",
     locale: "ko_KR",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "AudioLife - 오디오 경험을 기록하는 아카이브"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AudioLife",
+    description: "오디오 리뷰와 기사 아카이브",
+    images: ["/opengraph-image"]
+  },
+  icons: {
+    icon: "/icon"
   }
 };
 
