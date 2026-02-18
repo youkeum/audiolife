@@ -15,6 +15,12 @@ export default function GiscusComments({ term }: GiscusCommentsProps) {
   const categoryId = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID;
 
   const isConfigured = Boolean(repo && repoId && category && categoryId);
+  const missingKeys = [
+    !repo ? "NEXT_PUBLIC_GISCUS_REPO" : null,
+    !repoId ? "NEXT_PUBLIC_GISCUS_REPO_ID" : null,
+    !category ? "NEXT_PUBLIC_GISCUS_CATEGORY" : null,
+    !categoryId ? "NEXT_PUBLIC_GISCUS_CATEGORY_ID" : null
+  ].filter(Boolean) as string[];
 
   useEffect(() => {
     if (!isConfigured || !containerRef.current) {
@@ -47,9 +53,7 @@ export default function GiscusComments({ term }: GiscusCommentsProps) {
   if (!isConfigured) {
     return (
       <div className="giscus-placeholder">
-        Giscus 설정이 필요합니다. `NEXT_PUBLIC_GISCUS_REPO`, `NEXT_PUBLIC_GISCUS_REPO_ID`,
-        `NEXT_PUBLIC_GISCUS_CATEGORY`, `NEXT_PUBLIC_GISCUS_CATEGORY_ID` 값을 Vercel 환경변수에
-        추가해 주세요.
+        Giscus 설정이 필요합니다. 누락 키: {missingKeys.join(", ")}
       </div>
     );
   }
