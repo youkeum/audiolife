@@ -83,7 +83,11 @@ export default function HomePage() {
 
           <div className="mag-list">
             {reviewList.map((post) => (
-              <Link key={post.slug} className="mag-row" href={`/reviews/${post.slug}`}>
+              <Link
+                key={post.slug}
+                className={`mag-row ${post.coverImage ? "has-thumb" : "no-thumb"}`}
+                href={`/reviews/${post.slug}`}
+              >
                 {post.coverImage ? <img className="mag-row-thumb" src={post.coverImage} alt={post.title} /> : null}
                 <div>
                   <div className="meta">{post.date}</div>
@@ -116,7 +120,11 @@ export default function HomePage() {
 
           <div className="mag-list">
             {articleList.map((post) => (
-              <Link key={post.slug} className="mag-row" href={`/articles/${post.slug}`}>
+              <Link
+                key={post.slug}
+                className={`mag-row ${post.coverImage ? "has-thumb" : "no-thumb"}`}
+                href={`/articles/${post.slug}`}
+              >
                 {post.coverImage ? <img className="mag-row-thumb" src={post.coverImage} alt={post.title} /> : null}
                 <div>
                   <div className="meta">{post.date}</div>

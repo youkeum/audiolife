@@ -76,6 +76,26 @@ function withYoutubeEmbeds(markdown: string): string {
   });
 }
 
+function withSoftLineBreaks(markdown: string): string {
+  return markdown
+    .split("\n")
+    .map((line, index, lines) => {
+      const next = lines[index + 1] ?? "";
+      const isEmpty = line.trim() === "";
+      const nextIsEmpty = next.trim() === "";
+      const isMdSyntax =
+        /^(#{1,6}\s|>\s|[-*]\s|\d+\.\s|```|!\[|\[.*\]\(.*\)|\|)/.test(line.trim()) ||
+        line.trim().endsWith("|");
+
+      if (isEmpty || nextIsEmpty || isMdSyntax) {
+        return line;
+      }
+
+      return `${line}  `;
+    })
+    .join("\n");
+}
+
 function parseFile(type: PostType, fileName: string): { meta: PostMeta; content: string } {
   const fullPath = path.join(getContentDir(type), fileName);
   const raw = fs.readFileSync(fullPath, "utf8");
@@ -113,7 +133,8 @@ export async function getPostBySlug(type: PostType, slug: string): Promise<Post>
   const { meta, content } = parseFile(type, `${slug}.md`);
   const contentWithoutCover = removeFirstImage(content);
   const markdownWithEmbeds = withYoutubeEmbeds(contentWithoutCover);
-  const processed = await remark().use(html, { sanitize: false }).process(markdownWithEmbeds);
+  const markdownWithBreaks = withSoftLineBreaks(markdownWithEmbeds);
+  const processed = await remark().use(html, { sanitize: false }).process(markdownWithBreaks);
 
   return {
     ...meta,
