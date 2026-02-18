@@ -28,6 +28,7 @@ export default async function ReviewDetailPage({ params }: Props) {
 
     return (
       <article className="article">
+        {post.coverImage ? <img className="post-cover" src={post.coverImage} alt={post.title} /> : null}
         <div className="meta">{post.date} · {post.category}</div>
         <h1 className="page-title">{post.title}</h1>
         <p className="description">{post.excerpt}</p>

@@ -14,6 +14,7 @@ export type PostMeta = {
   category: string;
   tags: string[];
   type: PostType;
+  coverImage?: string;
 };
 
 export type Post = PostMeta & {
@@ -26,10 +27,53 @@ type Frontmatter = {
   excerpt: string;
   category: string;
   tags: string[];
+  coverImage?: string;
 };
 
 function getContentDir(type: PostType) {
   return path.join(process.cwd(), "content", type);
+}
+
+function extractFirstImagePath(markdown: string): string | undefined {
+  const match = markdown.match(/!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/);
+  return match?.[1];
+}
+
+function removeFirstImage(markdown: string): string {
+  return markdown.replace(/\n?!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)\n?/, "\n");
+}
+
+function extractYoutubeId(url: string): string | null {
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.replace("www.", "");
+
+    if (host === "youtube.com" || host === "m.youtube.com") {
+      const id = parsed.searchParams.get("v");
+      return id && id.length >= 11 ? id : null;
+    }
+
+    if (host === "youtu.be") {
+      const id = parsed.pathname.replace("/", "");
+      return id || null;
+    }
+
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function withYoutubeEmbeds(markdown: string): string {
+  const youtubeLine = /^(https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?[^\s]+|youtu\.be\/[^\s]+))$/gm;
+  return markdown.replace(youtubeLine, (url) => {
+    const id = extractYoutubeId(url.trim());
+    if (!id) {
+      return url;
+    }
+
+    return `<div class="video-embed"><iframe src="https://www.youtube.com/embed/${id}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`;
+  });
 }
 
 function parseFile(type: PostType, fileName: string): { meta: PostMeta; content: string } {
@@ -38,6 +82,7 @@ function parseFile(type: PostType, fileName: string): { meta: PostMeta; content:
   const { data, content } = matter(raw);
   const frontmatter = data as Frontmatter;
   const slug = fileName.replace(/\.md$/, "");
+  const firstImage = extractFirstImagePath(content);
 
   return {
     meta: {
@@ -47,7 +92,8 @@ function parseFile(type: PostType, fileName: string): { meta: PostMeta; content:
       date: frontmatter.date,
       excerpt: frontmatter.excerpt,
       category: frontmatter.category,
-      tags: frontmatter.tags ?? []
+      tags: frontmatter.tags ?? [],
+      coverImage: frontmatter.coverImage ?? firstImage
     },
     content
   };
@@ -65,7 +111,9 @@ export function getAllPosts(type: PostType): PostMeta[] {
 
 export async function getPostBySlug(type: PostType, slug: string): Promise<Post> {
   const { meta, content } = parseFile(type, `${slug}.md`);
-  const processed = await remark().use(html).process(content);
+  const contentWithoutCover = removeFirstImage(content);
+  const markdownWithEmbeds = withYoutubeEmbeds(contentWithoutCover);
+  const processed = await remark().use(html, { sanitize: false }).process(markdownWithEmbeds);
 
   return {
     ...meta,

@@ -9,6 +9,7 @@ type PostCardProps = {
 export default function PostCard({ post, basePath }: PostCardProps) {
   return (
     <Link className="card" href={`${basePath}/${post.slug}`}>
+      {post.coverImage ? <img className="card-image" src={post.coverImage} alt={post.title} /> : null}
       <div className="meta">{post.date} · {post.category}</div>
       <h3>{post.title}</h3>
       <p className="description">{post.excerpt}</p>
