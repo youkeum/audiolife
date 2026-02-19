@@ -63,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav className="nav" aria-label="주요 메뉴">
               <a href="/reviews">REVIEWS</a>
               <a href="/articles">ARTICLES</a>
+              <a href="/calendar">CALENDAR</a>
               <a href="/about">ABOUT</a>
               <HeaderSearch />
             </nav>

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+bash "$ROOT_DIR/scripts/optimize-staged-images.sh"
+bash "$ROOT_DIR/scripts/update-agent-md.sh"
+git add AGENT.md

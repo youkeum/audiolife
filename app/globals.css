@@ -690,6 +690,203 @@ footer {
   line-height: 1.55;
 }
 
+.event-calendar-wrap {
+  margin-top: 22px;
+  border: 1px solid #2f2f2f;
+  background: #101010;
+  animation: fade-up 360ms ease both;
+}
+
+.event-calendar-head {
+  padding: 16px;
+  border-bottom: 1px solid #2a2a2a;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.event-calendar-head h2 {
+  margin: 0;
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+}
+
+.event-calendar-head p {
+  margin: 0;
+  color: #9d9d9d;
+  font-size: 0.85rem;
+}
+
+.event-calendar-head code {
+  font-family: "IBM Plex Sans", "Noto Sans KR", sans-serif;
+  color: #ecc2a4;
+}
+
+.event-calendar {
+  padding: 12px;
+}
+
+.event-calendar-toolbar {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.event-calendar-toolbar button {
+  height: 36px;
+  border: 1px solid #313131;
+  background: #191919;
+  color: #f4f4f4;
+  font: inherit;
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+.event-calendar-toolbar strong {
+  text-align: center;
+  font-size: 1.06rem;
+  letter-spacing: 0.03em;
+}
+
+.event-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.event-weekdays div {
+  border: 1px solid #2a2a2a;
+  border-right: 0;
+  color: #acacac;
+  padding: 8px;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.event-weekdays div:last-child {
+  border-right: 1px solid #2a2a2a;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.event-cell {
+  min-height: 108px;
+  border: 1px solid #2a2a2a;
+  border-top: 0;
+  border-right: 0;
+  padding: 6px;
+}
+
+.event-cell:nth-child(7n) {
+  border-right: 1px solid #2a2a2a;
+}
+
+.event-cell.out-month {
+  background: #0c0c0c;
+}
+
+.event-day {
+  color: #d8d8d8;
+  font-size: 0.82rem;
+  margin-bottom: 6px;
+}
+
+.event-cell.out-month .event-day {
+  color: #666;
+}
+
+.event-items {
+  display: grid;
+  gap: 5px;
+}
+
+.event-pill {
+  border: 1px solid #39556a;
+  background: #15212c;
+  color: #c5e2f8;
+  font: inherit;
+  font-size: 0.77rem;
+  text-align: left;
+  padding: 4px 6px;
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+.event-pill:hover {
+  border-color: #5d88ad;
+}
+
+.event-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 6, 12, 0.75);
+  display: grid;
+  place-items: center;
+  z-index: 300;
+  padding: 20px;
+}
+
+.event-modal {
+  width: min(720px, 96vw);
+  background: #f4f4f4;
+  color: #1a1a1a;
+  border: 1px solid #2d2d2d;
+  position: relative;
+  padding: 20px;
+}
+
+.event-modal-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 0;
+  background: transparent;
+  color: #6a6a6a;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.event-modal h3 {
+  margin: 0 0 6px;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+}
+
+.event-modal-date {
+  margin: 0;
+  color: #4a4a4a;
+  font-size: 1rem;
+}
+
+.event-modal-summary {
+  margin: 12px 0 0;
+  color: #2f2f2f;
+}
+
+.event-modal-link {
+  margin-top: 12px;
+  display: block;
+  border: 1px solid #333;
+  background: #232323;
+  color: #efefef;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+}
+
+.event-modal-image {
+  width: 100%;
+  margin-top: 10px;
+  object-fit: cover;
+  max-height: 420px;
+  border: 1px solid #d2d2d2;
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -768,6 +965,14 @@ footer {
     width: 100%;
     height: 180px;
   }
+
+  .event-cell {
+    min-height: 88px;
+  }
+
+  .event-pill {
+    font-size: 0.72rem;
+  }
 }
 
 @media (max-width: 640px) {
@@ -789,5 +994,30 @@ footer {
     right: 10px;
     bottom: 10px;
     padding: 10px 11px;
+  }
+
+  .event-calendar-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-weekdays div {
+    font-size: 0.73rem;
+    padding: 6px 2px;
+  }
+
+  .event-cell {
+    min-height: 74px;
+    padding: 4px;
+  }
+
+  .event-day {
+    font-size: 0.73rem;
+    margin-bottom: 4px;
+  }
+
+  .event-pill {
+    font-size: 0.68rem;
+    padding: 3px 4px;
   }
 }
