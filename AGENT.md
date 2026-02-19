@@ -106,27 +106,16 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-19 20:41:59 KST
+- 업데이트 시각: 2026-02-19 20:42:27 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-19 | a4c920b | Update Article
+- 마지막 커밋: 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
 - 콘텐츠 개수: articles=4, reviews=2
 
 ### 워킹트리 상태
-- A  .githooks/post-checkout
-- A  .githooks/post-commit
-- A  .githooks/post-merge
-- A  .githooks/pre-commit
-- A  AGENT.md
-- A  app/calendar/page.tsx
-- M  app/globals.css
-- M  app/layout.tsx
-- A  components/EventCalendar.tsx
-- A  content/events.ts
-- A  public/posts/calendar/1.png
-- A  scripts/optimize-staged-images.sh
-- A  scripts/update-agent-md.sh
+- M  AGENT.md
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
 - 2026-02-19 | a4c920b | Update Article
 - 2026-02-19 | 9ff7201 | Fix link preview mojibake by adding charset-aware decoding
 - 2026-02-19 | dcabfae | Enhance magazine sidebar and add header search with results page
