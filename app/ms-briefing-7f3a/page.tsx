@@ -58,7 +58,7 @@ export default function MsBriefingPage() {
 
         <aside className="private-phone-wrap" aria-label="MyScheduler App Preview">
           <div className="private-phone">
-            <img src="/posts/calendar/1.png" alt="MyScheduler app preview" />
+            <img src="/posts/common/myscheduler.png?v=ms-briefing-2" alt="MyScheduler app preview" />
           </div>
         </aside>
       </div>
