@@ -108,17 +108,17 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-20 23:00:10 KST
+- 업데이트 시각: 2026-02-20 23:17:59 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-20 | 964b39f | Add private MyScheduler pages and refine calendar modal behavior
+- 마지막 커밋: 2026-02-20 | f8a79a3 | Update private MyScheduler page image asset
 - 콘텐츠 개수: articles=4, reviews=2
 
 ### 워킹트리 상태
 - M  AGENT.md
-- M  app/ms-briefing-7f3a/page.tsx
-- A  public/posts/common/myscheduler.png
+- M  app/globals.css
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-20 | f8a79a3 | Update private MyScheduler page image asset
 - 2026-02-20 | 964b39f | Add private MyScheduler pages and refine calendar modal behavior
 - 2026-02-19 | a0deb38 | Refresh AGENT snapshot after commit
 - 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
