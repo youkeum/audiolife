@@ -36,6 +36,8 @@
 - app/icon.tsx
 - app/layout.tsx
 - app/logo/route.tsx
+- app/ms-briefing-7f3a/page.tsx
+- app/ms-policy-31x9/page.tsx
 - app/not-found.tsx
 - app/opengraph-image.tsx
 - app/page.tsx
@@ -106,15 +108,24 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-19 20:42:27 KST
+- 업데이트 시각: 2026-02-20 22:51:07 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
+- 마지막 커밋: 2026-02-19 | a0deb38 | Refresh AGENT snapshot after commit
 - 콘텐츠 개수: articles=4, reviews=2
 
 ### 워킹트리 상태
 - M  AGENT.md
+- M  app/calendar/page.tsx
+- M  app/globals.css
+- A  app/ms-briefing-7f3a/page.tsx
+- A  app/ms-policy-31x9/page.tsx
+- M  app/robots.ts
+- M  components/EventCalendar.tsx
+- M  content/events.ts
+- A  public/posts/calendar/2.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-19 | a0deb38 | Refresh AGENT snapshot after commit
 - 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
 - 2026-02-19 | a4c920b | Update Article
 - 2026-02-19 | 9ff7201 | Fix link preview mojibake by adding charset-aware decoding

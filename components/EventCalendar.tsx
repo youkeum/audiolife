@@ -41,13 +41,8 @@ function getMonthCells(year: number, monthIndex: number): DayCell[] {
 }
 
 function getInitialMonth(events: AudioEvent[]): Date {
-  if (events.length === 0) {
-    return new Date();
-  }
-  const sorted = [...events].sort((a, b) => (a.date < b.date ? 1 : -1));
-  const latest = sorted[0];
-  const date = new Date(`${latest.date}T00:00:00`);
-  return new Date(date.getFullYear(), date.getMonth(), 1);
+  const today = new Date();
+  return new Date(today.getFullYear(), today.getMonth(), 1);
 }
 
 export default function EventCalendar({ events }: EventCalendarProps) {
@@ -57,6 +52,8 @@ export default function EventCalendar({ events }: EventCalendarProps) {
   const year = cursor.getFullYear();
   const monthIndex = cursor.getMonth();
   const monthLabel = `${year}년 ${monthIndex + 1}월`;
+  const organizerUrl = selected?.organizerUrl?.trim() ?? "";
+  const organizerName = selected?.organizerName?.trim() ?? "";
 
   const eventsByDate = useMemo(() => {
     const map = new Map<string, AudioEvent[]>();
@@ -89,9 +86,6 @@ export default function EventCalendar({ events }: EventCalendarProps) {
     <section className="event-calendar-wrap" aria-label="오디오 행사 캘린더">
       <div className="event-calendar-head">
         <h2>오디오 행사 캘린더</h2>
-        <p>
-          일정 추가 위치: <code>content/events.ts</code>
-        </p>
       </div>
 
       <div className="event-calendar">
@@ -120,7 +114,12 @@ export default function EventCalendar({ events }: EventCalendarProps) {
                 <div className="event-day">{cell.dayNumber}</div>
                 <div className="event-items">
                   {cellEvents.map((eventItem) => (
-                    <button key={eventItem.id} type="button" className="event-pill" onClick={() => setSelected(eventItem)}>
+                    <button
+                      key={`${eventItem.id}-${eventItem.date}`}
+                      type="button"
+                      className="event-pill"
+                      onClick={() => setSelected(eventItem)}
+                    >
                       {eventItem.title}
                     </button>
                   ))}
@@ -140,9 +139,11 @@ export default function EventCalendar({ events }: EventCalendarProps) {
             <h3>{selected.title}</h3>
             <p className="event-modal-date">{selected.date}</p>
             {selected.summary ? <p className="event-modal-summary">{selected.summary}</p> : null}
-            <a href={selected.organizerUrl} target="_blank" rel="noreferrer" className="event-modal-link">
-              {selected.organizerName} 링크 열기
-            </a>
+            {organizerUrl ? (
+              <a href={organizerUrl} target="_blank" rel="noreferrer" className="event-modal-link">
+                {organizerName ? `${organizerName} 링크 열기` : "링크 열기"}
+              </a>
+            ) : null}
             <img src={selected.imageUrl} alt={selected.title} className="event-modal-image" />
           </article>
         </div>

@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 export default function CalendarPage() {
   return (
     <>
-      <h1 className="page-title">Audio Event Calendar</h1>
       <EventCalendar events={audioEvents} />
     </>
   );

@@ -2,8 +2,8 @@ export type AudioEvent = {
   id: string;
   title: string;
   date: string; // YYYY-MM-DD
-  organizerName: string;
-  organizerUrl: string;
+  organizerName?: string;
+  organizerUrl?: string;
   imageUrl: string;
   summary?: string;
 };
@@ -18,5 +18,33 @@ export const audioEvents: AudioEvent[] = [
     organizerUrl: "https://cafe.naver.com/hfi/4240",
     imageUrl: "/posts/calendar/1.png",
     summary: "TAOC 랙 및 아날로그 청음회"
+  },
+   {
+    id: "2026recorddays",
+    title: "RECORD DAYS in SEOUL",
+    date: "2026-02-21",
+    imageUrl: "/posts/calendar/2.png",
+    summary: "VINYL 및 K-AUDIO 청음 행사"
+  },
+     {
+    id: "2026recorddays",
+    title: "RECORD DAYS in SEOUL",
+    date: "2026-02-22",
+    imageUrl: "/posts/calendar/2.png",
+    summary: "VINYL 및 K-AUDIO 청음 행사"
+  },
+     {
+    id: "2026recorddays",
+    title: "RECORD DAYS in SEOUL",
+    date: "2026-03-28",
+    imageUrl: "/posts/calendar/2.png",
+    summary: "VINYL 및 K-AUDIO 청음 행사"
+  },
+     {
+    id: "2026recorddays",
+    title: "RECORD DAYS in SEOUL",
+    date: "2026-03-29",
+    imageUrl: "/posts/calendar/2.png",
+    summary: "VINYL 및 K-AUDIO 청음 행사"
   }
 ];
