@@ -180,6 +180,23 @@ async function fetchLinkPreview(url: string): Promise<string | null> {
   }
 }
 
+function renderLinkFallback(url: string): string {
+  let hostLabel = "OPEN LINK";
+  try {
+    hostLabel = new URL(url).hostname.replace("www.", "").toUpperCase();
+  } catch {
+    // Keep default label when URL parsing fails.
+  }
+
+  return [
+    `<div class="link-fallback">`,
+    `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">`,
+    `${hostLabel} 방문하기`,
+    `</a>`,
+    `</div>`
+  ].join("");
+}
+
 async function withLinkCards(markdown: string): Promise<string> {
   const lines = markdown.split("\n");
   const result: string[] = [];
@@ -196,6 +213,9 @@ async function withLinkCards(markdown: string): Promise<string> {
         result.push(card);
         continue;
       }
+
+      result.push(renderLinkFallback(trimmed));
+      continue;
     }
 
     result.push(line);

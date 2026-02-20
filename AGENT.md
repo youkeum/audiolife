@@ -78,9 +78,10 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (4):
+- Articles (5):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
+- arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - Reviews (2):
@@ -108,16 +109,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-20 23:17:59 KST
+- 업데이트 시각: 2026-02-21 00:11:37 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-20 | f8a79a3 | Update private MyScheduler page image asset
-- 콘텐츠 개수: articles=4, reviews=2
+- 마지막 커밋: 2026-02-20 | 5d4b0f7 | Remove duplicate phone frame styling on private page
+- 콘텐츠 개수: articles=5, reviews=2
 
 ### 워킹트리 상태
 - M  AGENT.md
 - M  app/globals.css
+- A  content/articles/arnika.md
+- M  lib/content.ts
+- A  public/posts/articles/arnika/1.png
+- A  public/posts/articles/arnika/2.png
+- A  public/posts/articles/arnika/3.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-20 | 5d4b0f7 | Remove duplicate phone frame styling on private page
 - 2026-02-20 | f8a79a3 | Update private MyScheduler page image asset
 - 2026-02-20 | 964b39f | Add private MyScheduler pages and refine calendar modal behavior
 - 2026-02-19 | a0deb38 | Refresh AGENT snapshot after commit
