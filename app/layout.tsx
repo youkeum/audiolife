@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     default: "AudioLife",
     template: "%s | AudioLife"
   },
-  description: "오디오 리뷰와 기사 아카이브",
+  description: "오디오 리뷰, 기사, 컬럼 아카이브",
   alternates: {
     canonical: "https://audiolife.kr"
   },
-  keywords: ["오디오", "헤드폰", "스피커", "DAC", "앰프", "오디오 리뷰", "오디오 기사"],
+  keywords: ["오디오", "헤드폰", "스피커", "DAC", "앰프", "오디오 리뷰", "오디오 기사", "오디오 컬럼"],
   openGraph: {
     title: "AudioLife",
-    description: "오디오 리뷰와 기사 아카이브",
+    description: "오디오 리뷰, 기사, 컬럼 아카이브",
     url: "https://audiolife.kr",
     siteName: "AudioLife",
     locale: "ko_KR",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AudioLife",
-    description: "오디오 리뷰와 기사 아카이브",
+    description: "오디오 리뷰, 기사, 컬럼 아카이브",
     images: ["/opengraph-image"]
   },
   icons: {
@@ -63,6 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav className="nav" aria-label="주요 메뉴">
               <a href="/reviews">REVIEWS</a>
               <a href="/articles">ARTICLES</a>
+              <a href="/columns">COLUMNS</a>
               <a href="/calendar">CALENDAR</a>
               <a href="/about">ABOUT</a>
               <HeaderSearch />

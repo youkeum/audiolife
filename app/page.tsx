@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { getAllPosts } from "@/lib/content";
+import { getAllPosts, getPostBasePath, getPostTypeLabel } from "@/lib/content";
 
 export default function HomePage() {
   const latestReviews = getAllPosts("reviews");
   const latestArticles = getAllPosts("articles");
-  const latestMixed = [...latestReviews, ...latestArticles].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const latestColumns = getAllPosts("columns");
+  const latestMixed = [...latestReviews, ...latestArticles, ...latestColumns].sort((a, b) => (a.date < b.date ? 1 : -1));
   const latestPost = latestMixed[0];
   const featureReview = latestReviews[0];
   const featureArticle = latestArticles[0];
@@ -16,7 +17,7 @@ export default function HomePage() {
       {latestPost ? (
         <Link
           className="magazine-hero hero-latest"
-          href={`${latestPost.type === "reviews" ? "/reviews" : "/articles"}/${latestPost.slug}`}
+          href={`${getPostBasePath(latestPost.type)}/${latestPost.slug}`}
           style={
             latestPost.coverImage
               ? {
@@ -30,7 +31,7 @@ export default function HomePage() {
         >
           <p className="magazine-kicker">LATEST POST</p>
           <h1>{latestPost.title}</h1>
-          <p className="hero-meta">{latestPost.type === "reviews" ? "REVIEW" : "ARTICLE"} · {latestPost.date}</p>
+          <p className="hero-meta">{getPostTypeLabel(latestPost.type)} · {latestPost.date}</p>
           <p className="hero-excerpt">{latestPost.excerpt}</p>
         </Link>
       ) : (

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import GiscusComments from "@/components/GiscusComments";
-import { getAllPosts, getPostBySlug } from "@/lib/content";
+import { getAllPosts, getPostBasePath, getPostBySlug, getPostTypeLabel } from "@/lib/content";
 
 type Props = {
   params: { slug: string };
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ReviewDetailPage({ params }: Props) {
   try {
     const post = await getPostBySlug("reviews", params.slug);
-    const recentPosts = [...getAllPosts("reviews"), ...getAllPosts("articles")]
+    const recentPosts = [...getAllPosts("reviews"), ...getAllPosts("articles"), ...getAllPosts("columns")]
       .filter((entry) => !(entry.type === "reviews" && entry.slug === params.slug))
       .sort((a, b) => (a.date < b.date ? 1 : -1))
       .slice(0, 6);
@@ -72,18 +72,18 @@ export default async function ReviewDetailPage({ params }: Props) {
               <Link
                 key={`${entry.type}-${entry.slug}`}
                 className="recent-item"
-                href={`${entry.type === "reviews" ? "/reviews" : "/articles"}/${entry.slug}`}
+                href={`${getPostBasePath(entry.type)}/${entry.slug}`}
               >
                 <div className="recent-item-media">
                   {entry.coverImage ? (
                     <img src={entry.coverImage} alt={entry.title} />
                   ) : (
-                    <div className="recent-item-fallback">{entry.type === "reviews" ? "REVIEW" : "ARTICLE"}</div>
+                    <div className="recent-item-fallback">{getPostTypeLabel(entry.type)}</div>
                   )}
                 </div>
                 <div className="recent-item-body">
                   <p>{entry.title}</p>
-                  <span>{entry.type === "reviews" ? "REVIEW" : "ARTICLE"} · {entry.date}</span>
+                  <span>{getPostTypeLabel(entry.type)} · {entry.date}</span>
                 </div>
               </Link>
             ))}

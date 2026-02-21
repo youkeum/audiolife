@@ -1,9 +1,9 @@
 import Link from "next/link";
-import type { PostMeta } from "@/lib/content";
+import type { PostBasePath, PostMeta } from "@/lib/content";
 
 type PostCardProps = {
   post: PostMeta;
-  basePath: "/reviews" | "/articles";
+  basePath: PostBasePath;
 };
 
 export default function PostCard({ post, basePath }: PostCardProps) {

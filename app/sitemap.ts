@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9
+    },
+    {
+      url: `${baseUrl}/columns`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9
     }
   ];
 
@@ -39,5 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8
   }));
 
-  return [...staticRoutes, ...reviewRoutes, ...articleRoutes];
+  const columnRoutes: MetadataRoute.Sitemap = getAllPosts("columns").map((post) => ({
+    url: `${baseUrl}/columns/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "weekly",
+    priority: 0.85
+  }));
+
+  return [...staticRoutes, ...reviewRoutes, ...articleRoutes, ...columnRoutes];
 }

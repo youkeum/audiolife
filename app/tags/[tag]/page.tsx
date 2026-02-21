@@ -1,5 +1,5 @@
 import PostCard from "@/components/PostCard";
-import { getAllTags, getPostsByTag } from "@/lib/content";
+import { getAllTags, getPostBasePath, getPostsByTag } from "@/lib/content";
 
 type Props = {
   params: { tag: string };
@@ -20,7 +20,7 @@ export default function TagPage({ params }: Props) {
           <PostCard
             key={`${post.type}-${post.slug}`}
             post={post}
-            basePath={post.type === "reviews" ? "/reviews" : "/articles"}
+            basePath={getPostBasePath(post.type)}
           />
         ))}
       </section>

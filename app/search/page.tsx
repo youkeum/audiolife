@@ -1,10 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllPosts } from "@/lib/content";
+import { getAllPosts, getPostBasePath, getPostTypeLabel } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "오디오 리뷰 및 기사 검색"
+  description: "오디오 리뷰, 기사, 컬럼 검색"
 };
 
 type SearchPageProps = {
@@ -17,7 +17,7 @@ export default function SearchPage({ searchParams }: SearchPageProps) {
   const query = (searchParams?.q ?? "").trim();
   const keyword = query.toLowerCase();
 
-  const posts = [...getAllPosts("reviews"), ...getAllPosts("articles")]
+  const posts = [...getAllPosts("reviews"), ...getAllPosts("articles"), ...getAllPosts("columns")]
     .sort((a, b) => (a.date < b.date ? 1 : -1))
     .filter((post) => {
       if (!keyword) return false;
@@ -39,11 +39,11 @@ export default function SearchPage({ searchParams }: SearchPageProps) {
           <Link
             key={`${post.type}-${post.slug}`}
             className="search-item"
-            href={`${post.type === "reviews" ? "/reviews" : "/articles"}/${post.slug}`}
+            href={`${getPostBasePath(post.type)}/${post.slug}`}
           >
             {post.coverImage ? <img src={post.coverImage} alt={post.title} /> : <div className="search-thumb-empty" />}
             <div>
-              <p className="meta">{post.type.toUpperCase()} · {post.date}</p>
+              <p className="meta">{getPostTypeLabel(post.type)} · {post.date}</p>
               <h3>{post.title}</h3>
               <p className="description">{post.excerpt}</p>
             </div>

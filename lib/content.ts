@@ -4,7 +4,8 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 
-export type PostType = "reviews" | "articles";
+export type PostType = "reviews" | "articles" | "columns";
+export type PostBasePath = "/reviews" | "/articles" | "/columns";
 
 export type PostMeta = {
   slug: string;
@@ -32,8 +33,36 @@ type Frontmatter = {
   heroTextColor?: "white" | "black";
 };
 
+const POST_TYPES: PostType[] = ["reviews", "articles", "columns"];
+const BASE_PATH_BY_TYPE: Record<PostType, PostBasePath> = {
+  reviews: "/reviews",
+  articles: "/articles",
+  columns: "/columns"
+};
+const TYPE_LABEL_BY_TYPE: Record<PostType, string> = {
+  reviews: "REVIEW",
+  articles: "ARTICLE",
+  columns: "COLUMN"
+};
+
 function getContentDir(type: PostType) {
+  if (type === "columns") {
+    return path.join(process.cwd(), "content", "columns", "posts");
+  }
+
   return path.join(process.cwd(), "content", type);
+}
+
+function getAllEntries() {
+  return POST_TYPES.flatMap((type) => getAllPosts(type));
+}
+
+export function getPostBasePath(type: PostType): PostBasePath {
+  return BASE_PATH_BY_TYPE[type];
+}
+
+export function getPostTypeLabel(type: PostType) {
+  return TYPE_LABEL_BY_TYPE[type];
 }
 
 function extractFirstImagePath(markdown: string): string | undefined {
@@ -293,21 +322,21 @@ export async function getPostBySlug(type: PostType, slug: string): Promise<Post>
 }
 
 export function getAllCategories() {
-  const entries = [...getAllPosts("reviews"), ...getAllPosts("articles")];
+  const entries = getAllEntries();
   return Array.from(new Set(entries.map((post) => post.category))).sort();
 }
 
 export function getAllTags() {
-  const entries = [...getAllPosts("reviews"), ...getAllPosts("articles")];
+  const entries = getAllEntries();
   return Array.from(new Set(entries.flatMap((post) => post.tags))).sort();
 }
 
 export function getPostsByCategory(category: string): PostMeta[] {
-  const entries = [...getAllPosts("reviews"), ...getAllPosts("articles")];
+  const entries = getAllEntries();
   return entries.filter((post) => post.category.toLowerCase() === category.toLowerCase());
 }
 
 export function getPostsByTag(tag: string): PostMeta[] {
-  const entries = [...getAllPosts("reviews"), ...getAllPosts("articles")];
+  const entries = getAllEntries();
   return entries.filter((post) => post.tags.some((entry) => entry.toLowerCase() === tag.toLowerCase()));
 }

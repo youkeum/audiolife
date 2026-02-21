@@ -9,26 +9,26 @@ type Props = {
 };
 
 export async function generateStaticParams() {
-  return getAllPosts("articles").map((post) => ({ slug: post.slug }));
+  return getAllPosts("columns").map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const post = await getPostBySlug("articles", params.slug);
+    const post = await getPostBySlug("columns", params.slug);
     return {
       title: post.title,
       description: post.excerpt
     };
   } catch {
-    return { title: "기사" };
+    return { title: "컬럼" };
   }
 }
 
-export default async function ArticleDetailPage({ params }: Props) {
+export default async function ColumnDetailPage({ params }: Props) {
   try {
-    const post = await getPostBySlug("articles", params.slug);
+    const post = await getPostBySlug("columns", params.slug);
     const recentPosts = [...getAllPosts("reviews"), ...getAllPosts("articles"), ...getAllPosts("columns")]
-      .filter((entry) => !(entry.type === "articles" && entry.slug === params.slug))
+      .filter((entry) => !(entry.type === "columns" && entry.slug === params.slug))
       .sort((a, b) => (a.date < b.date ? 1 : -1))
       .slice(0, 6);
 
@@ -61,7 +61,7 @@ export default async function ArticleDetailPage({ params }: Props) {
           </div>
           <section className="comment-box" aria-label="댓글">
             <h2>댓글</h2>
-            <GiscusComments term={`articles/${post.slug}`} />
+            <GiscusComments term={`columns/${post.slug}`} />
           </section>
         </article>
 
