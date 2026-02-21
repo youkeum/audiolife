@@ -35,6 +35,11 @@ export const metadata: Metadata = {
     description: "오디오 리뷰, 기사, 컬럼 아카이브",
     images: ["/opengraph-image"]
   },
+  verification: {
+    other: {
+      "naver-site-verification": "f95dab4e0cff64d9ef52c1d71323f7496e867ef8"
+    }
+  },
   icons: {
     icon: "/icon"
   }

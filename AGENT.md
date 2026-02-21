@@ -111,34 +111,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-21 23:58:54 KST
+- 업데이트 시각: 2026-02-22 00:33:23 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-21 | e69fc06 | Add link button fallback when link card preview fails
+- 마지막 커밋: 2026-02-21 | aa867c8 | Document column workflow in AGENT
 - 콘텐츠 개수: articles=5, reviews=2
 
 ### 워킹트리 상태
 - M  AGENT.md
 - M  app/articles/[slug]/page.tsx
-- M  app/categories/[category]/page.tsx
-- A  app/columns/[slug]/page.tsx
-- A  app/columns/page.tsx
+- M  app/columns/[slug]/page.tsx
 - M  app/layout.tsx
-- M  app/page.tsx
 - M  app/reviews/[slug]/page.tsx
-- M  app/search/page.tsx
-- M  app/sitemap.ts
-- M  app/tags/[tag]/page.tsx
-- M  components/PostCard.tsx
-- A  content/columns/AGENT.MD
-- A  content/columns/WRITING_GUIDE.MD
-- A  content/columns/hifi-headfi-100days-curriculum.md
-- A  content/columns/posts/hifi-headfi-100days-day1.md
-- M  lib/content.ts
-- A  public/posts/columns/1.jpg
-- A  public/posts/columns/2.jpg
-- A  public/posts/columns/3.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-21 | aa867c8 | Document column workflow in AGENT
 - 2026-02-21 | e69fc06 | Add link button fallback when link card preview fails
 - 2026-02-20 | 5d4b0f7 | Remove duplicate phone frame styling on private page
 - 2026-02-20 | f8a79a3 | Update private MyScheduler page image asset
