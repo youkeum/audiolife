@@ -1,4 +1,4 @@
-import { CommentStatus, PostType, UserStatus } from "@prisma/client";
+import { CommentStatus, PostType, UserRole, UserStatus } from "@prisma/client";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 import { z } from "zod";
@@ -17,6 +17,10 @@ const createCommentSchema = z.object({
   postType: postTypeSchema,
   postSlug: z.string().min(1).max(140),
   body: z.string().trim().min(2).max(500)
+});
+
+const deleteCommentSchema = z.object({
+  commentId: z.string().min(1)
 });
 
 export async function GET(request: Request) {
@@ -122,4 +126,53 @@ export async function POST(request: Request) {
     },
     { status: 201 }
   );
+}
+
+export async function DELETE(request: Request) {
+  const session = await getServerSession(authOptions);
+
+  if (!session?.user?.id) {
+    return NextResponse.json({ message: "로그인이 필요합니다." }, { status: 401 });
+  }
+
+  const payload = await request.json().catch(() => null);
+  const parsed = deleteCommentSchema.safeParse(payload);
+
+  if (!parsed.success) {
+    return NextResponse.json({ message: "입력값을 확인해 주세요." }, { status: 400 });
+  }
+
+  const actor = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    select: { id: true, role: true, status: true }
+  });
+
+  if (!actor || actor.status !== UserStatus.ACTIVE) {
+    return NextResponse.json({ message: "삭제 권한이 없습니다." }, { status: 403 });
+  }
+
+  const target = await prisma.comment.findUnique({
+    where: { id: parsed.data.commentId },
+    select: { id: true, userId: true, status: true }
+  });
+
+  if (!target || target.status !== CommentStatus.VISIBLE) {
+    return NextResponse.json({ message: "댓글을 찾을 수 없습니다." }, { status: 404 });
+  }
+
+  const canDelete = actor.role === UserRole.ADMIN || target.userId === actor.id;
+  if (!canDelete) {
+    return NextResponse.json({ message: "삭제 권한이 없습니다." }, { status: 403 });
+  }
+
+  await prisma.comment.update({
+    where: { id: target.id },
+    data: {
+      status: CommentStatus.DELETED,
+      body: "",
+      deletedAt: new Date()
+    }
+  });
+
+  return NextResponse.json({ ok: true });
 }

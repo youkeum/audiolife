@@ -28,7 +28,9 @@
 ## 4) 핵심 구조 맵
 - 앱 라우트(실제 파일 기준):
 - app/about/page.tsx
+- app/admin/comments/page.tsx
 - app/admin/email/page.tsx
+- app/api/admin/comments/route.ts
 - app/api/admin/emails/send/route.ts
 - app/api/auth/[...nextauth]/route.ts
 - app/api/comments/route.ts
@@ -87,8 +89,8 @@
 ## 7) 현재 콘텐츠 인덱스
 - Articles (5):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
-- arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
+- arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - Reviews (2):
@@ -116,41 +118,23 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-22 22:00:50 KST
+- 업데이트 시각: 2026-02-22 22:28:01 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-22 | 1c351e8 | Add Day 2 column final draft and refine writing guide
+- 마지막 커밋: 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender
 - 콘텐츠 개수: articles=5, reviews=2
 
 ### 워킹트리 상태
-- A  .env.example
-- M  .gitignore
-- M  AGENT.md
-- M  README.md
-- A  app/admin/email/page.tsx
-- A  app/api/admin/emails/send/route.ts
-- A  app/api/auth/[...nextauth]/route.ts
-- A  app/api/comments/route.ts
-- A  app/api/me/subscription/route.ts
-- M  app/articles/[slug]/page.tsx
-- M  app/columns/[slug]/page.tsx
+-  M AGENT.md
+- A  app/admin/comments/page.tsx
+- M  app/admin/email/page.tsx
+- A  app/api/admin/comments/route.ts
+- M  app/api/comments/route.ts
 - M  app/globals.css
-- M  app/layout.tsx
-- M  app/reviews/[slug]/page.tsx
-- A  components/AdminEmailForm.tsx
-- A  components/AuthProvider.tsx
-- D  components/GiscusComments.tsx
-- A  components/MemberComments.tsx
-- A  lib/auth.ts
-- A  lib/prisma.ts
-- A  lib/rate-limit.ts
-- M  package-lock.json
-- M  package.json
-- A  prisma/migrations/20260222121129_init_member_auth_comments/migration.sql
-- A  prisma/migrations/migration_lock.toml
-- A  prisma/schema.prisma
-- A  types/next-auth.d.ts
+- A  components/AdminCommentsManager.tsx
+- M  components/MemberComments.tsx
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender
 - 2026-02-22 | 1c351e8 | Add Day 2 column final draft and refine writing guide
 - 2026-02-22 | 5d3151a | Add Naver site verification meta tag
 - 2026-02-21 | aa867c8 | Document column workflow in AGENT

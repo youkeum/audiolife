@@ -41,6 +41,7 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
   const [commentError, setCommentError] = useState<string | null>(null);
   const [newBody, setNewBody] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [deletingCommentId, setDeletingCommentId] = useState<string | null>(null);
   const [loginEmail, setLoginEmail] = useState("");
   const [loginInfo, setLoginInfo] = useState<string | null>(null);
   const [loginError, setLoginError] = useState<string | null>(null);
@@ -181,6 +182,43 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
     setLoginEmail("");
   }
 
+  function canDeleteComment(comment: CommentItem) {
+    if (!session?.user?.id) {
+      return false;
+    }
+
+    return session.user.role === "ADMIN" || session.user.id === comment.user.id;
+  }
+
+  async function handleDeleteComment(commentId: string) {
+    const confirmed = window.confirm("이 댓글을 삭제할까요?");
+    if (!confirmed) {
+      return;
+    }
+
+    setDeletingCommentId(commentId);
+    setCommentError(null);
+
+    try {
+      const response = await fetch("/api/comments", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ commentId })
+      });
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message ?? "댓글 삭제에 실패했습니다.");
+      }
+
+      setComments((prev) => prev.filter((comment) => comment.id !== commentId));
+    } catch (error) {
+      setCommentError(error instanceof Error ? error.message : "댓글 삭제에 실패했습니다.");
+    } finally {
+      setDeletingCommentId(null);
+    }
+  }
+
   async function toggleSubscription(enabled: boolean) {
     setSubscriptionSaving(true);
 
@@ -289,7 +327,18 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
           <article key={comment.id} className="member-comment-item">
             <header>
               <strong>{comment.user.name ?? "회원"}</strong>
-              <time dateTime={comment.createdAt}>{formatDate(comment.createdAt)}</time>
+              <div className="member-comment-item-actions">
+                <time dateTime={comment.createdAt}>{formatDate(comment.createdAt)}</time>
+                {canDeleteComment(comment) ? (
+                  <button
+                    type="button"
+                    onClick={() => handleDeleteComment(comment.id)}
+                    disabled={deletingCommentId === comment.id}
+                  >
+                    {deletingCommentId === comment.id ? "삭제 중..." : "삭제"}
+                  </button>
+                ) : null}
+              </div>
             </header>
             <p>{comment.body}</p>
           </article>

@@ -1,16 +1,15 @@
 import { UserRole } from "@prisma/client";
 import { getServerSession } from "next-auth";
-import Link from "next/link";
 import { redirect } from "next/navigation";
-import AdminEmailForm from "@/components/AdminEmailForm";
+import AdminCommentsManager from "@/components/AdminCommentsManager";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
 export const metadata = {
-  title: "회원 이메일 발송"
+  title: "댓글 관리"
 };
 
-export default async function AdminEmailPage() {
+export default async function AdminCommentsPage() {
   const session = await getServerSession(authOptions);
 
   if (!session?.user?.id) {
@@ -28,13 +27,10 @@ export default async function AdminEmailPage() {
 
   return (
     <section className="page-stack">
-      <div className="meta">MEMBER MAIL</div>
-      <h1 className="page-title">회원 이메일 발송</h1>
-      <p className="description">수신 동의 회원에게 공지 메일을 발송합니다.</p>
-      <p className="description">
-        댓글 관리는 <Link href="/admin/comments">/admin/comments</Link> 에서 할 수 있습니다.
-      </p>
-      <AdminEmailForm />
+      <div className="meta">COMMENT MODERATION</div>
+      <h1 className="page-title">댓글 관리</h1>
+      <p className="description">회원 댓글을 확인하고 삭제할 수 있습니다.</p>
+      <AdminCommentsManager />
     </section>
   );
 }

@@ -657,6 +657,8 @@ h3 {
 .member-comments-email-login button,
 .member-comments-user-row button,
 .member-comments-form button,
+.member-comment-item-actions button,
+.admin-comments-toolbar button,
 .admin-email-form button {
   border: 1px solid #3a3a3a;
   background: #191919;
@@ -739,6 +741,17 @@ h3 {
   color: #9f9f9f;
 }
 
+.member-comment-item-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.member-comment-item-actions button {
+  padding: 4px 8px;
+  font-size: 0.78rem;
+}
+
 .member-comment-item p {
   margin: 0;
   color: #e4e4e4;
@@ -762,6 +775,94 @@ h3 {
   padding: 14px;
   display: grid;
   gap: 12px;
+}
+
+.admin-comments-wrap {
+  margin-top: 14px;
+  border: 1px solid #2f2f2f;
+  background: #101010;
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.admin-comments-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-comments-toolbar label {
+  display: grid;
+  gap: 8px;
+  color: #d5d5d5;
+  font-size: 0.9rem;
+}
+
+.admin-comments-toolbar select {
+  border: 1px solid #333;
+  background: #101010;
+  color: #efefef;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.admin-comments-list {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-comment-item {
+  border: 1px solid #2a2a2a;
+  background: #0f0f0f;
+  padding: 10px 12px;
+}
+
+.admin-comment-item header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: start;
+  margin-bottom: 8px;
+}
+
+.admin-comment-item header strong {
+  display: block;
+}
+
+.admin-comment-item header span {
+  display: block;
+  margin-top: 4px;
+  color: #9f9f9f;
+  font-size: 0.78rem;
+}
+
+.admin-comment-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-comment-actions a {
+  border: 1px solid #3a3a3a;
+  background: #171717;
+  color: #efefef;
+  padding: 7px 11px;
+  font-size: 0.84rem;
+}
+
+.admin-comment-item p {
+  margin: 0;
+  white-space: pre-wrap;
+  color: #e4e4e4;
+}
+
+.admin-comment-item small {
+  display: block;
+  margin-top: 8px;
+  color: #9f9f9f;
 }
 
 .admin-email-form label {
