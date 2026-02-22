@@ -1,0 +1,36 @@
+import { UserRole } from "@prisma/client";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import AdminEmailForm from "@/components/AdminEmailForm";
+import { authOptions } from "@/lib/auth";
+import { prisma } from "@/lib/prisma";
+
+export const metadata = {
+  title: "회원 이메일 발송"
+};
+
+export default async function AdminEmailPage() {
+  const session = await getServerSession(authOptions);
+
+  if (!session?.user?.id) {
+    redirect("/");
+  }
+
+  const user = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    select: { role: true }
+  });
+
+  if (!user || user.role !== UserRole.ADMIN) {
+    redirect("/");
+  }
+
+  return (
+    <section className="page-stack">
+      <div className="meta">MEMBER MAIL</div>
+      <h1 className="page-title">회원 이메일 발송</h1>
+      <p className="description">수신 동의 회원에게 공지 메일을 발송합니다.</p>
+      <AdminEmailForm />
+    </section>
+  );
+}

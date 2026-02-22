@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AuthProvider from "@/components/AuthProvider";
 import HeaderSearch from "@/components/HeaderSearch";
 import "./globals.css";
 
@@ -57,28 +58,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <header className="topbar">
-          <div className="container topbar-wrap">
-            <div className="brand-wrap">
-              <a className="brand" href="/">
-                <img className="brand-logo" src="/logo" alt="AudioLife logo" />
-                AudioLife
-              </a>
+        <AuthProvider>
+          <header className="topbar">
+            <div className="container topbar-wrap">
+              <div className="brand-wrap">
+                <a className="brand" href="/">
+                  <img className="brand-logo" src="/logo" alt="AudioLife logo" />
+                  AudioLife
+                </a>
+              </div>
+              <nav className="nav" aria-label="주요 메뉴">
+                <a href="/reviews">REVIEWS</a>
+                <a href="/articles">ARTICLES</a>
+                <a href="/columns">COLUMNS</a>
+                <a href="/calendar">CALENDAR</a>
+                <a href="/about">ABOUT</a>
+                <HeaderSearch />
+              </nav>
             </div>
-            <nav className="nav" aria-label="주요 메뉴">
-              <a href="/reviews">REVIEWS</a>
-              <a href="/articles">ARTICLES</a>
-              <a href="/columns">COLUMNS</a>
-              <a href="/calendar">CALENDAR</a>
-              <a href="/about">ABOUT</a>
-              <HeaderSearch />
-            </nav>
-          </div>
-        </header>
-        <main className="container">{children}</main>
-        <footer>
-          <div className="container">© {new Date().getFullYear()} AudioLife. Built for audiolife.kr</div>
-        </footer>
+          </header>
+          <main className="container">{children}</main>
+          <footer>
+            <div className="container">© {new Date().getFullYear()} AudioLife. Built for audiolife.kr</div>
+          </footer>
+        </AuthProvider>
       </body>
     </html>
   );

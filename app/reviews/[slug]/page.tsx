@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import GiscusComments from "@/components/GiscusComments";
+import MemberComments from "@/components/MemberComments";
 import { getAllPosts, getPostBasePath, getPostBySlug, getPostTypeLabel } from "@/lib/content";
 
 type Props = {
@@ -126,7 +126,7 @@ export default async function ReviewDetailPage({ params }: Props) {
           </div>
           <section className="comment-box" aria-label="댓글">
             <h2>댓글</h2>
-            <GiscusComments term={`reviews/${post.slug}`} />
+            <MemberComments postType="reviews" postSlug={post.slug} />
           </section>
         </article>
 

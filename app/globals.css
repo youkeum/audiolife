@@ -626,13 +626,153 @@ h3 {
   font-size: 1.25rem;
 }
 
-.giscus-placeholder {
+.member-comments {
+  display: grid;
+  gap: 14px;
+}
+
+.member-comments-login-box,
+.member-comments-authenticated {
   border: 1px solid #303030;
   background: #0f0f0f;
   color: #c9c9c9;
   padding: 12px;
   font-size: 0.92rem;
   line-height: 1.65;
+}
+
+.member-comments-login-box p,
+.member-comments-authenticated p {
+  margin: 0 0 10px;
+}
+
+.member-comments-login-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.member-comments-login-actions button,
+.member-comments-email-login button,
+.member-comments-user-row button,
+.member-comments-form button,
+.admin-email-form button {
+  border: 1px solid #3a3a3a;
+  background: #191919;
+  color: #efefef;
+  padding: 7px 11px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.member-comments-email-login {
+  display: flex;
+  gap: 8px;
+}
+
+.member-comments-email-login input,
+.member-comments-form textarea,
+.admin-email-form input,
+.admin-email-form textarea {
+  width: 100%;
+  border: 1px solid #333;
+  background: #101010;
+  color: #efefef;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.member-comments-user-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.member-comments-form {
+  margin-top: 10px;
+}
+
+.member-comments-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.member-comments-form-foot {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.subscription-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  color: #d5d5d5;
+}
+
+.member-comments-list {
+  display: grid;
+  gap: 10px;
+}
+
+.member-comment-item {
+  border: 1px solid #2a2a2a;
+  background: #0f0f0f;
+  padding: 10px 12px;
+}
+
+.member-comment-item header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 7px;
+}
+
+.member-comment-item header time {
+  font-size: 0.78rem;
+  color: #9f9f9f;
+}
+
+.member-comment-item p {
+  margin: 0;
+  color: #e4e4e4;
+  white-space: pre-wrap;
+}
+
+.member-comments-info {
+  margin: 8px 0 0;
+  color: #96cfaa;
+}
+
+.member-comments-error {
+  margin: 8px 0 0;
+  color: #e7a4a4;
+}
+
+.admin-email-form {
+  margin-top: 14px;
+  border: 1px solid #2f2f2f;
+  background: #101010;
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.admin-email-form label {
+  display: grid;
+  gap: 8px;
+  color: #dadada;
+}
+
+.admin-email-success {
+  margin: 0;
+  color: #9fd8b3;
 }
 
 footer {
