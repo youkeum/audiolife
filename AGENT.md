@@ -118,17 +118,23 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-22 23:20:55 KST
+- 업데이트 시각: 2026-02-22 23:50:06 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-22 | cec8ee8 | feat: add comment deletion and admin moderation
+- 마지막 커밋: 2026-02-22 | ed561d4 | fix: add nodemailer for email magic-link signin
 - 콘텐츠 개수: articles=5, reviews=2
 
 ### 워킹트리 상태
 -  M AGENT.md
-- M  package-lock.json
-- M  package.json
+- M  app/api/comments/route.ts
+- M  app/globals.css
+- M  app/layout.tsx
+- M  components/MemberComments.tsx
+- A  components/TopAuthMenu.tsx
+- A  prisma/migrations/20260222144558_add_comment_replies/migration.sql
+- M  prisma/schema.prisma
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-22 | ed561d4 | fix: add nodemailer for email magic-link signin
 - 2026-02-22 | cec8ee8 | feat: add comment deletion and admin moderation
 - 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender
 - 2026-02-22 | 1c351e8 | Add Day 2 column final draft and refine writing guide

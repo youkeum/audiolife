@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AuthProvider from "@/components/AuthProvider";
 import HeaderSearch from "@/components/HeaderSearch";
+import TopAuthMenu from "@/components/TopAuthMenu";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="/columns">COLUMNS</a>
                 <a href="/calendar">CALENDAR</a>
                 <a href="/about">ABOUT</a>
+                <TopAuthMenu />
                 <HeaderSearch />
               </nav>
             </div>

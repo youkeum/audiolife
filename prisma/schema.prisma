@@ -90,6 +90,9 @@ model Comment {
   postSlug  String
   body      String        @db.Text
   status    CommentStatus @default(VISIBLE)
+  parentId  String?
+  parent    Comment?      @relation("CommentReplies", fields: [parentId], references: [id], onDelete: SetNull)
+  replies   Comment[]     @relation("CommentReplies")
   userId    String
   user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
   editedAt  DateTime?
@@ -98,6 +101,7 @@ model Comment {
   updatedAt DateTime      @updatedAt
 
   @@index([postType, postSlug])
+  @@index([parentId])
   @@index([userId])
   @@index([status, createdAt])
 }

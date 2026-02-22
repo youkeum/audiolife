@@ -10,11 +10,13 @@ type CommentItem = {
   body: string;
   createdAt: string;
   editedAt: string | null;
+  parentId: string | null;
   user: {
     id: string;
     name: string | null;
     image: string | null;
   };
+  replies: CommentItem[];
 };
 
 type MemberCommentsProps = {
@@ -42,6 +44,9 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
   const [newBody, setNewBody] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [deletingCommentId, setDeletingCommentId] = useState<string | null>(null);
+  const [replyTargetId, setReplyTargetId] = useState<string | null>(null);
+  const [replyBody, setReplyBody] = useState("");
+  const [replySubmitting, setReplySubmitting] = useState(false);
   const [loginEmail, setLoginEmail] = useState("");
   const [loginInfo, setLoginInfo] = useState<string | null>(null);
   const [loginError, setLoginError] = useState<string | null>(null);
@@ -121,6 +126,24 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
   const socialProviders = providerList.filter((provider) => provider.id !== "email");
   const supportsEmailMagicLink = providerList.some((provider) => provider.id === "email");
 
+  async function createComment(body: string, parentId?: string) {
+    const response = await fetch("/api/comments", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        postType,
+        postSlug,
+        body,
+        parentId
+      })
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message ?? "댓글 작성에 실패했습니다.");
+    }
+  }
+
   async function handleCommentSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -132,27 +155,35 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
     setCommentError(null);
 
     try {
-      const response = await fetch("/api/comments", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          postType,
-          postSlug,
-          body: newBody
-        })
-      });
-
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.message ?? "댓글 작성에 실패했습니다.");
-      }
-
-      setComments((prev) => [...prev, data.comment as CommentItem]);
+      await createComment(newBody.trim());
       setNewBody("");
+      await loadComments();
     } catch (error) {
       setCommentError(error instanceof Error ? error.message : "댓글 작성에 실패했습니다.");
     } finally {
       setSubmitting(false);
+    }
+  }
+
+  async function handleReplySubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!replyTargetId || !replyBody.trim()) {
+      return;
+    }
+
+    setReplySubmitting(true);
+    setCommentError(null);
+
+    try {
+      await createComment(replyBody.trim(), replyTargetId);
+      setReplyBody("");
+      setReplyTargetId(null);
+      await loadComments();
+    } catch (error) {
+      setCommentError(error instanceof Error ? error.message : "답글 작성에 실패했습니다.");
+    } finally {
+      setReplySubmitting(false);
     }
   }
 
@@ -191,7 +222,7 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
   }
 
   async function handleDeleteComment(commentId: string) {
-    const confirmed = window.confirm("이 댓글을 삭제할까요?");
+    const confirmed = window.confirm("이 댓글 스레드를 삭제할까요?");
     if (!confirmed) {
       return;
     }
@@ -211,7 +242,11 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
         throw new Error(data.message ?? "댓글 삭제에 실패했습니다.");
       }
 
-      setComments((prev) => prev.filter((comment) => comment.id !== commentId));
+      await loadComments();
+      if (replyTargetId === commentId) {
+        setReplyTargetId(null);
+        setReplyBody("");
+      }
     } catch (error) {
       setCommentError(error instanceof Error ? error.message : "댓글 삭제에 실패했습니다.");
     } finally {
@@ -239,6 +274,74 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
     } finally {
       setSubscriptionSaving(false);
     }
+  }
+
+  function renderCommentNode(comment: CommentItem) {
+    const isReplying = replyTargetId === comment.id;
+
+    return (
+      <div key={comment.id} className="member-comment-node">
+        <article className="member-comment-item">
+          <header>
+            <strong>{comment.user.name ?? "회원"}</strong>
+            <div className="member-comment-item-actions">
+              <time dateTime={comment.createdAt}>{formatDate(comment.createdAt)}</time>
+              {canDeleteComment(comment) ? (
+                <button
+                  type="button"
+                  onClick={() => handleDeleteComment(comment.id)}
+                  disabled={deletingCommentId === comment.id}
+                >
+                  {deletingCommentId === comment.id ? "삭제 중..." : "삭제"}
+                </button>
+              ) : null}
+            </div>
+          </header>
+          <p>{comment.body}</p>
+          {status === "authenticated" ? (
+            <div className="member-comment-ops">
+              <button
+                type="button"
+                onClick={() => {
+                  if (isReplying) {
+                    setReplyTargetId(null);
+                    setReplyBody("");
+                  } else {
+                    setReplyTargetId(comment.id);
+                    setReplyBody("");
+                  }
+                }}
+              >
+                {isReplying ? "답글 취소" : "답글 달기"}
+              </button>
+            </div>
+          ) : null}
+
+          {isReplying ? (
+            <form className="member-comment-reply-form" onSubmit={handleReplySubmit}>
+              <textarea
+                value={replyBody}
+                onChange={(event) => setReplyBody(event.target.value)}
+                minLength={2}
+                maxLength={500}
+                placeholder="답글을 입력해 주세요."
+                required
+              />
+              <div className="member-comments-form-foot">
+                <span>{replyBody.length}/500</span>
+                <button type="submit" disabled={replySubmitting}>
+                  {replySubmitting ? "등록 중..." : "답글 등록"}
+                </button>
+              </div>
+            </form>
+          ) : null}
+        </article>
+
+        {comment.replies.length > 0 ? (
+          <div className="member-comment-children">{comment.replies.map((reply) => renderCommentNode(reply))}</div>
+        ) : null}
+      </div>
+    );
   }
 
   return (
@@ -292,11 +395,7 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
               <span>로그인 설정이 아직 완료되지 않았습니다.</span>
             ) : null}
             {socialProviders.map((provider) => (
-              <button
-                key={provider.id}
-                type="button"
-                onClick={() => signIn(provider.id, { callbackUrl: window.location.href })}
-              >
+              <button key={provider.id} type="button" onClick={() => signIn(provider.id, { callbackUrl: window.location.href })}>
                 {provider.name} 로그인
               </button>
             ))}
@@ -323,26 +422,7 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
       <div className="member-comments-list">
         {loadingComments ? <p>댓글 불러오는 중...</p> : null}
         {!loadingComments && comments.length === 0 ? <p>첫 댓글을 남겨보세요.</p> : null}
-        {comments.map((comment) => (
-          <article key={comment.id} className="member-comment-item">
-            <header>
-              <strong>{comment.user.name ?? "회원"}</strong>
-              <div className="member-comment-item-actions">
-                <time dateTime={comment.createdAt}>{formatDate(comment.createdAt)}</time>
-                {canDeleteComment(comment) ? (
-                  <button
-                    type="button"
-                    onClick={() => handleDeleteComment(comment.id)}
-                    disabled={deletingCommentId === comment.id}
-                  >
-                    {deletingCommentId === comment.id ? "삭제 중..." : "삭제"}
-                  </button>
-                ) : null}
-              </div>
-            </header>
-            <p>{comment.body}</p>
-          </article>
-        ))}
+        {!loadingComments ? comments.map((comment) => renderCommentNode(comment)) : null}
       </div>
 
       {commentError ? <p className="member-comments-error">{commentError}</p> : null}
