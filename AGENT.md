@@ -118,22 +118,18 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-22 22:28:01 KST
+- 업데이트 시각: 2026-02-22 23:20:55 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender
+- 마지막 커밋: 2026-02-22 | cec8ee8 | feat: add comment deletion and admin moderation
 - 콘텐츠 개수: articles=5, reviews=2
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  app/admin/comments/page.tsx
-- M  app/admin/email/page.tsx
-- A  app/api/admin/comments/route.ts
-- M  app/api/comments/route.ts
-- M  app/globals.css
-- A  components/AdminCommentsManager.tsx
-- M  components/MemberComments.tsx
+- M  package-lock.json
+- M  package.json
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-22 | cec8ee8 | feat: add comment deletion and admin moderation
 - 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender
 - 2026-02-22 | 1c351e8 | Add Day 2 column final draft and refine writing guide
 - 2026-02-22 | 5d3151a | Add Naver site verification meta tag
