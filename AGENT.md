@@ -111,19 +111,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-22 00:33:23 KST
+- 업데이트 시각: 2026-02-22 17:28:37 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-21 | aa867c8 | Document column workflow in AGENT
+- 마지막 커밋: 2026-02-22 | 5d3151a | Add Naver site verification meta tag
 - 콘텐츠 개수: articles=5, reviews=2
 
 ### 워킹트리 상태
 - M  AGENT.md
-- M  app/articles/[slug]/page.tsx
-- M  app/columns/[slug]/page.tsx
-- M  app/layout.tsx
-- M  app/reviews/[slug]/page.tsx
+- M  content/columns/WRITING_GUIDE.MD
+- A  content/columns/posts/hifi-headfi-100days-day2.md
+- A  public/posts/columns/4.png
+- A  public/posts/columns/5.png
+- A  public/posts/columns/6.png
+- A  public/posts/columns/7.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-22 | 5d3151a | Add Naver site verification meta tag
 - 2026-02-21 | aa867c8 | Document column workflow in AGENT
 - 2026-02-21 | e69fc06 | Add link button fallback when link card preview fails
 - 2026-02-20 | 5d4b0f7 | Remove duplicate phone frame styling on private page
