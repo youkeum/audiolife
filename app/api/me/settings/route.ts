@@ -6,7 +6,9 @@ import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 
 const updateSchema = z.object({
-  enabled: z.boolean()
+  nickname: z.string().trim().min(1).max(32),
+  announcementEnabled: z.boolean(),
+  replyNotificationEnabled: z.boolean()
 });
 
 export async function GET() {
@@ -16,27 +18,37 @@ export async function GET() {
     return NextResponse.json({ message: "로그인이 필요합니다." }, { status: 401 });
   }
 
+  const user = await prisma.user.findUnique({
+    where: { id: session.user.id },
+    select: { id: true, email: true, name: true, status: true }
+  });
+
+  if (!user || user.status !== UserStatus.ACTIVE) {
+    return NextResponse.json({ message: "설정 조회 권한이 없습니다." }, { status: 403 });
+  }
+
   const subscription = await prisma.emailSubscription.upsert({
-    where: { userId: session.user.id },
+    where: { userId: user.id },
     update: {},
     create: {
-      userId: session.user.id,
+      userId: user.id,
       enabled: false,
-      newPostEnabled: false,
       announcementEnabled: false,
       replyNotificationEnabled: false
     },
     select: {
-      enabled: true,
-      newPostEnabled: true,
       announcementEnabled: true,
-      replyNotificationEnabled: true,
-      consentAt: true,
-      unsubscribedAt: true
+      replyNotificationEnabled: true
     }
   });
 
-  return NextResponse.json({ subscription });
+  return NextResponse.json({
+    settings: {
+      nickname: user.name ?? "",
+      email: user.email,
+      ...subscription
+    }
+  });
 }
 
 export async function PATCH(request: Request) {
@@ -55,43 +67,52 @@ export async function PATCH(request: Request) {
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
-    select: { status: true }
+    select: { id: true, status: true }
   });
 
   if (!user || user.status !== UserStatus.ACTIVE) {
-    return NextResponse.json({ message: "수정 권한이 없습니다." }, { status: 403 });
+    return NextResponse.json({ message: "설정 수정 권한이 없습니다." }, { status: 403 });
   }
 
   const now = new Date();
-  const enabled = parsed.data.enabled;
+  const enabled = parsed.data.announcementEnabled;
+
+  await prisma.user.update({
+    where: { id: user.id },
+    data: {
+      name: parsed.data.nickname
+    }
+  });
 
   const subscription = await prisma.emailSubscription.upsert({
-    where: { userId: session.user.id },
+    where: { userId: user.id },
     update: {
       enabled,
       newPostEnabled: false,
-      announcementEnabled: enabled,
+      announcementEnabled: parsed.data.announcementEnabled,
+      replyNotificationEnabled: parsed.data.replyNotificationEnabled,
       consentAt: enabled ? now : undefined,
       unsubscribedAt: enabled ? null : now
     },
     create: {
-      userId: session.user.id,
+      userId: user.id,
       enabled,
       newPostEnabled: false,
-      announcementEnabled: enabled,
-      replyNotificationEnabled: false,
+      announcementEnabled: parsed.data.announcementEnabled,
+      replyNotificationEnabled: parsed.data.replyNotificationEnabled,
       consentAt: enabled ? now : null,
       unsubscribedAt: enabled ? null : now
     },
     select: {
-      enabled: true,
-      newPostEnabled: true,
       announcementEnabled: true,
-      replyNotificationEnabled: true,
-      consentAt: true,
-      unsubscribedAt: true
+      replyNotificationEnabled: true
     }
   });
 
-  return NextResponse.json({ subscription });
+  return NextResponse.json({
+    settings: {
+      nickname: parsed.data.nickname,
+      ...subscription
+    }
+  });
 }

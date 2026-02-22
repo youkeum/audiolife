@@ -69,13 +69,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </a>
               </div>
               <nav className="nav" aria-label="주요 메뉴">
-                <a href="/reviews">REVIEWS</a>
-                <a href="/articles">ARTICLES</a>
-                <a href="/columns">COLUMNS</a>
-                <a href="/calendar">CALENDAR</a>
-                <a href="/about">ABOUT</a>
-                <TopAuthMenu />
-                <HeaderSearch />
+                <div className="nav-links">
+                  <a href="/reviews">REVIEWS</a>
+                  <a href="/articles">ARTICLES</a>
+                  <a href="/columns">COLUMNS</a>
+                  <a href="/calendar">CALENDAR</a>
+                  <a href="/about">ABOUT</a>
+                </div>
+                <div className="nav-utilities">
+                  <TopAuthMenu />
+                  <HeaderSearch />
+                </div>
               </nav>
             </div>
           </header>

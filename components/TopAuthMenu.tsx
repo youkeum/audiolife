@@ -36,6 +36,29 @@ export default function TopAuthMenu() {
   const providerList = useMemo(() => Object.values(providers ?? {}), [providers]);
   const socialProviders = providerList.filter((provider) => provider.id !== "email");
   const supportsEmailMagicLink = providerList.some((provider) => provider.id === "email");
+  const displayName = session?.user?.name?.trim() || session?.user?.email?.trim() || "회원";
+
+  function getProviderIcon(providerId: string, providerName: string) {
+    if (providerId === "google") {
+      return (
+        <span className="provider-icon provider-icon-google" aria-hidden="true">
+          G
+        </span>
+      );
+    }
+    if (providerId === "naver") {
+      return (
+        <span className="provider-icon provider-icon-naver" aria-hidden="true">
+          N
+        </span>
+      );
+    }
+    return (
+      <span className="provider-icon provider-icon-default" aria-hidden="true">
+        {providerName.slice(0, 1).toUpperCase()}
+      </span>
+    );
+  }
 
   async function handleEmailLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -63,16 +86,18 @@ export default function TopAuthMenu() {
   if (status === "authenticated" && session?.user) {
     return (
       <div className="top-auth-user">
-        <span className="top-auth-user-name">{session.user.name ?? session.user.email ?? "회원"}</span>
-        {session.user.role === "ADMIN" ? (
-          <>
-            <a href="/admin/comments">댓글관리</a>
-            <a href="/admin/email">이메일관리</a>
-          </>
-        ) : null}
-        <button type="button" onClick={() => signOut({ callbackUrl: window.location.href })}>
-          로그아웃
-        </button>
+        <span className="top-auth-user-name" title={displayName}>
+          {displayName}
+        </span>
+        <div className="top-auth-user-actions">
+          <a href="/settings" className="top-auth-settings-link" aria-label="설정" title="설정">
+            <span aria-hidden="true">⚙</span>
+          </a>
+          {session.user.role === "ADMIN" ? <a href="/admin">관리자</a> : null}
+          <button type="button" onClick={() => signOut({ callbackUrl: window.location.href })}>
+            로그아웃
+          </button>
+        </div>
       </div>
     );
   }
@@ -104,8 +129,10 @@ export default function TopAuthMenu() {
                   <button
                     key={provider.id}
                     type="button"
+                    className="provider-button"
                     onClick={() => signIn(provider.id, { callbackUrl: window.location.href })}
                   >
+                    {getProviderIcon(provider.id, provider.name)}
                     {provider.name} 로그인
                   </button>
                 ))}

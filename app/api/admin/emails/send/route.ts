@@ -11,7 +11,8 @@ const sendSchema = z
   .object({
     subject: z.string().trim().min(2).max(140),
     html: z.string().max(200000).optional(),
-    text: z.string().max(200000).optional()
+    text: z.string().max(200000).optional(),
+    audience: z.enum(["announcement"]).default("announcement")
   })
   .superRefine((value, ctx) => {
     if (!value.html && !value.text) {
@@ -78,7 +79,7 @@ export async function POST(request: Request) {
 
   const subscriptions = await prisma.emailSubscription.findMany({
     where: {
-      enabled: true,
+      announcementEnabled: true,
       user: {
         status: UserStatus.ACTIVE,
         email: {

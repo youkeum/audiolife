@@ -89,7 +89,7 @@ export const authOptions: NextAuthOptions = {
 
       return true;
     },
-    async jwt({ token, user }) {
+    async jwt({ token, user, trigger, session }) {
       const userId = user?.id ?? token.sub;
       if (!userId) {
         return token;
@@ -98,12 +98,27 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         const dbUser = await prisma.user.findUnique({
           where: { id: userId },
-          select: { role: true, status: true }
+          select: { role: true, status: true, name: true, email: true }
         });
 
         if (dbUser) {
           token.role = dbUser.role;
           token.status = dbUser.status;
+          token.name = dbUser.name;
+          token.email = dbUser.email;
+        }
+      }
+
+      if (trigger === "update") {
+        const updatedName =
+          typeof session?.name === "string"
+            ? session.name
+            : typeof session?.user?.name === "string"
+              ? session.user.name
+              : undefined;
+
+        if (typeof updatedName === "string") {
+          token.name = updatedName;
         }
       }
 
@@ -114,6 +129,9 @@ export const authOptions: NextAuthOptions = {
         session.user.id = token.sub;
         session.user.role = (token.role as UserRole | undefined) ?? UserRole.USER;
         session.user.status = (token.status as UserStatus | undefined) ?? UserStatus.ACTIVE;
+        if (typeof token.name === "string") {
+          session.user.name = token.name;
+        }
       }
 
       return session;
@@ -134,7 +152,10 @@ export const authOptions: NextAuthOptions = {
         update: {},
         create: {
           userId: user.id,
-          enabled: false
+          enabled: false,
+          newPostEnabled: false,
+          announcementEnabled: false,
+          replyNotificationEnabled: false
         }
       });
     }

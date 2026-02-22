@@ -11,6 +11,7 @@ export default function HomePage() {
   const featureArticle = latestArticles[0];
   const reviewList = latestReviews.slice(1, 8);
   const articleList = latestArticles.slice(1, 8);
+  const columnHighlights = latestColumns.slice(0, 4);
 
   return (
     <>
@@ -60,6 +61,30 @@ export default function HomePage() {
         <a className="banner-slot" href="/about">
           <span>SPONSOR BANNER 03</span>
         </a>
+      </section>
+
+      <section className="latest-columns-strip" aria-label="최신 컬럼">
+        <div className="latest-columns-head">
+          <h2>LATEST COLUMNS</h2>
+          <Link href="/columns">ALL COLUMNS</Link>
+        </div>
+
+        <div className="latest-columns-grid">
+          {columnHighlights.map((post) => (
+            <Link key={post.slug} href={`/columns/${post.slug}`} className="latest-column-card">
+              {post.coverImage ? (
+                <img className="latest-column-image" src={post.coverImage} alt={post.title} />
+              ) : (
+                <div className="latest-column-fallback">{post.category.toUpperCase()}</div>
+              )}
+              <div className="latest-column-body">
+                <div className="meta">{post.date}</div>
+                <h3>{post.title}</h3>
+              </div>
+            </Link>
+          ))}
+          {columnHighlights.length === 0 ? <p>등록된 컬럼이 없습니다.</p> : null}
+        </div>
       </section>
 
       <section className="magazine-grid">

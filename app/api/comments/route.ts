@@ -1,6 +1,7 @@
 import { CommentStatus, PostType, UserRole, UserStatus } from "@prisma/client";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 import { z } from "zod";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
@@ -136,17 +137,37 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: "댓글 권한이 없습니다." }, { status: 403 });
   }
 
-  if (parsed.data.parentId) {
-    const parent = await prisma.comment.findUnique({
+  const parentComment = parsed.data.parentId
+    ? await prisma.comment.findUnique({
       where: { id: parsed.data.parentId },
-      select: { id: true, postType: true, postSlug: true, status: true }
-    });
+      select: {
+        id: true,
+        postType: true,
+        postSlug: true,
+        status: true,
+        userId: true,
+        user: {
+          select: {
+            name: true,
+            email: true,
+            status: true,
+            emailSubscription: {
+              select: {
+                replyNotificationEnabled: true
+              }
+            }
+          }
+        }
+      }
+    })
+    : null;
 
+  if (parsed.data.parentId) {
     if (
-      !parent ||
-      parent.status !== CommentStatus.VISIBLE ||
-      parent.postType !== (parsed.data.postType as PostType) ||
-      parent.postSlug !== parsed.data.postSlug
+      !parentComment ||
+      parentComment.status !== CommentStatus.VISIBLE ||
+      parentComment.postType !== (parsed.data.postType as PostType) ||
+      parentComment.postSlug !== parsed.data.postSlug
     ) {
       return NextResponse.json({ message: "답글 대상을 찾을 수 없습니다." }, { status: 400 });
     }
@@ -168,6 +189,34 @@ export async function POST(request: Request) {
       parentId: true
     }
   });
+
+  if (
+    parentComment &&
+    parentComment.userId !== author.id &&
+    parentComment.user.status === UserStatus.ACTIVE &&
+    parentComment.user.email &&
+    parentComment.user.emailSubscription?.replyNotificationEnabled
+  ) {
+    const resendKey = process.env.RESEND_API_KEY;
+    const resendFrom = process.env.RESEND_FROM;
+    const siteUrl = process.env.NEXTAUTH_URL ?? "https://audiolife.kr";
+
+    if (resendKey && resendFrom) {
+      const resend = new Resend(resendKey);
+      const postUrl = `${siteUrl}/${parsed.data.postType}/${parsed.data.postSlug}`;
+      const actorName = author.name ?? "회원";
+      const parentName = parentComment.user.name ?? "회원";
+
+      await resend.emails
+        .send({
+          from: resendFrom,
+          to: parentComment.user.email,
+          subject: `[AudioLife] ${parentName}님의 댓글에 답글이 달렸습니다`,
+          text: `${actorName}님이 답글을 남겼습니다.\n\n답글 내용: ${parsed.data.body}\n\n확인하기: ${postUrl}`
+        })
+        .catch(() => null);
+    }
+  }
 
   return NextResponse.json(
     {

@@ -126,6 +126,28 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
   const socialProviders = providerList.filter((provider) => provider.id !== "email");
   const supportsEmailMagicLink = providerList.some((provider) => provider.id === "email");
 
+  function getProviderIcon(providerId: string, providerName: string) {
+    if (providerId === "google") {
+      return (
+        <span className="provider-icon provider-icon-google" aria-hidden="true">
+          G
+        </span>
+      );
+    }
+    if (providerId === "naver") {
+      return (
+        <span className="provider-icon provider-icon-naver" aria-hidden="true">
+          N
+        </span>
+      );
+    }
+    return (
+      <span className="provider-icon provider-icon-default" aria-hidden="true">
+        {providerName.slice(0, 1).toUpperCase()}
+      </span>
+    );
+  }
+
   async function createComment(body: string, parentId?: string) {
     const response = await fetch("/api/comments", {
       method: "POST",
@@ -365,7 +387,7 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
                 disabled={subscriptionSaving}
                 onChange={(event) => toggleSubscription(event.target.checked)}
               />
-              새 글/공지 이메일 받기
+              공지 이메일 받기
             </label>
           ) : null}
 
@@ -395,7 +417,13 @@ export default function MemberComments({ postType, postSlug }: MemberCommentsPro
               <span>로그인 설정이 아직 완료되지 않았습니다.</span>
             ) : null}
             {socialProviders.map((provider) => (
-              <button key={provider.id} type="button" onClick={() => signIn(provider.id, { callbackUrl: window.location.href })}>
+              <button
+                key={provider.id}
+                type="button"
+                className="provider-button"
+                onClick={() => signIn(provider.id, { callbackUrl: window.location.href })}
+              >
+                {getProviderIcon(provider.id, provider.name)}
                 {provider.name} 로그인
               </button>
             ))}

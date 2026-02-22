@@ -30,10 +30,15 @@
 - app/about/page.tsx
 - app/admin/comments/page.tsx
 - app/admin/email/page.tsx
+- app/admin/layout.tsx
+- app/admin/members/page.tsx
+- app/admin/page.tsx
 - app/api/admin/comments/route.ts
 - app/api/admin/emails/send/route.ts
+- app/api/admin/members/route.ts
 - app/api/auth/[...nextauth]/route.ts
 - app/api/comments/route.ts
+- app/api/me/settings/route.ts
 - app/api/me/subscription/route.ts
 - app/articles/[slug]/page.tsx
 - app/articles/page.tsx
@@ -54,6 +59,7 @@
 - app/reviews/page.tsx
 - app/robots.ts
 - app/search/page.tsx
+- app/settings/page.tsx
 - app/sitemap.ts
 - app/tags/[tag]/page.tsx
 - 콘텐츠 디렉토리:
@@ -118,22 +124,39 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-22 23:50:06 KST
+- 업데이트 시각: 2026-02-23 01:08:41 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-22 | ed561d4 | fix: add nodemailer for email magic-link signin
+- 마지막 커밋: 2026-02-22 | de68b20 | feat: add threaded comments and topbar auth modal
 - 콘텐츠 개수: articles=5, reviews=2
 
 ### 워킹트리 상태
 -  M AGENT.md
+- M  app/admin/comments/page.tsx
+- M  app/admin/email/page.tsx
+- A  app/admin/layout.tsx
+- A  app/admin/members/page.tsx
+- A  app/admin/page.tsx
+- M  app/api/admin/emails/send/route.ts
+- A  app/api/admin/members/route.ts
 - M  app/api/comments/route.ts
+- A  app/api/me/settings/route.ts
+- M  app/api/me/subscription/route.ts
 - M  app/globals.css
 - M  app/layout.tsx
+- M  app/page.tsx
+- A  app/settings/page.tsx
+- M  components/AdminEmailForm.tsx
+- A  components/AdminMembersManager.tsx
+- A  components/AdminNav.tsx
 - M  components/MemberComments.tsx
-- A  components/TopAuthMenu.tsx
-- A  prisma/migrations/20260222144558_add_comment_replies/migration.sql
+- M  components/TopAuthMenu.tsx
+- A  components/UserSettingsForm.tsx
+- M  lib/auth.ts
+- A  prisma/migrations/20260222152647_add_email_preferences/migration.sql
 - M  prisma/schema.prisma
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-22 | de68b20 | feat: add threaded comments and topbar auth modal
 - 2026-02-22 | ed561d4 | fix: add nodemailer for email magic-link signin
 - 2026-02-22 | cec8ee8 | feat: add comment deletion and admin moderation
 - 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender

@@ -5,6 +5,7 @@ import { FormEvent, useState } from "react";
 export default function AdminEmailForm() {
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
+  const [audience, setAudience] = useState<"announcement">("announcement");
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -21,7 +22,8 @@ export default function AdminEmailForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           subject,
-          text
+          text,
+          audience
         })
       });
 
@@ -50,6 +52,12 @@ export default function AdminEmailForm() {
       <label>
         본문 (텍스트)
         <textarea value={text} onChange={(event) => setText(event.target.value)} rows={12} required />
+      </label>
+      <label>
+        발송 대상
+        <select value={audience} onChange={(event) => setAudience(event.target.value as "announcement")}>
+          <option value="announcement">전체 공지 수신 회원</option>
+        </select>
       </label>
       <button type="submit" disabled={submitting}>
         {submitting ? "발송 중..." : "동의 회원에게 발송"}
