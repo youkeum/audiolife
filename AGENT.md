@@ -93,9 +93,10 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (5):
+- Articles (6):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
+- SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
@@ -124,21 +125,21 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-24 21:24:30 KST
+- 업데이트 시각: 2026-02-24 22:25:24 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-23 | d2ba8ea | Add finalized Day 3 column and update writing guide
-- 콘텐츠 개수: articles=5, reviews=2
+- 마지막 커밋: 2026-02-24 | b3dbdb5 | Add finalized Day 4 column and update writing guide
+- 콘텐츠 개수: articles=6, reviews=2
 
 ### 워킹트리 상태
 - M  AGENT.md
-- M  content/columns/WRITING_GUIDE.MD
-- A  content/columns/posts/hifi-headfi-100days-day4.md
-- A  public/posts/columns/12.png
-- A  public/posts/columns/13.png
-- A  public/posts/columns/14.png
-- A  public/posts/columns/15.png
+- A  content/articles/SL1500CS.md
+- A  public/posts/articles/sl1500cs/1.png
+- A  public/posts/articles/sl1500cs/2.jpg
+- A  public/posts/articles/sl1500cs/3.jpg
+- A  public/posts/articles/sl1500cs/4.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-24 | b3dbdb5 | Add finalized Day 4 column and update writing guide
 - 2026-02-23 | d2ba8ea | Add finalized Day 3 column and update writing guide
 - 2026-02-23 | a4108f1 | feat: 회원 인증/관리자 대시보드 및 헤더-홈 레이아웃 개선
 - 2026-02-22 | de68b20 | feat: add threaded comments and topbar auth modal
