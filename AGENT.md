@@ -3,20 +3,20 @@
 오디오 개인 웹매거진(HomePage) 재시작/인수인계를 위한 단일 운영 문서.
 
 ## 1) 프로젝트 정체성
-- 목적: 오디오 리뷰/기사 중심의 개인 웹매거진 운영
+- 목적: 오디오 리뷰/기사/컬럼 + 멤버 커뮤니티 운영
 - 스택: Next.js(App Router) + Markdown 콘텐츠 + 정적 이미지 자산
 - 기준 저장소 경로: `/Users/ykkim/Desktop/Homepage`
 - 프로덕션 도메인: `https://audiolife.kr`
 
 ## 2) 지금까지 작업 흐름 요약
-1. 초기 웹매거진 구조 구축 (카테고리/태그/리뷰/기사 라우트, 마크다운 로더)
-2. SEO/배포 기반 추가 (robots, sitemap, OG 이미지, 아이콘, 도메인 리다이렉트)
-3. 메인/헤더/네비게이션을 매거진형 UI로 개편
-4. 포스트 상세 UX 강화 (커버 이미지, 썸네일, 유튜브 임베드, 본문 미디어 대응)
-5. Giscus 댓글 박스 연동 및 환경값 디버그 메시지 보강
-6. 검색 기능 추가 (헤더 검색 + `/search` 결과 페이지)
-7. 링크 프리뷰 한글 깨짐(mojibake) 처리 개선 (charset 인식 디코딩)
-8. 최신 기사/리뷰 콘텐츠 및 이미지 자산 지속 추가
+1. 매거진 기본 구조 구축 (리뷰/기사/카테고리/태그 라우트 + 마크다운 로더)
+2. SEO/배포 기반 정비 (robots, sitemap, OG, 아이콘, 도메인 리다이렉트)
+3. 홈/헤더/상세 페이지 매거진형 UI 개선
+4. 본문 미디어 처리 강화 (커버 추출, YouTube 임베드, 링크카드)
+5. 컬럼 섹션 추가 (`/columns` + 컬럼 상세 라우트)
+6. 검색 고도화 (헤더 검색 + 통합 검색 페이지)
+7. 멤버 인증/댓글 시스템 도입 + 관리자 페이지(`/admin`) 구축
+8. 콘텐츠/이미지 자산 지속 업데이트
 
 ## 3) 실행/운영 커맨드
 - 의존성 설치: `npm install`
@@ -65,10 +65,13 @@
 - 콘텐츠 디렉토리:
   - `content/articles/*.md`
   - `content/reviews/*.md`
+  - `content/columns/posts/*.md`
+  - 컬럼 운영 문서: `content/columns/AGENT.MD`, `content/columns/WRITING_GUIDE.MD`, `content/columns/hifi-headfi-100days-curriculum.md`
 - 이미지 자산:
   - 배너: `public/banners/*`
   - 기사 이미지: `public/posts/articles/<slug>/*`
   - 리뷰 이미지: `public/posts/reviews/<slug>/*`
+  - 컬럼 이미지: `public/posts/columns/*`
 - 콘텐츠 파서 핵심: `lib/content.ts`
 
 ## 5) 콘텐츠 작성 규격(재시작 시 필수)
@@ -81,15 +84,12 @@
   - 본문의 단독 일반 URL은 링크카드(미리보기)로 변환 시도
 
 ## 6) 기능/동작 포인트
-- 홈(`app/page.tsx`): 최신 게시물 Hero + 리뷰/기사 섹션
-- 상세(`app/articles/[slug]/page.tsx`, `app/reviews/[slug]/page.tsx`): 커버 오버레이 + 본문 + 댓글
-- 검색(`app/search/page.tsx` + `components/HeaderSearch.tsx`): 제목/요약/태그 기반 검색 UX
-- 댓글(`components/GiscusComments.tsx`):
-  - 필요 env:
-    - `NEXT_PUBLIC_GISCUS_REPO`
-    - `NEXT_PUBLIC_GISCUS_REPO_ID`
-    - `NEXT_PUBLIC_GISCUS_CATEGORY`
-    - `NEXT_PUBLIC_GISCUS_CATEGORY_ID`
+- 홈(`app/page.tsx`): 최신 포스트 Hero + 리뷰/기사 + 최신 컬럼 스트립
+- 상세(`app/articles/[slug]/page.tsx`, `app/reviews/[slug]/page.tsx`, `app/columns/[slug]/page.tsx`): 본문 + 멤버 댓글 + 최근 글
+- 검색(`app/search/page.tsx` + `components/HeaderSearch.tsx`): 리뷰/기사/컬럼 통합 검색
+- 댓글(`components/MemberComments.tsx`): 로그인 사용자 댓글 작성 + 관리자 검수 플로우
+- 인증/권한(`lib/auth.ts`, `app/api/auth/[...nextauth]/route.ts`): 멤버 인증 + 관리자 권한
+- 관리자(`app/admin/*`, `app/api/admin/*`): 댓글/이메일/회원 관리
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
@@ -103,14 +103,21 @@
 - Reviews (2):
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
+- Columns (5):
+- hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
+- hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
+- hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
+- hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
+- hifi-headfi-100days-day5.md | 2026-02-25 | COLUMN | [100일 프로젝트] Day 5 - 주파수와 음높이, 배음의 기초
 
 ## 8) 재시작 체크리스트
 1. `npm install` 후 `npm run dev` 실행
 2. `AGENT.md`의 "현재 상태"와 "최근 커밋"으로 마지막 작업 지점 확인
-3. 새 글 작성 시 `content/*/*.md` + `public/posts/.../` 이미지 동시 반영
-4. UI 변경 시 `app/globals.css`와 해당 페이지 컴포넌트 동시 확인
-5. 댓글이 비정상일 경우 giscus env 누락 여부 먼저 점검
-6. 배포 전 `npm run build`로 라우팅/마크다운 파싱 오류 확인
+3. 컬럼 작성 시 `content/columns/AGENT.MD` -> `.../WRITING_GUIDE.MD` -> `.../hifi-headfi-100days-curriculum.md` 순으로 확인
+4. 새 글 작성 시 `content/articles/*.md` / `content/reviews/*.md` / `content/columns/posts/*.md` + `public/posts/.../` 이미지 동시 반영
+5. 인증/댓글 기능 수정 시 `app/api/*`, `lib/auth.ts`, `prisma/schema.prisma` 영향 범위 확인
+6. UI 변경 시 `app/globals.css`와 해당 페이지 컴포넌트 동시 확인
+7. 배포 전 `npm run build`로 라우팅/마크다운/타입 오류 확인
 
 ## 9) 자동 반영(실시간 운영)
 - 자동 갱신 스크립트: `scripts/update-agent-md.sh`
@@ -125,20 +132,24 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-24 22:25:24 KST
+- 업데이트 시각: 2026-02-25 17:42:44 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-24 | b3dbdb5 | Add finalized Day 4 column and update writing guide
-- 콘텐츠 개수: articles=6, reviews=2
+- 마지막 커밋: 2026-02-24 | b02737b | Add SL-1500C(S) article and assets
+- 콘텐츠 개수: articles=6, reviews=2, columns=5
 
 ### 워킹트리 상태
 - M  AGENT.md
-- A  content/articles/SL1500CS.md
-- A  public/posts/articles/sl1500cs/1.png
-- A  public/posts/articles/sl1500cs/2.jpg
-- A  public/posts/articles/sl1500cs/3.jpg
-- A  public/posts/articles/sl1500cs/4.png
+- M  content/columns/AGENT.MD
+- M  content/columns/WRITING_GUIDE.MD
+- A  content/columns/posts/hifi-headfi-100days-day5.md
+- A  public/posts/columns/16.png
+- A  public/posts/columns/17.jpg
+- A  public/posts/columns/18.png
+- A  public/posts/columns/19.png
+- M  scripts/update-agent-md.sh
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-24 | b02737b | Add SL-1500C(S) article and assets
 - 2026-02-24 | b3dbdb5 | Add finalized Day 4 column and update writing guide
 - 2026-02-23 | d2ba8ea | Add finalized Day 3 column and update writing guide
 - 2026-02-23 | a4108f1 | feat: 회원 인증/관리자 대시보드 및 헤더-홈 레이아웃 개선

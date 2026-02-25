@@ -1,11 +1,12 @@
-# 100일 컬럼 문체/전개 가이드 (Day 1~4 최종본 기준)
+# 100일 컬럼 문체/전개 가이드 (Day 1~5 최종본 기준)
 
 이 문서는 아래 최종본을 기준으로 추출한 작성 규칙이다.
 - `/Users/ykkim/Desktop/Homepage/content/columns/posts/hifi-headfi-100days-day1.md`
 - `/Users/ykkim/Desktop/Homepage/content/columns/posts/hifi-headfi-100days-day2.md`
 - `/Users/ykkim/Desktop/Homepage/content/columns/posts/hifi-headfi-100days-day3.md`
 - `/Users/ykkim/Desktop/Homepage/content/columns/posts/hifi-headfi-100days-day4.md`
-Day 5 이후 원고는 아래 기준을 기본값으로 사용한다.
+- `/Users/ykkim/Desktop/Homepage/content/columns/posts/hifi-headfi-100days-day5.md`
+Day 6 이후 원고는 아래 기준을 기본값으로 사용한다.
 
 ## 1) 문체 톤
 - 기본 톤은 친절한 설명형 + 대화형 어조를 섞는다.
@@ -92,3 +93,10 @@ Day 5 이후 원고는 아래 기준을 기본값으로 사용한다.
 - 수치/용어를 제시할 때 `오늘은 개념 지도`, `후속 Day에서 심화`를 명확히 분리한다.
 - 독자 행동 제안은 작고 바로 가능한 단위로 제시한다.
   - 예: `평소 듣던 곡을 3축으로 메모해 보기`
+
+## 11) Day 5에서 추가로 반영할 스타일 포인트
+- 기초 물리 개념(Hz, 기음/배음)은 `정의 -> 예시(440Hz 등) -> 청감 연결` 순서로 설명한다.
+- 기술 개념은 오디오 실무 맥락(진공관, 치찰음 억제, 스피커 저역 한계)으로 즉시 연결한다.
+- 루틴 제시는 `질문형 도입 -> 단계별 청취 -> 즉시 메모` 구조를 유지한다.
+- 가치판단은 단정 대신 균형형 문장으로 마무리한다.
+  - 예: `높은 해상력`과 `편안한 청취`는 항상 같은 뜻이 아니다.
