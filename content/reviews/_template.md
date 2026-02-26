@@ -4,6 +4,8 @@ date: "2026-02-18"
 excerpt: "요약 한 줄"
 category: "headphone"
 tags: ["입문", "헤드폰"]
+reviewItemType: "Product" # Product | Place
+reviewItemName: "리뷰 대상 이름" # 예: Astell&Kern HC5 / OOO 청음실
 ---
 
 ## 한 줄 총평

@@ -69,6 +69,8 @@ export default async function ReviewDetailPage({ params }: Props) {
     const post = await getPostBySlug("reviews", params.slug);
     const canonicalUrl = `${SITE_URL}/reviews/${post.slug}`;
     const ogImage = toAbsoluteUrl(post.coverImage);
+    const itemType = post.reviewItemType === "Place" ? "Place" : "Product";
+    const itemName = post.reviewItemName?.trim() || post.title;
     const reviewJsonLd = {
       "@context": "https://schema.org",
       "@type": "Review",
@@ -78,9 +80,13 @@ export default async function ReviewDetailPage({ params }: Props) {
       dateModified: post.date,
       image: [ogImage],
       reviewBody: post.excerpt,
+      author: {
+        "@type": "Person",
+        name: "YK"
+      },
       itemReviewed: {
-        "@type": "Thing",
-        name: post.title
+        "@type": itemType,
+        name: itemName
       },
       keywords: post.tags.join(", "),
       mainEntityOfPage: canonicalUrl,

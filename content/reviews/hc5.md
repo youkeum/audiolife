@@ -4,6 +4,8 @@ date: "2026-02-18"
 excerpt: "체급의 한계를 뛰어넘은 물량 구성"
 category: "DAC"
 tags: ["리뷰", "DAC", "포터블오디오", "아스텔앤컨"]
+reviewItemType: "Product"
+reviewItemName: "Astell&Kern HC5"
 ---
 
 https://www.youtube.com/watch?v=MAtk5HvQC2A

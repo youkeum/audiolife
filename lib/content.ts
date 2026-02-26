@@ -17,6 +17,8 @@ export type PostMeta = {
   type: PostType;
   coverImage?: string;
   heroTextColor?: "white" | "black";
+  reviewItemType?: "Product" | "Place";
+  reviewItemName?: string;
 };
 
 export type Post = PostMeta & {
@@ -31,6 +33,8 @@ type Frontmatter = {
   tags: string[];
   coverImage?: string;
   heroTextColor?: "white" | "black";
+  reviewItemType?: "Product" | "Place";
+  reviewItemName?: string;
 };
 
 const POST_TYPES: PostType[] = ["reviews", "articles", "columns"];
@@ -291,7 +295,9 @@ function parseFile(type: PostType, fileName: string): { meta: PostMeta; content:
       category: frontmatter.category,
       tags: frontmatter.tags ?? [],
       coverImage: frontmatter.coverImage ?? firstImage,
-      heroTextColor: frontmatter.heroTextColor ?? "white"
+      heroTextColor: frontmatter.heroTextColor ?? "white",
+      reviewItemType: frontmatter.reviewItemType,
+      reviewItemName: frontmatter.reviewItemName
     },
     content
   };
