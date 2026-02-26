@@ -17,24 +17,27 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #1f1b16 0%, #91522c 100%)",
-          color: "#fff"
+          background: "#f5f5f5"
         }}
       >
         <div
           style={{
-            width: 180,
-            height: 180,
+            width: 192,
+            height: 192,
             borderRadius: 999,
-            border: "10px solid rgba(255,255,255,0.85)",
+            border: "5px solid #3b3c44",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            fontSize: 88,
-            fontWeight: 700
+            fontFamily: "Arial",
+            fontSize: 98,
+            lineHeight: 1,
+            color: "#3b3c44",
+            background: "#f7f7f7"
           }}
         >
-          A
+          <span style={{ color: "#d97536", marginRight: 2 }}>A</span>
+          <span>L</span>
         </div>
       </div>
     ),
