@@ -136,21 +136,21 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-27 17:53:57 KST
+- 업데이트 시각: 2026-02-27 17:59:24 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-27 | 6a53131 | Add PD20 article and related media assets
+- 마지막 커밋: 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
 - 콘텐츠 개수: articles=8, reviews=2, columns=7
 
 ### 워킹트리 상태
 - M  AGENT.md
-- A  content/columns/IMAGE_PROMPT_GUIDE.MD
-- A  content/columns/posts/hifi-headfi-100days-day7.md
-- A  public/posts/columns/24.png
-- A  public/posts/columns/25.png
-- A  public/posts/columns/26.png
-- A  public/posts/columns/27.png
+- R  public/posts/articles/PD20/1.png -> public/posts/articles/pd20/1.png
+- R  public/posts/articles/PD20/2.png -> public/posts/articles/pd20/2.png
+- R  public/posts/articles/PD20/3.png -> public/posts/articles/pd20/3.png
+- R  public/posts/articles/PD20/4.png -> public/posts/articles/pd20/4.png
+- R  public/posts/articles/PD20/5.png -> public/posts/articles/pd20/5.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
 - 2026-02-27 | 6a53131 | Add PD20 article and related media assets
 - 2026-02-27 | 8f86044 | Fix topbar wrapping and force favicon to logo route
 - 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
@@ -180,4 +180,3 @@
 - 2026-02-18 | b7bf163 | Add giscus missing env key debug message
 - 2026-02-18 | 425059a | Update magazine UI, post media handling, hero overlay, link cards, and about page formatting
 - 2026-02-18 | 190cdf5 | Update magazine UI, post media handling, hero overlay, link cards, and about page formatting
-- 2026-02-18 | c20f134 | Overlay post title on cover image and add comment box UI
