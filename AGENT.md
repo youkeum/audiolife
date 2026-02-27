@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (7):
+- Articles (8):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
@@ -101,6 +101,7 @@
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
+- pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
 - Reviews (2):
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
@@ -134,17 +135,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-27 10:26:01 KST
+- 업데이트 시각: 2026-02-27 12:23:13 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
-- 콘텐츠 개수: articles=7, reviews=2, columns=6
+- 마지막 커밋: 2026-02-27 | 8f86044 | Fix topbar wrapping and force favicon to logo route
+- 콘텐츠 개수: articles=8, reviews=2, columns=6
 
 ### 워킹트리 상태
 - M  AGENT.md
-- M  app/globals.css
-- M  app/layout.tsx
+- A  content/articles/pd20.md
+- A  public/posts/articles/PD20/1.png
+- A  public/posts/articles/PD20/2.png
+- A  public/posts/articles/PD20/3.png
+- A  public/posts/articles/PD20/4.png
+- A  public/posts/articles/PD20/5.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-27 | 8f86044 | Fix topbar wrapping and force favicon to logo route
 - 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
 - 2026-02-26 | c00a753 | Align favicon icon with AudioLife logo style
 - 2026-02-26 | 3498e05 | Add finalized Day 6 column and Buds4 Pro article
@@ -174,4 +180,3 @@
 - 2026-02-18 | 190cdf5 | Update magazine UI, post media handling, hero overlay, link cards, and about page formatting
 - 2026-02-18 | c20f134 | Overlay post title on cover image and add comment box UI
 - 2026-02-18 | 4c8cd03 | Add cover image extraction, list thumbnails, YouTube embeds, responsive images
-- 2026-02-18 | 49d1938 | Remove menu icon and replace brand logo
