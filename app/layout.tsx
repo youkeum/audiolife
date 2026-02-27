@@ -43,7 +43,9 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: "/icon"
+    icon: [{ url: "/logo?v=2" }],
+    shortcut: [{ url: "/logo?v=2" }],
+    apple: [{ url: "/logo?v=2" }]
   }
 };
 
@@ -61,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <AuthProvider>
           <header className="topbar">
-            <div className="container topbar-wrap">
+            <div className="container topbar-container topbar-wrap">
               <div className="brand-wrap">
                 <a className="brand" href="/">
                   <img className="brand-logo" src="/logo" alt="AudioLife logo" />

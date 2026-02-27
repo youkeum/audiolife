@@ -134,19 +134,18 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-26 22:41:46 KST
+- 업데이트 시각: 2026-02-27 10:26:01 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-26 | c00a753 | Align favicon icon with AudioLife logo style
+- 마지막 커밋: 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
 - 콘텐츠 개수: articles=7, reviews=2, columns=6
 
 ### 워킹트리 상태
 - M  AGENT.md
-- M  app/reviews/[slug]/page.tsx
-- M  content/reviews/_template.md
-- M  content/reviews/hc5.md
-- M  lib/content.ts
+- M  app/globals.css
+- M  app/layout.tsx
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
 - 2026-02-26 | c00a753 | Align favicon icon with AudioLife logo style
 - 2026-02-26 | 3498e05 | Add finalized Day 6 column and Buds4 Pro article
 - 2026-02-25 | 5788b99 | Add finalized Day 5 column and clean AGENT documentation
@@ -176,4 +175,3 @@
 - 2026-02-18 | c20f134 | Overlay post title on cover image and add comment box UI
 - 2026-02-18 | 4c8cd03 | Add cover image extraction, list thumbnails, YouTube embeds, responsive images
 - 2026-02-18 | 49d1938 | Remove menu icon and replace brand logo
-- 2026-02-18 | de027b9 | Update hero latest post logic and redesign dark magazine header/nav

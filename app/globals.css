@@ -38,6 +38,10 @@ a {
   margin: 0 auto;
 }
 
+.topbar-container {
+  width: min(1700px, 97vw);
+}
+
 .topbar {
   position: sticky;
   top: 0;
@@ -91,10 +95,11 @@ a {
 .nav-links {
   display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
   gap: clamp(14px, 2.2vw, 42px);
   padding-top: 8px;
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -160,9 +165,10 @@ a {
 
 .top-auth-user-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 6px;
   justify-content: flex-end;
+  white-space: nowrap;
 }
 
 .top-auth-user a {
@@ -1804,6 +1810,10 @@ footer {
 
   .top-auth-user {
     min-width: 0;
+  }
+
+  .top-auth-user-actions {
+    flex-wrap: wrap;
   }
 
   .search-panel {
