@@ -105,7 +105,7 @@
 - Reviews (2):
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
-- Columns (7):
+- Columns (8):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
@@ -113,6 +113,7 @@
 - hifi-headfi-100days-day5.md | 2026-02-25 | COLUMN | [100일 프로젝트] Day 5 - 주파수와 음높이, 배음의 기초
 - hifi-headfi-100days-day6.md | 2026-02-26 | COLUMN | [100일 프로젝트] Day 6 - 음압과 체감 크기(라우드니스)의 차이
 - hifi-headfi-100days-day7.md | 2026-02-27 | COLUMN | [100일 프로젝트] Day 7 - 데시벨(dB) 완전 기초
+- hifi-headfi-100days-day8.md | 2026-02-28 | COLUMN | [100일 프로젝트] Day 8 - 샘플링레이트가 의미하는 것
 
 ## 8) 재시작 체크리스트
 1. `npm install` 후 `npm run dev` 실행
@@ -136,20 +137,21 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-27 17:59:24 KST
+- 업데이트 시각: 2026-02-28 23:49:20 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
-- 콘텐츠 개수: articles=8, reviews=2, columns=7
+- 마지막 커밋: 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
+- 콘텐츠 개수: articles=8, reviews=2, columns=8
 
 ### 워킹트리 상태
 - M  AGENT.md
-- R  public/posts/articles/PD20/1.png -> public/posts/articles/pd20/1.png
-- R  public/posts/articles/PD20/2.png -> public/posts/articles/pd20/2.png
-- R  public/posts/articles/PD20/3.png -> public/posts/articles/pd20/3.png
-- R  public/posts/articles/PD20/4.png -> public/posts/articles/pd20/4.png
-- R  public/posts/articles/PD20/5.png -> public/posts/articles/pd20/5.png
+- A  content/columns/posts/hifi-headfi-100days-day8.md
+- A  public/posts/columns/28.png
+- A  public/posts/columns/29.png
+- A  public/posts/columns/30.png
+- A  public/posts/columns/31.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
 - 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
 - 2026-02-27 | 6a53131 | Add PD20 article and related media assets
 - 2026-02-27 | 8f86044 | Fix topbar wrapping and force favicon to logo route
@@ -179,4 +181,3 @@
 - 2026-02-19 | dcabfae | Enhance magazine sidebar and add header search with results page
 - 2026-02-18 | b7bf163 | Add giscus missing env key debug message
 - 2026-02-18 | 425059a | Update magazine UI, post media handling, hero overlay, link cards, and about page formatting
-- 2026-02-18 | 190cdf5 | Update magazine UI, post media handling, hero overlay, link cards, and about page formatting
