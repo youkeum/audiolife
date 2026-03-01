@@ -102,9 +102,10 @@
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
-- Reviews (2):
+- Reviews (3):
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
+- taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
 - Columns (8):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
@@ -137,16 +138,23 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-01 11:58:52 KST
+- 업데이트 시각: 2026-03-01 21:35:34 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
-- 콘텐츠 개수: articles=8, reviews=2, columns=8
+- 마지막 커밋: 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
+- 콘텐츠 개수: articles=8, reviews=3, columns=8
 
 ### 워킹트리 상태
 - M  AGENT.md
-- M  app/reviews/[slug]/page.tsx
+- A  content/reviews/taoc.md
+- A  public/posts/reviews/taoc/1.jpg
+- A  public/posts/reviews/taoc/2.jpg
+- A  public/posts/reviews/taoc/3.jpg
+- A  public/posts/reviews/taoc/4.jpg
+- A  public/posts/reviews/taoc/5.jpg
+- A  public/posts/reviews/taoc/6.jpg
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
 - 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
 - 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
 - 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
@@ -176,4 +184,3 @@
 - 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
 - 2026-02-19 | a4c920b | Update Article
 - 2026-02-19 | 9ff7201 | Fix link preview mojibake by adding charset-aware decoding
-- 2026-02-19 | dcabfae | Enhance magazine sidebar and add header search with results page
