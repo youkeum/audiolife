@@ -138,22 +138,28 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-01 21:35:34 KST
+- 업데이트 시각: 2026-03-01 22:08:12 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
+- 마지막 커밋: 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
 - 콘텐츠 개수: articles=8, reviews=3, columns=8
 
 ### 워킹트리 상태
-- M  AGENT.md
-- A  content/reviews/taoc.md
-- A  public/posts/reviews/taoc/1.jpg
-- A  public/posts/reviews/taoc/2.jpg
-- A  public/posts/reviews/taoc/3.jpg
-- A  public/posts/reviews/taoc/4.jpg
-- A  public/posts/reviews/taoc/5.jpg
-- A  public/posts/reviews/taoc/6.jpg
+-  M AGENT.md
+- M  app/admin/layout.tsx
+- M  app/articles/page.tsx
+- M  app/categories/[category]/page.tsx
+- M  app/columns/page.tsx
+- M  app/page.tsx
+- M  app/reviews/page.tsx
+- M  app/search/page.tsx
+- M  app/settings/page.tsx
+- M  app/tags/[tag]/page.tsx
+-  M content/events.ts
+-  M content/reviews/glv.md
+- A  lib/seo.ts
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
 - 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
 - 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
 - 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
@@ -183,4 +189,3 @@
 - 2026-02-19 | a0deb38 | Refresh AGENT snapshot after commit
 - 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
 - 2026-02-19 | a4c920b | Update Article
-- 2026-02-19 | 9ff7201 | Fix link preview mojibake by adding charset-aware decoding

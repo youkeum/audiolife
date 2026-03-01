@@ -1,10 +1,21 @@
+import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import UserSettingsForm from "@/components/UserSettingsForm";
 import { authOptions } from "@/lib/auth";
 
-export const metadata = {
-  title: "설정"
+export const metadata: Metadata = {
+  title: "설정",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true
+    }
+  }
 };
 
 export default async function SettingsPage() {

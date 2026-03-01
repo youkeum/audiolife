@@ -4,7 +4,20 @@ import { getAllPosts, getPostBasePath, getPostTypeLabel } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Search",
-  description: "오디오 리뷰, 기사, 컬럼 검색"
+  description: "오디오 리뷰, 기사, 컬럼 검색",
+  alternates: {
+    canonical: "https://audiolife.kr/search"
+  },
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true
+    }
+  }
 };
 
 type SearchPageProps = {

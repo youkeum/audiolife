@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllPosts, getPostBasePath, getPostTypeLabel } from "@/lib/content";
+import { createItemListJsonLd, createOrganizationJsonLd, createWebSiteJsonLd } from "@/lib/seo";
 
 export default function HomePage() {
   const latestReviews = getAllPosts("reviews");
@@ -12,9 +13,20 @@ export default function HomePage() {
   const reviewList = latestReviews.slice(1, 8);
   const articleList = latestArticles.slice(1, 8);
   const columnHighlights = latestColumns.slice(0, 4);
+  const webSiteJsonLd = createWebSiteJsonLd();
+  const organizationJsonLd = createOrganizationJsonLd();
+  const homeItemListJsonLd = createItemListJsonLd({
+    name: "AudioLife 최신 포스트",
+    description: "AudioLife의 최신 리뷰/기사/컬럼 목록",
+    path: "/",
+    posts: latestMixed.slice(0, 12)
+  });
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeItemListJsonLd) }} />
       {latestPost ? (
         <Link
           className="magazine-hero hero-latest"
