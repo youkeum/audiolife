@@ -137,15 +137,17 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-02-28 23:49:55 KST
+- 업데이트 시각: 2026-03-01 11:58:52 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
+- 마지막 커밋: 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
 - 콘텐츠 개수: articles=8, reviews=2, columns=8
 
 ### 워킹트리 상태
 - M  AGENT.md
+- M  app/reviews/[slug]/page.tsx
 
 ### 최근 커밋 (최신 30개)
+- 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
 - 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
 - 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
 - 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
@@ -175,4 +177,3 @@
 - 2026-02-19 | a4c920b | Update Article
 - 2026-02-19 | 9ff7201 | Fix link preview mojibake by adding charset-aware decoding
 - 2026-02-19 | dcabfae | Enhance magazine sidebar and add header search with results page
-- 2026-02-18 | b7bf163 | Add giscus missing env key debug message

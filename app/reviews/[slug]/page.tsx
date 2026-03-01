@@ -71,31 +71,53 @@ export default async function ReviewDetailPage({ params }: Props) {
     const ogImage = toAbsoluteUrl(post.coverImage);
     const itemType = post.reviewItemType === "Place" ? "Place" : "Product";
     const itemName = post.reviewItemName?.trim() || post.title;
-    const reviewJsonLd = {
-      "@context": "https://schema.org",
+    const reviewCore = {
       "@type": "Review",
-      headline: post.title,
-      description: post.excerpt,
-      datePublished: post.date,
-      dateModified: post.date,
-      image: [ogImage],
-      reviewBody: post.excerpt,
       author: {
         "@type": "Person",
         name: "YK"
       },
-      itemReviewed: {
-        "@type": itemType,
-        name: itemName
-      },
-      keywords: post.tags.join(", "),
-      mainEntityOfPage: canonicalUrl,
-      publisher: {
-        "@type": "Organization",
-        name: "AudioLife",
-        url: SITE_URL
-      }
+      name: post.title,
+      datePublished: post.date,
+      reviewBody: post.excerpt
     };
+
+    const reviewJsonLd =
+      itemType === "Product"
+        ? {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: itemName,
+            description: post.excerpt,
+            image: [ogImage],
+            review: reviewCore,
+            mainEntityOfPage: canonicalUrl
+          }
+        : {
+            "@context": "https://schema.org",
+            "@type": "Review",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            dateModified: post.date,
+            image: [ogImage],
+            reviewBody: post.excerpt,
+            author: {
+              "@type": "Person",
+              name: "YK"
+            },
+            itemReviewed: {
+              "@type": "Place",
+              name: itemName
+            },
+            keywords: post.tags.join(", "),
+            mainEntityOfPage: canonicalUrl,
+            publisher: {
+              "@type": "Organization",
+              name: "AudioLife",
+              url: SITE_URL
+            }
+          };
 
     const recentPosts = [...getAllPosts("reviews"), ...getAllPosts("articles"), ...getAllPosts("columns")]
       .filter((entry) => !(entry.type === "reviews" && entry.slug === params.slug))
