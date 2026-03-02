@@ -106,7 +106,7 @@
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (8):
+- Columns (9):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
@@ -115,6 +115,7 @@
 - hifi-headfi-100days-day6.md | 2026-02-26 | COLUMN | [100일 프로젝트] Day 6 - 음압과 체감 크기(라우드니스)의 차이
 - hifi-headfi-100days-day7.md | 2026-02-27 | COLUMN | [100일 프로젝트] Day 7 - 데시벨(dB) 완전 기초
 - hifi-headfi-100days-day8.md | 2026-02-28 | COLUMN | [100일 프로젝트] Day 8 - 샘플링레이트가 의미하는 것
+- hifi-headfi-100days-day9.md | 2026-03-02 | COLUMN | [100일 프로젝트] Day 9 - 비트뎁스와 다이내믹레인지의 관계
 
 ## 8) 재시작 체크리스트
 1. `npm install` 후 `npm run dev` 실행
@@ -138,27 +139,26 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-01 22:08:12 KST
+- 업데이트 시각: 2026-03-02 13:13:45 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
-- 콘텐츠 개수: articles=8, reviews=3, columns=8
+- 마지막 커밋: 2026-03-01 | 13688c9 | Enhance SEO metadata and structured data
+- 콘텐츠 개수: articles=8, reviews=3, columns=9
 
 ### 워킹트리 상태
 -  M AGENT.md
-- M  app/admin/layout.tsx
-- M  app/articles/page.tsx
-- M  app/categories/[category]/page.tsx
-- M  app/columns/page.tsx
-- M  app/page.tsx
-- M  app/reviews/page.tsx
-- M  app/search/page.tsx
-- M  app/settings/page.tsx
-- M  app/tags/[tag]/page.tsx
+- M  content/columns/AGENT.MD
+- M  content/columns/WRITING_GUIDE.MD
+- A  content/columns/image-prompts/hifi-headfi-100days-day9-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day9.md
 -  M content/events.ts
 -  M content/reviews/glv.md
-- A  lib/seo.ts
+- A  public/posts/columns/32.png
+- A  public/posts/columns/33.png
+- A  public/posts/columns/34.png
+- A  public/posts/columns/35.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-01 | 13688c9 | Enhance SEO metadata and structured data
 - 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
 - 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
 - 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
@@ -188,4 +188,3 @@
 - 2026-02-20 | 964b39f | Add private MyScheduler pages and refine calendar modal behavior
 - 2026-02-19 | a0deb38 | Refresh AGENT snapshot after commit
 - 2026-02-19 | 6e37b3f | Add calendar page and automate staged image optimization
-- 2026-02-19 | a4c920b | Update Article
