@@ -102,7 +102,8 @@
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
-- Reviews (3):
+- Reviews (4):
+- RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
@@ -140,23 +141,24 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-03 22:42:05 KST
+- 업데이트 시각: 2026-03-04 00:55:58 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-02 | 527ff08 | Adjust Day 9 column line breaks
-- 콘텐츠 개수: articles=8, reviews=3, columns=10
+- 마지막 커밋: 2026-03-03 | bc531e8 | Add finalized Day 10 column and image prompts
+- 콘텐츠 개수: articles=8, reviews=4, columns=10
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day10-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day10.md
 -  M content/events.ts
--  M content/reviews/glv.md
-- A  public/posts/columns/36.png
-- A  public/posts/columns/37.png
-- A  public/posts/columns/38.png
-- A  public/posts/columns/39.png
+- A  content/reviews/RS275.md
+- M  content/reviews/glv.md
+- A  public/posts/reviews/rs275/1.png
+- A  public/posts/reviews/rs275/2.png
+- A  public/posts/reviews/rs275/3.png
+- A  public/posts/reviews/rs275/4.png
+- A  public/posts/reviews/rs275/5.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-03 | bc531e8 | Add finalized Day 10 column and image prompts
 - 2026-03-02 | 527ff08 | Adjust Day 9 column line breaks
 - 2026-03-02 | ff97f5a | Add finalized Day 9 column, assets, and image prompts
 - 2026-03-01 | 13688c9 | Enhance SEO metadata and structured data
@@ -186,4 +188,3 @@
 - 2026-02-21 | e69fc06 | Add link button fallback when link card preview fails
 - 2026-02-20 | 5d4b0f7 | Remove duplicate phone frame styling on private page
 - 2026-02-20 | f8a79a3 | Update private MyScheduler page image asset
-- 2026-02-20 | 964b39f | Add private MyScheduler pages and refine calendar modal behavior

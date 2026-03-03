@@ -4,6 +4,8 @@ date: "2026-02-01"
 excerpt: "GLV 신년 청음회"
 category: "TURNTABLE"
 tags: ["리뷰", "TURNTABLE", "하이파이", "GLV", "J_SIKORA"]
+reviewItemType: "Place"
+reviewItemName: "GLV"
 ---
 
 
