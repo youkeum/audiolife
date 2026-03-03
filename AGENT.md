@@ -106,8 +106,9 @@
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (9):
+- Columns (10):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
+- hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
@@ -139,18 +140,24 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-02 14:24:29 KST
+- 업데이트 시각: 2026-03-03 22:42:05 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-02 | ff97f5a | Add finalized Day 9 column, assets, and image prompts
-- 콘텐츠 개수: articles=8, reviews=3, columns=9
+- 마지막 커밋: 2026-03-02 | 527ff08 | Adjust Day 9 column line breaks
+- 콘텐츠 개수: articles=8, reviews=3, columns=10
 
 ### 워킹트리 상태
 -  M AGENT.md
-- M  content/columns/posts/hifi-headfi-100days-day9.md
+- A  content/columns/image-prompts/hifi-headfi-100days-day10-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day10.md
 -  M content/events.ts
 -  M content/reviews/glv.md
+- A  public/posts/columns/36.png
+- A  public/posts/columns/37.png
+- A  public/posts/columns/38.png
+- A  public/posts/columns/39.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-02 | 527ff08 | Adjust Day 9 column line breaks
 - 2026-03-02 | ff97f5a | Add finalized Day 9 column, assets, and image prompts
 - 2026-03-01 | 13688c9 | Enhance SEO metadata and structured data
 - 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
@@ -180,4 +187,3 @@
 - 2026-02-20 | 5d4b0f7 | Remove duplicate phone frame styling on private page
 - 2026-02-20 | f8a79a3 | Update private MyScheduler page image asset
 - 2026-02-20 | 964b39f | Add private MyScheduler pages and refine calendar modal behavior
-- 2026-02-19 | a0deb38 | Refresh AGENT snapshot after commit
