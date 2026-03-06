@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (9):
+- Articles (10):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
@@ -101,6 +101,7 @@
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
+- oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
 - Reviews (4):
@@ -108,10 +109,11 @@
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (11):
+- Columns (12):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
+- hifi-headfi-100days-day12.md | 2026-03-05 | COLUMN | [100일 프로젝트] Day 12 - 무손실(FLAC/ALAC)과 하이레졸루션의 실제 의미
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
@@ -143,27 +145,30 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-04 20:07:06 KST
+- 업데이트 시각: 2026-03-06 10:32:01 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-04 | 29d947a | Add RS275 review post and assets
-- 콘텐츠 개수: articles=9, reviews=4, columns=11
+- 마지막 커밋: 2026-03-04 | 9300fff | Add finalized Day 11 column and image prompts
+- 콘텐츠 개수: articles=10, reviews=4, columns=12
 
 ### 워킹트리 상태
 -  M AGENT.md
 -  M content/columns/hifi-headfi-100days-curriculum.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day11-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day11.md
+- A  content/columns/image-prompts/hifi-headfi-100days-day12-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day12.md
 -  M content/events.ts
-- A  public/posts/columns/40.png
-- A  public/posts/columns/41.png
-- A  public/posts/columns/42.png
-- A  public/posts/columns/43.png
+- A  public/posts/columns/44.png
+- A  public/posts/columns/45.png
+- A  public/posts/columns/46.png
+- A  public/posts/columns/47.png
+- ?? content/articles/oae2.md
 - ?? content/articles/s550.md
 - ?? content/columns/audiolife_qa_checklist.md
 - ?? content/columns/content_qa.py
+- ?? public/posts/articles/oae2/
 - ?? public/posts/articles/s550/
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-04 | 9300fff | Add finalized Day 11 column and image prompts
 - 2026-03-04 | 29d947a | Add RS275 review post and assets
 - 2026-03-03 | bc531e8 | Add finalized Day 10 column and image prompts
 - 2026-03-02 | 527ff08 | Adjust Day 9 column line breaks
@@ -193,4 +198,3 @@
 - 2026-02-22 | 5d3151a | Add Naver site verification meta tag
 - 2026-02-21 | aa867c8 | Document column workflow in AGENT
 - 2026-02-21 | e69fc06 | Add link button fallback when link card preview fails
-- 2026-02-20 | 5d4b0f7 | Remove duplicate phone frame styling on private page
