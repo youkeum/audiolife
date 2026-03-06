@@ -145,29 +145,28 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-06 10:32:01 KST
+- 업데이트 시각: 2026-03-06 10:33:55 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-04 | 9300fff | Add finalized Day 11 column and image prompts
+- 마지막 커밋: 2026-03-06 | 9b71c65 | Add finalized Day 12 column and image prompts
 - 콘텐츠 개수: articles=10, reviews=4, columns=12
 
 ### 워킹트리 상태
--  M AGENT.md
--  M content/columns/hifi-headfi-100days-curriculum.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day12-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day12.md
--  M content/events.ts
-- A  public/posts/columns/44.png
-- A  public/posts/columns/45.png
-- A  public/posts/columns/46.png
-- A  public/posts/columns/47.png
-- ?? content/articles/oae2.md
-- ?? content/articles/s550.md
-- ?? content/columns/audiolife_qa_checklist.md
-- ?? content/columns/content_qa.py
-- ?? public/posts/articles/oae2/
-- ?? public/posts/articles/s550/
+- M  AGENT.md
+- A  content/articles/oae2.md
+- A  content/articles/s550.md
+- A  content/columns/audiolife_qa_checklist.md
+- A  content/columns/content_qa.py
+- M  content/columns/hifi-headfi-100days-curriculum.md
+- M  content/events.ts
+- A  public/posts/articles/oae2/1.png
+- A  public/posts/articles/oae2/2.png
+- A  public/posts/articles/oae2/3.png
+- A  public/posts/articles/s550/1.png
+- A  public/posts/articles/s550/2.png
+- A  public/posts/articles/s550/3.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-06 | 9b71c65 | Add finalized Day 12 column and image prompts
 - 2026-03-04 | 9300fff | Add finalized Day 11 column and image prompts
 - 2026-03-04 | 29d947a | Add RS275 review post and assets
 - 2026-03-03 | bc531e8 | Add finalized Day 10 column and image prompts
@@ -197,4 +196,3 @@
 - 2026-02-22 | 1c351e8 | Add Day 2 column final draft and refine writing guide
 - 2026-02-22 | 5d3151a | Add Naver site verification meta tag
 - 2026-02-21 | aa867c8 | Document column workflow in AGENT
-- 2026-02-21 | e69fc06 | Add link button fallback when link card preview fails

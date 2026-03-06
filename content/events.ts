@@ -46,5 +46,53 @@ export const audioEvents: AudioEvent[] = [
     date: "2026-03-29",
     imageUrl: "/posts/calendar/2.png",
     summary: "VINYL 및 K-AUDIO 청음 행사"
+  },
+    {
+    id: "2026roycouadioshow",
+    title: "2026 Royco Audio Show",
+    date: "2026-04-03",
+    imageUrl: "",
+    summary: "로이코 주관 하이파이 오디오쇼"
+  },
+    {
+    id: "2026roycouadioshow",
+    title: "2026 Royco Audio Show",
+    date: "2026-04-04",
+    imageUrl: "",
+    summary: "로이코 주관 하이파이 오디오쇼"
+  },
+    {
+    id: "2026roycouadioshow",
+    title: "2026 Royco Audio Show",
+    date: "2026-04-05",
+    imageUrl: "",
+    summary: "로이코 주관 하이파이 오디오쇼"
+  },
+   {
+    id: "202603hfisorishop",
+    title: "HFI 소리샵 청음회",
+    date: "2026-03-14",
+    organizerName: "NAVER HFI COMMUNITY",
+    organizerUrl: "https://naver.me/F1az6Cki",
+    imageUrl: "",
+    summary: "오디오벡터 & T+A 청음회"
+  },
+     {
+    id: "pinkfaun",
+    title: "아날로그라운지 Pink Faun CEO 내한 청음회",
+    date: "2026-03-07",
+    organizerName: "Analog Lounge",
+    organizerUrl: "https://cafe.naver.com/hfi/4319",
+    imageUrl: "",
+    summary: "Pink Faun CEO 내한 청음회"
+  },
+   {
+    id: "pinkfaun",
+    title: "아날로그라운지 Pink Faun CEO 내한 청음회",
+    date: "2026-03-08",
+    organizerName: "Analog Lounge",
+    organizerUrl: "https://cafe.naver.com/hfi/4319",
+    imageUrl: "",
+    summary: "Pink Faun CEO 내한 청음회"
   }
 ];
