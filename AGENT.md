@@ -93,13 +93,14 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (10):
+- Articles (11):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
+- meze_astru.md | 2026-03-07 | IEM | Meze Astru
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
@@ -147,26 +148,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-07 11:37:45 KST
+- 업데이트 시각: 2026-03-07 19:46:46 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-07 | 469fd7f | Refine Day 13 column final manuscript
-- 콘텐츠 개수: articles=10, reviews=5, columns=13
+- 마지막 커밋: 2026-03-07 | 8224489 | Update tags for Day 2-13 columns
+- 콘텐츠 개수: articles=11, reviews=5, columns=13
 
 ### 워킹트리 상태
 -  M AGENT.md
-- M  content/columns/posts/hifi-headfi-100days-day10.md
-- M  content/columns/posts/hifi-headfi-100days-day11.md
-- M  content/columns/posts/hifi-headfi-100days-day12.md
-- M  content/columns/posts/hifi-headfi-100days-day13.md
-- M  content/columns/posts/hifi-headfi-100days-day2.md
-- M  content/columns/posts/hifi-headfi-100days-day3.md
-- M  content/columns/posts/hifi-headfi-100days-day4.md
-- M  content/columns/posts/hifi-headfi-100days-day5.md
-- M  content/columns/posts/hifi-headfi-100days-day6.md
-- M  content/columns/posts/hifi-headfi-100days-day7.md
-- M  content/columns/posts/hifi-headfi-100days-day9.md
+- A  content/articles/meze_astru.md
+- A  public/posts/articles/astru/1.png
+- A  public/posts/articles/astru/2.png
+- A  public/posts/articles/astru/3.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-07 | 8224489 | Update tags for Day 2-13 columns
 - 2026-03-07 | 469fd7f | Refine Day 13 column final manuscript
 - 2026-03-07 | dd0f953 | Apply pending content and asset updates
 - 2026-03-07 | f764b81 | Add Day 13 column updates and image prompts
@@ -196,4 +191,3 @@
 - 2026-02-23 | d2ba8ea | Add finalized Day 3 column and update writing guide
 - 2026-02-23 | a4108f1 | feat: 회원 인증/관리자 대시보드 및 헤더-홈 레이아웃 개선
 - 2026-02-22 | de68b20 | feat: add threaded comments and topbar auth modal
-- 2026-02-22 | ed561d4 | fix: add nodemailer for email magic-link signin
