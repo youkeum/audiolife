@@ -149,21 +149,17 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-07 22:11:42 KST
+- 업데이트 시각: 2026-03-07 22:15:23 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-07 | e1bbaa3 | Add Meze Astru article and images
+- 마지막 커밋: 2026-03-07 | f04aeca | Add Pink Faun review post and images
 - 콘텐츠 개수: articles=11, reviews=6, columns=13
 
 ### 워킹트리 상태
--  M AGENT.md
-- A  content/reviews/pinkfaun.md
-- A  public/posts/reviews/pinkfaun/1.jpg
-- A  public/posts/reviews/pinkfaun/2.jpg
-- A  public/posts/reviews/pinkfaun/3.jpg
-- A  public/posts/reviews/pinkfaun/4.jpg
-- A  public/posts/reviews/pinkfaun/5.png
+- M  AGENT.md
+- M  content/reviews/pinkfaun.md
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-07 | f04aeca | Add Pink Faun review post and images
 - 2026-03-07 | e1bbaa3 | Add Meze Astru article and images
 - 2026-03-07 | 8224489 | Update tags for Day 2-13 columns
 - 2026-03-07 | 469fd7f | Refine Day 13 column final manuscript
@@ -193,4 +189,3 @@
 - 2026-02-24 | b02737b | Add SL-1500C(S) article and assets
 - 2026-02-24 | b3dbdb5 | Add finalized Day 4 column and update writing guide
 - 2026-02-23 | d2ba8ea | Add finalized Day 3 column and update writing guide
-- 2026-02-23 | a4108f1 | feat: 회원 인증/관리자 대시보드 및 헤더-홈 레이아웃 개선
