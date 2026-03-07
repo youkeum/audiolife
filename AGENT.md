@@ -110,13 +110,12 @@
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (14):
+- Columns (13):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
 - hifi-headfi-100days-day12.md | 2026-03-05 | COLUMN | [100일 프로젝트] Day 12 - 무손실(FLAC/ALAC)과 하이레졸루션의 실제 의미
 - hifi-headfi-100days-day13.md | 2026-03-06 | COLUMN | [100일 프로젝트] Day 13 - 인간 청각의 특성: 가청대역, 마스킹, 적응
-- hifi-headfi-100days-day14.md | 2026-03-07 | COLUMN | [100일 프로젝트] Day 14 - 등청감곡선과 볼륨 착시
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
@@ -148,27 +147,26 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-06 21:04:40 KST
+- 업데이트 시각: 2026-03-07 11:03:16 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-06 | a42f895 | Add pending articles, QA tooling, and curriculum updates
-- 콘텐츠 개수: articles=10, reviews=5, columns=14
+- 마지막 커밋: 2026-03-06 | 003e911 | Add Cambridge Audio L/R review post and media
+- 콘텐츠 개수: articles=10, reviews=5, columns=13
 
 ### 워킹트리 상태
 -  M AGENT.md
 -  M content/articles/oae2.md
+- A  content/columns/image-prompts/hifi-headfi-100days-day13-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day13.md
 -  M content/events.ts
-- A  content/reviews/cambridgelr.md
-- A  public/posts/reviews/lr/1.jpg
-- A  public/posts/reviews/lr/2.jpg
-- A  public/posts/reviews/lr/3.jpg
-- A  public/posts/reviews/lr/4.png
-- A  public/posts/reviews/lr/5.png
-- A  public/posts/reviews/lr/6.jpg
-- ?? content/columns/posts/hifi-headfi-100days-day13.md
-- ?? content/columns/posts/hifi-headfi-100days-day14.md
+-  M content/reviews/cambridgelr.md
 - ?? public/posts/calendar/3.png
+- ?? public/posts/columns/48.png
+- ?? public/posts/columns/49.png
+- ?? public/posts/columns/50.png
+- ?? public/posts/columns/51.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-06 | 003e911 | Add Cambridge Audio L/R review post and media
 - 2026-03-06 | a42f895 | Add pending articles, QA tooling, and curriculum updates
 - 2026-03-06 | 9b71c65 | Add finalized Day 12 column and image prompts
 - 2026-03-04 | 9300fff | Add finalized Day 11 column and image prompts
@@ -198,4 +196,3 @@
 - 2026-02-22 | cec8ee8 | feat: add comment deletion and admin moderation
 - 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender
 - 2026-02-22 | 1c351e8 | Add Day 2 column final draft and refine writing guide
-- 2026-02-22 | 5d3151a | Add Naver site verification meta tag
