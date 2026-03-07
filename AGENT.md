@@ -105,11 +105,12 @@
 - oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
-- Reviews (5):
+- Reviews (6):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - cambridgelr.md | 2026-03-06 | SPEAKER | 캠브리지오디오 L/R 북셸프 스피커
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
+- pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
 - Columns (13):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
@@ -148,19 +149,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-07 19:46:46 KST
+- 업데이트 시각: 2026-03-07 22:11:42 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-07 | 8224489 | Update tags for Day 2-13 columns
-- 콘텐츠 개수: articles=11, reviews=5, columns=13
+- 마지막 커밋: 2026-03-07 | e1bbaa3 | Add Meze Astru article and images
+- 콘텐츠 개수: articles=11, reviews=6, columns=13
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/meze_astru.md
-- A  public/posts/articles/astru/1.png
-- A  public/posts/articles/astru/2.png
-- A  public/posts/articles/astru/3.png
+- A  content/reviews/pinkfaun.md
+- A  public/posts/reviews/pinkfaun/1.jpg
+- A  public/posts/reviews/pinkfaun/2.jpg
+- A  public/posts/reviews/pinkfaun/3.jpg
+- A  public/posts/reviews/pinkfaun/4.jpg
+- A  public/posts/reviews/pinkfaun/5.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-07 | e1bbaa3 | Add Meze Astru article and images
 - 2026-03-07 | 8224489 | Update tags for Day 2-13 columns
 - 2026-03-07 | 469fd7f | Refine Day 13 column final manuscript
 - 2026-03-07 | dd0f953 | Apply pending content and asset updates
@@ -190,4 +194,3 @@
 - 2026-02-24 | b3dbdb5 | Add finalized Day 4 column and update writing guide
 - 2026-02-23 | d2ba8ea | Add finalized Day 3 column and update writing guide
 - 2026-02-23 | a4108f1 | feat: 회원 인증/관리자 대시보드 및 헤더-홈 레이아웃 개선
-- 2026-02-22 | de68b20 | feat: add threaded comments and topbar auth modal
