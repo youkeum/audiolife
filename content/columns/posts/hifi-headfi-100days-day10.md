@@ -3,7 +3,7 @@ title: "[100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식"
 date: "2026-03-03"
 excerpt: "샘플링레이트와 비트뎁스가 실제 파일 안에서 어떻게 엮일까요? PCM의 저장 구조, 비트레이트 계산, WAV/FLAC/손실압축의 차이를 입문자 기준으로 정리합니다."
 category: "COLUMN"
-tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트"]
+tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트", "샘플링레이트", "PCM"]
 ---
 
 ![메인](/posts/columns/36.png)

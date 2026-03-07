@@ -3,7 +3,7 @@ title: "[100일 프로젝트] Day 12 - 무손실(FLAC/ALAC)과 하이레졸루�
 date: "2026-03-05"
 excerpt: "FLAC과 ALAC은 왜 원본과 같다고 할까요? 무손실 압축과 하이레졸루션 음원의 의미, 음악 감상에서의 실제 체감 차이를 정리합니다."
 category: "COLUMN"
-tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트"]
+tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트", "무손실 압축"]
 ---
 
 ![메인](/posts/columns/44.png)

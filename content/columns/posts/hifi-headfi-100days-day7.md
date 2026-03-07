@@ -3,7 +3,7 @@ title: "[100일 프로젝트] Day 7 - 데시벨(dB) 완전 기초"
 date: "2026-02-27"
 excerpt: "dB는 왜 로그 단위를 쓸까요? 전력/전압 dB 계산, dB SPL과 dBFS의 차이까지 입문자 기준으로 정리합니다."
 category: "COLUMN"
-tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트"]
+tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트", "데시벨", "dB SPL"]
 ---
 
 ![메인](/posts/columns/24.png)

@@ -3,7 +3,7 @@ title: "[100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계"
 date: "2026-03-04"
 excerpt: "MP3와 AAC는 어떻게 용량을 줄일까요? 손실 압축의 원리, 청취 영향, 재인코딩 한계 등을 입문자 눈높이에서 정리합니다."
 category: "COLUMN"
-tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트"]
+tags: ["컬럼", "입문", "HiFi", "HeadFi", "100일프로젝트", "손실압축"]
 ---
 
 ![메인](/posts/columns/40.png)
