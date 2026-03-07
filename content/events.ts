@@ -51,21 +51,21 @@ export const audioEvents: AudioEvent[] = [
     id: "2026roycouadioshow",
     title: "2026 Royco Audio Show",
     date: "2026-04-03",
-    imageUrl: "",
+    imageUrl: "/posts/calendar/3.png",
     summary: "로이코 주관 하이파이 오디오쇼"
   },
     {
     id: "2026roycouadioshow",
     title: "2026 Royco Audio Show",
     date: "2026-04-04",
-    imageUrl: "",
+    imageUrl: "/posts/calendar/3.png",
     summary: "로이코 주관 하이파이 오디오쇼"
   },
     {
     id: "2026roycouadioshow",
     title: "2026 Royco Audio Show",
     date: "2026-04-05",
-    imageUrl: "",
+    imageUrl: "/posts/calendar/3.png",
     summary: "로이코 주관 하이파이 오디오쇼"
   },
    {

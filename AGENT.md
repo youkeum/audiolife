@@ -147,25 +147,24 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-07 11:03:16 KST
+- 업데이트 시각: 2026-03-07 11:08:42 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-06 | 003e911 | Add Cambridge Audio L/R review post and media
+- 마지막 커밋: 2026-03-07 | f764b81 | Add Day 13 column updates and image prompts
 - 콘텐츠 개수: articles=10, reviews=5, columns=13
 
 ### 워킹트리 상태
--  M AGENT.md
--  M content/articles/oae2.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day13-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day13.md
--  M content/events.ts
--  M content/reviews/cambridgelr.md
-- ?? public/posts/calendar/3.png
-- ?? public/posts/columns/48.png
-- ?? public/posts/columns/49.png
-- ?? public/posts/columns/50.png
-- ?? public/posts/columns/51.png
+- M  AGENT.md
+- M  content/articles/oae2.md
+- M  content/events.ts
+- M  content/reviews/cambridgelr.md
+- A  public/posts/calendar/3.png
+- A  public/posts/columns/48.png
+- A  public/posts/columns/49.png
+- A  public/posts/columns/50.png
+- A  public/posts/columns/51.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-07 | f764b81 | Add Day 13 column updates and image prompts
 - 2026-03-06 | 003e911 | Add Cambridge Audio L/R review post and media
 - 2026-03-06 | a42f895 | Add pending articles, QA tooling, and curriculum updates
 - 2026-03-06 | 9b71c65 | Add finalized Day 12 column and image prompts
@@ -195,4 +194,3 @@
 - 2026-02-22 | ed561d4 | fix: add nodemailer for email magic-link signin
 - 2026-02-22 | cec8ee8 | feat: add comment deletion and admin moderation
 - 2026-02-22 | 9a771c4 | feat: member auth comments and admin email sender
-- 2026-02-22 | 1c351e8 | Add Day 2 column final draft and refine writing guide
