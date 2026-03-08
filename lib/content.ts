@@ -12,6 +12,7 @@ export type PostMeta = {
   title: string;
   date: string;
   excerpt: string;
+  bodyPreview?: string;
   category: string;
   tags: string[];
   type: PostType;
@@ -72,6 +73,33 @@ export function getPostTypeLabel(type: PostType) {
 function extractFirstImagePath(markdown: string): string | undefined {
   const match = markdown.match(/!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/);
   return match?.[1];
+}
+
+function extractPreviewText(markdown: string, maxLength = 190): string {
+  const noImages = markdown.replace(/!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/g, " ");
+  const noLinks = noImages.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1");
+  const noStandaloneUrls = noLinks.replace(/^https?:\/\/\S+$/gm, " ");
+  const noHtml = noStandaloneUrls.replace(/<[^>]+>/g, " ");
+
+  const merged = noHtml
+    .split("\n")
+    .map((line) =>
+      line
+        .replace(/^#{1,6}\s*/, "")
+        .replace(/^[-*+]\s+/, "")
+        .replace(/^\d+\.\s+/, "")
+        .trim()
+    )
+    .filter((line) => line !== "" && !line.startsWith("```"))
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (merged.length <= maxLength) {
+    return merged;
+  }
+
+  return `${merged.slice(0, maxLength).trimEnd()}...`;
 }
 
 function removeFirstImage(markdown: string): string {
@@ -292,6 +320,7 @@ function parseFile(type: PostType, fileName: string): { meta: PostMeta; content:
       title: frontmatter.title,
       date: frontmatter.date,
       excerpt: frontmatter.excerpt,
+      bodyPreview: extractPreviewText(content),
       category: frontmatter.category,
       tags: frontmatter.tags ?? [],
       coverImage: frontmatter.coverImage ?? firstImage,
