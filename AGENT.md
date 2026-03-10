@@ -112,7 +112,7 @@
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (15):
+- Columns (16):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
@@ -120,6 +120,7 @@
 - hifi-headfi-100days-day13.md | 2026-03-06 | COLUMN | [100일 프로젝트] Day 13 - 인간 청각의 특성: 가청대역, 마스킹, 적응
 - hifi-headfi-100days-day14.md | 2026-03-08 | COLUMN | [100일 프로젝트] Day 14 - 등청감곡선과 볼륨 착시
 - hifi-headfi-100days-day15.md | 2026-03-09 | COLUMN | [100일 프로젝트] Day 15 - 라우드니스 워: 왜 음원은 점점 더 커졌는가
+- hifi-headfi-100days-day16.md | 2026-03-10 | COLUMN | [100일 프로젝트] Day 16 - 스트리밍 라우드니스 노멀라이제이션(LUFS)과 실제 청감 차이
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
@@ -151,22 +152,23 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-09 22:05:31 KST
+- 업데이트 시각: 2026-03-10 15:01:19 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-08 | bd044e0 | Refine home article list layout and spacing
-- 콘텐츠 개수: articles=11, reviews=6, columns=15
+- 마지막 커밋: 2026-03-09 | 9c40023 | Add finalized Day 15 column and images
+- 콘텐츠 개수: articles=11, reviews=6, columns=16
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day15-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day15.md
-- A  public/posts/columns/56.png
-- A  public/posts/columns/57.png
-- A  public/posts/columns/58.png
-- A  public/posts/columns/59.png
+- A  content/columns/image-prompts/hifi-headfi-100days-day16-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day16.md
+- A  public/posts/columns/60.png
+- A  public/posts/columns/61.png
+- A  public/posts/columns/62.png
+- A  public/posts/columns/63.png
 - ?? public/posts/stella/
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-09 | 9c40023 | Add finalized Day 15 column and images
 - 2026-03-08 | bd044e0 | Refine home article list layout and spacing
 - 2026-03-08 | bfb08ff | Add finalized Day 14 column and images
 - 2026-03-07 | 4114e1e | Revise Pink Faun review content
@@ -196,4 +198,3 @@
 - 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
 - 2026-02-26 | c00a753 | Align favicon icon with AudioLife logo style
 - 2026-02-26 | 3498e05 | Add finalized Day 6 column and Buds4 Pro article
-- 2026-02-25 | 5788b99 | Add finalized Day 5 column and clean AGENT documentation
