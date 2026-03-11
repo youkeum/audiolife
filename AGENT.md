@@ -105,12 +105,13 @@
 - oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
-- Reviews (6):
+- Reviews (7):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - cambridgelr.md | 2026-03-06 | SPEAKER | 캠브리지오디오 L/R 북셸프 스피커
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
+- stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
 - Columns (16):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
@@ -152,22 +153,23 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-10 15:01:19 KST
+- 업데이트 시각: 2026-03-12 00:07:19 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-09 | 9c40023 | Add finalized Day 15 column and images
-- 콘텐츠 개수: articles=11, reviews=6, columns=16
+- 마지막 커밋: 2026-03-10 | e24d109 | Add finalized Day 16 column and images
+- 콘텐츠 개수: articles=11, reviews=7, columns=16
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day16-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day16.md
-- A  public/posts/columns/60.png
-- A  public/posts/columns/61.png
-- A  public/posts/columns/62.png
-- A  public/posts/columns/63.png
-- ?? public/posts/stella/
+- A  content/reviews/stella.md
+- A  public/posts/reviews/stella/1.jpg
+- A  public/posts/reviews/stella/2.jpg
+- A  public/posts/reviews/stella/3.jpg
+- A  public/posts/reviews/stella/4.jpg
+- A  public/posts/reviews/stella/5.jpg
+- A  public/posts/reviews/stella/6.jpg
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-10 | e24d109 | Add finalized Day 16 column and images
 - 2026-03-09 | 9c40023 | Add finalized Day 15 column and images
 - 2026-03-08 | bd044e0 | Refine home article list layout and spacing
 - 2026-03-08 | bfb08ff | Add finalized Day 14 column and images
@@ -197,4 +199,3 @@
 - 2026-02-27 | 8f86044 | Fix topbar wrapping and force favicon to logo route
 - 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
 - 2026-02-26 | c00a753 | Align favicon icon with AudioLife logo style
-- 2026-02-26 | 3498e05 | Add finalized Day 6 column and Buds4 Pro article
