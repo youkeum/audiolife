@@ -93,10 +93,11 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (11):
+- Articles (12):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
+- ab92.md | 2026-03-13 | HEADPHONE | ARCTEC AB92
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
@@ -155,21 +156,21 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-13 11:11:07 KST
+- 업데이트 시각: 2026-03-13 12:37:54 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-12 | bb49fb6 | Add finalized Day 17 column and images
-- 콘텐츠 개수: articles=11, reviews=7, columns=18
+- 마지막 커밋: 2026-03-13 | b64c8d4 | Add finalized Day 18 column and images
+- 콘텐츠 개수: articles=12, reviews=7, columns=18
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day18-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day18.md
-- A  public/posts/columns/68.png
-- A  public/posts/columns/69.png
-- A  public/posts/columns/70.png
-- A  public/posts/columns/71.png
+- A  content/articles/ab92.md
+- A  public/posts/articles/ab92/1.png
+- A  public/posts/articles/ab92/2.png
+- A  public/posts/articles/ab92/3.png
+- A  public/posts/articles/ab92/4.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-13 | b64c8d4 | Add finalized Day 18 column and images
 - 2026-03-12 | bb49fb6 | Add finalized Day 17 column and images
 - 2026-03-12 | 799f0b7 | Add STELLA review draft and renamed images
 - 2026-03-10 | e24d109 | Add finalized Day 16 column and images
@@ -199,4 +200,3 @@
 - 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
 - 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
 - 2026-02-27 | 6a53131 | Add PD20 article and related media assets
-- 2026-02-27 | 8f86044 | Fix topbar wrapping and force favicon to logo route
