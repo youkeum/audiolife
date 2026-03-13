@@ -113,7 +113,7 @@
 - pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (17):
+- Columns (18):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
@@ -123,6 +123,7 @@
 - hifi-headfi-100days-day15.md | 2026-03-09 | COLUMN | [100일 프로젝트] Day 15 - 라우드니스 워: 왜 음원은 점점 더 커졌는가
 - hifi-headfi-100days-day16.md | 2026-03-10 | COLUMN | [100일 프로젝트] Day 16 - 스트리밍 라우드니스 노멀라이제이션(LUFS)과 실제 청감 차이
 - hifi-headfi-100days-day17.md | 2026-03-12 | COLUMN | [100일 프로젝트] Day 17 - 오디오 표현 용어 1: 밝음, 따뜻함, 선명함
+- hifi-headfi-100days-day18.md | 2026-03-13 | COLUMN | [100일 프로젝트] Day 18 - 오디오 표현 용어 2: 해상도, 분리도, 밀도, 공간감
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
@@ -154,21 +155,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-12 17:10:34 KST
+- 업데이트 시각: 2026-03-13 11:11:07 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-12 | 799f0b7 | Add STELLA review draft and renamed images
-- 콘텐츠 개수: articles=11, reviews=7, columns=17
+- 마지막 커밋: 2026-03-12 | bb49fb6 | Add finalized Day 17 column and images
+- 콘텐츠 개수: articles=11, reviews=7, columns=18
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day17-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day17.md
-- A  public/posts/columns/64.png
-- A  public/posts/columns/65.png
-- A  public/posts/columns/66.png
-- A  public/posts/columns/67.png
+- A  content/columns/image-prompts/hifi-headfi-100days-day18-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day18.md
+- A  public/posts/columns/68.png
+- A  public/posts/columns/69.png
+- A  public/posts/columns/70.png
+- A  public/posts/columns/71.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-12 | bb49fb6 | Add finalized Day 17 column and images
 - 2026-03-12 | 799f0b7 | Add STELLA review draft and renamed images
 - 2026-03-10 | e24d109 | Add finalized Day 16 column and images
 - 2026-03-09 | 9c40023 | Add finalized Day 15 column and images
@@ -198,4 +200,3 @@
 - 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
 - 2026-02-27 | 6a53131 | Add PD20 article and related media assets
 - 2026-02-27 | 8f86044 | Fix topbar wrapping and force favicon to logo route
-- 2026-02-26 | 10f717d | Improve review schema with YK author and item type fields
