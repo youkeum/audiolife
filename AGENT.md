@@ -106,12 +106,13 @@
 - oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
-- Reviews (7):
+- Reviews (8):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - cambridgelr.md | 2026-03-06 | SPEAKER | 캠브리지오디오 L/R 북셸프 스피커
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
 - pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
+- r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
 - Columns (18):
@@ -156,20 +157,23 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-13 12:37:54 KST
+- 업데이트 시각: 2026-03-15 10:16:07 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-13 | b64c8d4 | Add finalized Day 18 column and images
-- 콘텐츠 개수: articles=12, reviews=7, columns=18
+- 마지막 커밋: 2026-03-13 | 3dcb8f4 | Add AB92 article and media assets
+- 콘텐츠 개수: articles=12, reviews=8, columns=18
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/ab92.md
-- A  public/posts/articles/ab92/1.png
-- A  public/posts/articles/ab92/2.png
-- A  public/posts/articles/ab92/3.png
-- A  public/posts/articles/ab92/4.png
+- A  content/reviews/r10arrete.md
+- A  public/posts/reviews/r10arrete/1.jpg
+- A  public/posts/reviews/r10arrete/2.jpg
+- A  public/posts/reviews/r10arrete/3.jpg
+- A  public/posts/reviews/r10arrete/4.jpg
+- A  public/posts/reviews/r10arrete/5.jpg
+- A  public/posts/reviews/r10arrete/6.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-13 | 3dcb8f4 | Add AB92 article and media assets
 - 2026-03-13 | b64c8d4 | Add finalized Day 18 column and images
 - 2026-03-12 | bb49fb6 | Add finalized Day 17 column and images
 - 2026-03-12 | 799f0b7 | Add STELLA review draft and renamed images
@@ -199,4 +203,3 @@
 - 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
 - 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
 - 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
-- 2026-02-27 | 6a53131 | Add PD20 article and related media assets
