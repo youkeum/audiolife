@@ -115,7 +115,7 @@
 - r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (18):
+- Columns (19):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
@@ -126,6 +126,7 @@
 - hifi-headfi-100days-day16.md | 2026-03-10 | COLUMN | [100일 프로젝트] Day 16 - 스트리밍 라우드니스 노멀라이제이션(LUFS)과 실제 청감 차이
 - hifi-headfi-100days-day17.md | 2026-03-12 | COLUMN | [100일 프로젝트] Day 17 - 오디오 표현 용어 1: 밝음, 따뜻함, 선명함
 - hifi-headfi-100days-day18.md | 2026-03-13 | COLUMN | [100일 프로젝트] Day 18 - 오디오 표현 용어 2: 해상도, 분리도, 밀도, 공간감
+- hifi-headfi-100days-day19.md | 2026-03-15 | COLUMN | [100일 프로젝트] Day 19 - 스테레오 이미지와 사운드스테이지 입문
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
@@ -157,22 +158,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-15 10:16:07 KST
+- 업데이트 시각: 2026-03-15 14:52:08 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-13 | 3dcb8f4 | Add AB92 article and media assets
-- 콘텐츠 개수: articles=12, reviews=8, columns=18
+- 마지막 커밋: 2026-03-15 | 7a7cdab | Add R10 Arrete review post and images
+- 콘텐츠 개수: articles=12, reviews=8, columns=19
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/reviews/r10arrete.md
-- A  public/posts/reviews/r10arrete/1.jpg
-- A  public/posts/reviews/r10arrete/2.jpg
-- A  public/posts/reviews/r10arrete/3.jpg
-- A  public/posts/reviews/r10arrete/4.jpg
-- A  public/posts/reviews/r10arrete/5.jpg
-- A  public/posts/reviews/r10arrete/6.png
+- A  content/columns/image-prompts/hifi-headfi-100days-day19-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day19.md
+- A  public/posts/columns/72.png
+- A  public/posts/columns/73.png
+- A  public/posts/columns/74.png
+- A  public/posts/columns/75.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-15 | 7a7cdab | Add R10 Arrete review post and images
 - 2026-03-13 | 3dcb8f4 | Add AB92 article and media assets
 - 2026-03-13 | b64c8d4 | Add finalized Day 18 column and images
 - 2026-03-12 | bb49fb6 | Add finalized Day 17 column and images
@@ -202,4 +203,3 @@
 - 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
 - 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
 - 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
-- 2026-02-27 | ba69563 | Add finalized Day 7 column and image prompt guide
