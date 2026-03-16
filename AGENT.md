@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (12):
+- Articles (13):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
@@ -105,6 +105,7 @@
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
+- s400mk3.md | 2026-03-16 | SPEAKER | Buchardt Audio S400 MK3
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
 - Reviews (8):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
@@ -158,21 +159,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-15 14:52:08 KST
+- 업데이트 시각: 2026-03-16 18:22:26 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-15 | 7a7cdab | Add R10 Arrete review post and images
-- 콘텐츠 개수: articles=12, reviews=8, columns=19
+- 마지막 커밋: 2026-03-15 | a34ba71 | Add finalized Day 19 column and images
+- 콘텐츠 개수: articles=13, reviews=8, columns=19
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day19-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day19.md
-- A  public/posts/columns/72.png
-- A  public/posts/columns/73.png
-- A  public/posts/columns/74.png
-- A  public/posts/columns/75.png
+- A  content/articles/s400mk3.md
+- A  public/posts/articles/s400mk3/1.jpeg
+- A  public/posts/articles/s400mk3/2.png
+- A  public/posts/articles/s400mk3/3.jpeg
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-15 | a34ba71 | Add finalized Day 19 column and images
 - 2026-03-15 | 7a7cdab | Add R10 Arrete review post and images
 - 2026-03-13 | 3dcb8f4 | Add AB92 article and media assets
 - 2026-03-13 | b64c8d4 | Add finalized Day 18 column and images
@@ -202,4 +202,3 @@
 - 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
 - 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
 - 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
-- 2026-02-27 | 61917af | Normalize PD20 asset directory to lowercase path
