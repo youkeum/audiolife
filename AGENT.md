@@ -116,7 +116,7 @@
 - r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (19):
+- Columns (20):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
@@ -129,6 +129,7 @@
 - hifi-headfi-100days-day18.md | 2026-03-13 | COLUMN | [100일 프로젝트] Day 18 - 오디오 표현 용어 2: 해상도, 분리도, 밀도, 공간감
 - hifi-headfi-100days-day19.md | 2026-03-15 | COLUMN | [100일 프로젝트] Day 19 - 스테레오 이미지와 사운드스테이지 입문
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
+- hifi-headfi-100days-day20.md | 2026-03-16 | COLUMN | [100일 프로젝트] Day 20 - 다양한 장르별 감상 포인트
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
 - hifi-headfi-100days-day5.md | 2026-02-25 | COLUMN | [100일 프로젝트] Day 5 - 주파수와 음높이, 배음의 기초
@@ -159,19 +160,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-16 18:22:26 KST
+- 업데이트 시각: 2026-03-16 22:26:23 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-15 | a34ba71 | Add finalized Day 19 column and images
-- 콘텐츠 개수: articles=13, reviews=8, columns=19
+- 마지막 커밋: 2026-03-16 | 3c0ca6e | Add S400 MK3 article and images
+- 콘텐츠 개수: articles=13, reviews=8, columns=20
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/s400mk3.md
-- A  public/posts/articles/s400mk3/1.jpeg
-- A  public/posts/articles/s400mk3/2.png
-- A  public/posts/articles/s400mk3/3.jpeg
+- A  content/columns/image-prompts/hifi-headfi-100days-day20-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day20.md
+- A  public/posts/columns/76.png
+- A  public/posts/columns/77.png
+- A  public/posts/columns/78.png
+- A  public/posts/columns/79.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-16 | 3c0ca6e | Add S400 MK3 article and images
 - 2026-03-15 | a34ba71 | Add finalized Day 19 column and images
 - 2026-03-15 | 7a7cdab | Add R10 Arrete review post and images
 - 2026-03-13 | 3dcb8f4 | Add AB92 article and media assets
@@ -201,4 +205,3 @@
 - 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
 - 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
 - 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
-- 2026-02-28 | d34c09e | Add finalized Day 8 column and assets
