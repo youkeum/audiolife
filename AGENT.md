@@ -93,11 +93,12 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (13):
+- Articles (14):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
 - ab92.md | 2026-03-13 | HEADPHONE | ARCTEC AB92
+- airpodmax2.md | 2026-03-17 | HEADPHONE | 에어팟 맥스2
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
@@ -160,21 +161,21 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-16 22:26:23 KST
+- 업데이트 시각: 2026-03-17 12:17:14 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-16 | 3c0ca6e | Add S400 MK3 article and images
-- 콘텐츠 개수: articles=13, reviews=8, columns=20
+- 마지막 커밋: 2026-03-16 | bd320a9 | Add finalized Day 20 column and images
+- 콘텐츠 개수: articles=14, reviews=8, columns=20
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day20-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day20.md
-- A  public/posts/columns/76.png
-- A  public/posts/columns/77.png
-- A  public/posts/columns/78.png
-- A  public/posts/columns/79.png
+- A  content/articles/airpodmax2.md
+- A  public/posts/articles/airpodmax2/1.png
+- A  public/posts/articles/airpodmax2/2.png
+- A  public/posts/articles/airpodmax2/3.png
+- A  public/posts/articles/airpodmax2/4.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-16 | bd320a9 | Add finalized Day 20 column and images
 - 2026-03-16 | 3c0ca6e | Add S400 MK3 article and images
 - 2026-03-15 | a34ba71 | Add finalized Day 19 column and images
 - 2026-03-15 | 7a7cdab | Add R10 Arrete review post and images
@@ -204,4 +205,3 @@
 - 2026-03-01 | 13688c9 | Enhance SEO metadata and structured data
 - 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
 - 2026-03-01 | c367e06 | Adjust review schema to embed Product review data
-- 2026-02-28 | 4a165cb | Update AGENT status after Day 8 commit
