@@ -161,20 +161,19 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-17 12:17:14 KST
+- 업데이트 시각: 2026-03-17 15:34:56 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-16 | bd320a9 | Add finalized Day 20 column and images
+- 마지막 커밋: 2026-03-17 | 54f154c | Add AirPods Max 2 article and images
 - 콘텐츠 개수: articles=14, reviews=8, columns=20
 
 ### 워킹트리 상태
--  M AGENT.md
-- A  content/articles/airpodmax2.md
-- A  public/posts/articles/airpodmax2/1.png
-- A  public/posts/articles/airpodmax2/2.png
-- A  public/posts/articles/airpodmax2/3.png
-- A  public/posts/articles/airpodmax2/4.png
+- M  AGENT.md
+- M  app/globals.css
+- M  app/layout.tsx
+- M  lib/seo.ts
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-17 | 54f154c | Add AirPods Max 2 article and images
 - 2026-03-16 | bd320a9 | Add finalized Day 20 column and images
 - 2026-03-16 | 3c0ca6e | Add S400 MK3 article and images
 - 2026-03-15 | a34ba71 | Add finalized Day 19 column and images
@@ -204,4 +203,3 @@
 - 2026-03-02 | ff97f5a | Add finalized Day 9 column, assets, and image prompts
 - 2026-03-01 | 13688c9 | Enhance SEO metadata and structured data
 - 2026-03-01 | 0ea31e8 | Add TAOC review post and media assets
-- 2026-03-01 | c367e06 | Adjust review schema to embed Product review data

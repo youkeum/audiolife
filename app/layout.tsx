@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     default: "AudioLife",
     template: "%s | AudioLife"
   },
-  description: "오디오 리뷰, 기사, 컬럼 아카이브",
+  description: "AudioLife는 하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진입니다.",
   alternates: {
     canonical: "https://audiolife.kr"
   },
   keywords: ["오디오", "헤드폰", "스피커", "DAC", "앰프", "오디오 리뷰", "오디오 기사", "오디오 컬럼"],
   openGraph: {
     title: "AudioLife",
-    description: "오디오 리뷰, 기사, 컬럼 아카이브",
+    description: "AudioLife는 하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진입니다.",
     url: "https://audiolife.kr",
     siteName: "AudioLife",
     locale: "ko_KR",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AudioLife",
-    description: "오디오 리뷰, 기사, 컬럼 아카이브",
+    description: "AudioLife는 하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진입니다.",
     images: ["/opengraph-image"]
   },
   verification: {
@@ -69,6 +69,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <img className="brand-logo" src="/logo" alt="AudioLife logo" />
                   AudioLife
                 </a>
+                <p className="brand-subcopy">
+                  하이파이·헤드파이 리뷰, 오디오 업계 기사, 오디오 컬럼을 제공하는 한국어 오디오 웹매거진
+                </p>
               </div>
               <nav className="nav" aria-label="주요 메뉴">
                 <div className="nav-links">

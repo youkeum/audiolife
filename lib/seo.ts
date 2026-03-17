@@ -21,6 +21,7 @@ export function createWebSiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "AudioLife",
+    description: "하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진",
     url: SITE_URL,
     inLanguage: "ko-KR",
     potentialAction: {
@@ -36,6 +37,7 @@ export function createOrganizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "AudioLife",
+    description: "오디오 리뷰, 기사, 컬럼 콘텐츠를 발행하는 한국어 오디오 웹매거진",
     url: SITE_URL,
     logo: `${SITE_URL}/logo?v=2`
   };
