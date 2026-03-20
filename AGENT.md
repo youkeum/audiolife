@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (14):
+- Articles (15):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
@@ -103,6 +103,7 @@
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - meze_astru.md | 2026-03-07 | IEM | Meze Astru
+- michiprestige.md | 2026-03-19 | HIFI | 로텔 미치 프레스티지
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
@@ -162,21 +163,18 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-18 21:46:49 KST
+- 업데이트 시각: 2026-03-20 11:29:39 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-17 | 7646727 | Refine header subcopy and homepage SEO signals
-- 콘텐츠 개수: articles=14, reviews=8, columns=21
+- 마지막 커밋: 2026-03-19 | f42b056 | Add Michi Prestige article and images
+- 콘텐츠 개수: articles=15, reviews=8, columns=21
 
 ### 워킹트리 상태
--  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day21-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day21.md
-- A  public/posts/columns/80.png
-- A  public/posts/columns/81.png
-- A  public/posts/columns/82.png
-- A  public/posts/columns/83.png
+- M  AGENT.md
+- M  app/reviews/[slug]/page.tsx
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-19 | f42b056 | Add Michi Prestige article and images
+- 2026-03-18 | a332d21 | Add finalized Day 21 column and images
 - 2026-03-17 | 7646727 | Refine header subcopy and homepage SEO signals
 - 2026-03-17 | 54f154c | Add AirPods Max 2 article and images
 - 2026-03-16 | bd320a9 | Add finalized Day 20 column and images
@@ -205,5 +203,3 @@
 - 2026-03-04 | 29d947a | Add RS275 review post and assets
 - 2026-03-03 | bc531e8 | Add finalized Day 10 column and image prompts
 - 2026-03-02 | 527ff08 | Adjust Day 9 column line breaks
-- 2026-03-02 | ff97f5a | Add finalized Day 9 column, assets, and image prompts
-- 2026-03-01 | 13688c9 | Enhance SEO metadata and structured data

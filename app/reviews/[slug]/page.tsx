@@ -69,7 +69,7 @@ export default async function ReviewDetailPage({ params }: Props) {
     const post = await getPostBySlug("reviews", params.slug);
     const canonicalUrl = `${SITE_URL}/reviews/${post.slug}`;
     const ogImage = toAbsoluteUrl(post.coverImage);
-    const itemType = post.reviewItemType === "Place" ? "Place" : "Product";
+    const itemType = post.reviewItemType === "Place" ? "LocalBusiness" : "Product";
     const itemName = post.reviewItemName?.trim() || post.title;
     const reviewCore = {
       "@type": "Review",
@@ -107,7 +107,7 @@ export default async function ReviewDetailPage({ params }: Props) {
               name: "YK"
             },
             itemReviewed: {
-              "@type": "Place",
+              "@type": "LocalBusiness",
               name: itemName
             },
             keywords: post.tags.join(", "),
