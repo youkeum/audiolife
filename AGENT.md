@@ -118,7 +118,7 @@
 - r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (21):
+- Columns (22):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
@@ -133,6 +133,7 @@
 - hifi-headfi-100days-day2.md | 2026-02-22 | COLUMN | [100일 프로젝트] Day 2 - 좋은 소리란 무엇인가 (공학 vs 취향)
 - hifi-headfi-100days-day20.md | 2026-03-16 | COLUMN | [100일 프로젝트] Day 20 - 다양한 장르별 감상 포인트
 - hifi-headfi-100days-day21.md | 2026-03-18 | COLUMN | [100일 프로젝트] Day 21 - 헤드폰 타입: 오픈백, 클로즈드, 세미오픈
+- hifi-headfi-100days-day22.md | 2026-03-20 | COLUMN | [100일 프로젝트] Day 22 - IEM 착용과 실링: 최고의 소리를 위한 맞춤
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
 - hifi-headfi-100days-day5.md | 2026-02-25 | COLUMN | [100일 프로젝트] Day 5 - 주파수와 음높이, 배음의 기초
@@ -163,16 +164,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-20 11:29:39 KST
+- 업데이트 시각: 2026-03-20 19:18:46 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-19 | f42b056 | Add Michi Prestige article and images
-- 콘텐츠 개수: articles=15, reviews=8, columns=21
+- 마지막 커밋: 2026-03-20 | c7b0a21 | Fix review schema itemReviewed type for place posts
+- 콘텐츠 개수: articles=15, reviews=8, columns=22
 
 ### 워킹트리 상태
-- M  AGENT.md
-- M  app/reviews/[slug]/page.tsx
+-  M AGENT.md
+- A  content/columns/image-prompts/hifi-headfi-100days-day22-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day22.md
+- A  public/posts/columns/84.png
+- A  public/posts/columns/85.png
+- A  public/posts/columns/86.png
+- A  public/posts/columns/87.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-20 | c7b0a21 | Fix review schema itemReviewed type for place posts
 - 2026-03-19 | f42b056 | Add Michi Prestige article and images
 - 2026-03-18 | a332d21 | Add finalized Day 21 column and images
 - 2026-03-17 | 7646727 | Refine header subcopy and homepage SEO signals
@@ -202,4 +209,3 @@
 - 2026-03-04 | 9300fff | Add finalized Day 11 column and image prompts
 - 2026-03-04 | 29d947a | Add RS275 review post and assets
 - 2026-03-03 | bc531e8 | Add finalized Day 10 column and image prompts
-- 2026-03-02 | 527ff08 | Adjust Day 9 column line breaks
