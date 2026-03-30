@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (18):
+- Articles (19):
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
@@ -102,6 +102,7 @@
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
+- fosi_s3.md | 2026-03-28 | STREAMER | 포시 오디오 S3
 - meze_astru.md | 2026-03-07 | IEM | Meze Astru
 - michiprestige.md | 2026-03-19 | HIFI | 로텔 미치 프레스티지
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
@@ -121,7 +122,7 @@
 - r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (25):
+- Columns (26):
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
@@ -140,6 +141,7 @@
 - hifi-headfi-100days-day23.md | 2026-03-22 | COLUMN | [100일 프로젝트] Day 23 - 헤드폰 드라이버 1: 다이내믹 드라이버
 - hifi-headfi-100days-day24.md | 2026-03-24 | COLUMN | [100일 프로젝트] Day 24 - 헤드폰 드라이버 2: 플래너 마그네틱 드라이버
 - hifi-headfi-100days-day25.md | 2026-03-27 | COLUMN | [100일 프로젝트] Day 25 - 헤드폰 드라이버 3: 정전형 드라이버
+- hifi-headfi-100days-day26.md | 2026-03-30 | COLUMN | [100일 프로젝트] Day 26 - IEM 드라이버 종류: 다이내믹, 밸런스드 아마추어, 그리고 하이브리드
 - hifi-headfi-100days-day3.md | 2026-02-23 | COLUMN | [100일 프로젝트] Day 3 - 오디오 신호 체인 한눈에 보기
 - hifi-headfi-100days-day4.md | 2026-02-24 | COLUMN | [100일 프로젝트] Day 4 - 소리의 세 가지 축: 주파수, 크기, 시간
 - hifi-headfi-100days-day5.md | 2026-02-25 | COLUMN | [100일 프로젝트] Day 5 - 주파수와 음높이, 배음의 기초
@@ -170,21 +172,23 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-27 22:17:22 KST
+- 업데이트 시각: 2026-03-30 19:24:29 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-25 | 2f51abf | Add VC-E mini article and images
-- 콘텐츠 개수: articles=18, reviews=8, columns=25
+- 마지막 커밋: 2026-03-28 | 3a5ed3b | Add Fosi Audio S3 article and images
+- 콘텐츠 개수: articles=19, reviews=8, columns=26
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day25-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day25.md
-- A  public/posts/columns/96.png
-- A  public/posts/columns/97.png
-- A  public/posts/columns/98.png
-- A  public/posts/columns/99.png
+- A  content/columns/image-prompts/hifi-headfi-100days-day26-image-prompts.md
+- A  content/columns/posts/hifi-headfi-100days-day26.md
+- A  public/posts/columns/100.png
+- A  public/posts/columns/101.png
+- A  public/posts/columns/102.png
+- A  public/posts/columns/103.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-03-28 | 3a5ed3b | Add Fosi Audio S3 article and images
+- 2026-03-27 | 98b1fd7 | Add finalized Day 25 column and images
 - 2026-03-25 | 2f51abf | Add VC-E mini article and images
 - 2026-03-24 | 2b8a7fd | Add finalized Day 24 column and images
 - 2026-03-24 | 0c8cff1 | Add Sonova article and image
@@ -213,5 +217,3 @@
 - 2026-03-07 | e1bbaa3 | Add Meze Astru article and images
 - 2026-03-07 | 8224489 | Update tags for Day 2-13 columns
 - 2026-03-07 | 469fd7f | Refine Day 13 column final manuscript
-- 2026-03-07 | dd0f953 | Apply pending content and asset updates
-- 2026-03-07 | f764b81 | Add Day 13 column updates and image prompts
