@@ -94,5 +94,23 @@ export const audioEvents: AudioEvent[] = [
     organizerUrl: "https://cafe.naver.com/hfi/4319",
     imageUrl: "",
     summary: "Pink Faun CEO 내한 청음회"
-  }
+  },
+     {
+    id: "koneav",
+    title: "윌슨 XVX 크로노소닉 & 볼더 2110/2150 시연회",
+    date: "2026-04-22",
+    organizerName: "KONE AV",
+    organizerUrl: "https://cafe.naver.com/samaudio/7389",
+    imageUrl: "/posts/calendar/4.jpg",
+    summary: "케이원에이브이 정기 시연회"
+  },
+  {
+    id: "202604hfisaemenergy",
+    title: "HFI 샘에너지 청음회",
+    date: "2026-04-18",
+    organizerName: "NAVER HFI COMMUNITY",
+    organizerUrl: "https://cafe.naver.com/f-e/cafes/31297892/articles/4571?boardtype=L&referrerAllArticles=false",
+    imageUrl: "",
+    summary: "우마미 블랙 카트리지 국내 런칭회"
+  },
 ];
