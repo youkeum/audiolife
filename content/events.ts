@@ -113,4 +113,13 @@ export const audioEvents: AudioEvent[] = [
     imageUrl: "",
     summary: "우마미 블랙 카트리지 국내 런칭회"
   },
+   {
+    id: "202605sohgom",
+    title: "소곰 JBL 마칼루 청음회",
+    date: "2026-05-02",
+    organizerName: "SOHGOM",
+    organizerUrl: "https://cafe.naver.com/f-e/cafes/30169838/articles/39333?boardtype=L&referrerAllArticles=false",
+    imageUrl: "/posts/calendar/5.jpg",
+    summary: "JBL 마칼루 & VAC 마스터 프리/파워 앰프 청음회"
+  },
 ];
