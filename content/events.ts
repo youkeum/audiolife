@@ -122,4 +122,13 @@ export const audioEvents: AudioEvent[] = [
     imageUrl: "/posts/calendar/5.jpg",
     summary: "JBL 마칼루 & VAC 마스터 프리/파워 앰프 청음회"
   },
+  {
+    id: "202605royco",
+    title: "로이코 제34회 정기 시청회",
+    date: "2026-05-28",
+    organizerName: "Royco",
+    organizerUrl: "",
+    imageUrl: "/posts/calendar/6.jpg",
+    summary: "매킨토시 MCD12000을 통한 CD 청음회"
+  },
 ];
