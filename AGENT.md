@@ -93,36 +93,62 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (19):
+- Articles (38):
+- 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
+- a550.md | 2026-04-25 | HEADPHONE | 코스(KOSS) A/550
 - ab92.md | 2026-03-13 | HEADPHONE | ARCTEC AB92
 - airpodmax2.md | 2026-03-17 | HEADPHONE | 에어팟 맥스2
+- applebluetooth.md | 2026-05-01 | BLUETOOTH | 블루투스 코덱에 대한 애플의 입장
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
+- autobiography.md | 2026-04-24 | SPEAKER | 윌슨 오디오 오토바이오그라피(Autobiography)
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
+- buf.md | 2026-04-30 | ACC | Schiit Buf
+- cadentia3.md | 2026-04-15 | SPEAKER | Audio First Designs Cadentia 3
+- chimera.md | 2026-05-12 | EARPHONE | 캠프파이어 오디오 키메라(Chimera)
+- designone.md | 2026-05-20 | CDP | YBA 디자인 원(Design One)
+- evoone.md | 2026-05-15 | DAP | 에보아리아(EvoAria) 에보원(Evo One)
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - fosi_s3.md | 2026-03-28 | STREAMER | 포시 오디오 S3
+- hiplay.md | 2026-05-06 | NETWORK | 무선 전송에 대한 화웨이의 대답, 하이플레이(HiPlay)
+- ibuki.md | 2026-04-23 | EARPHONE | 브리즈 오디오 이부키(IBUKI)
+- k1k.md | 2026-04-20 | HEADPHONE | APOS K1K
+- lunisse.md | 2026-05-20 | EARPHONE | 미아톤 루니스(Lunisse)
 - meze_astru.md | 2026-03-07 | IEM | Meze Astru
+- mg200.md | 2026-05-16 | EARPHONE | 샨링 다크스페이스 MG200
 - michiprestige.md | 2026-03-19 | HIFI | 로텔 미치 프레스티지
+- momentum5.md | 2026-05-26 | HEADPHONE | 젠하이저 모멘텀5 와이어리스
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
+- noble_luban.md | 2026-04-14 | EARPHONE | 노블 오디오 루반(Lu Ban)
 - nodeaudioatom.md | 2026-03-21 | SPEAKER | Node Audio Atom
 - oae2.md | 2026-03-06 | HEADPHONE | 그렐 오디오 OAE2 출격 준비
 - pd20.md | 2026-02-27 | IEM | 아스텔앤컨 PD20
+- quartet.md | 2026-05-22 | HIFI | 코드 쿼르텟 업스케일러(Quartet Upscaler)
+- reskin.md | 2026-05-07 | HEADPHONE | 오디지 멕스웰2 리스킨(ReSkin)
+- roon.md | 2026-05-15 | NETWORK | roon 11주 이용권 $1
 - s400mk3.md | 2026-03-16 | SPEAKER | Buchardt Audio S400 MK3
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
 - sonova.md | 2026-03-24 | HEADPHONE | 소노바, 젠하이저 매각 발표
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
-- Reviews (8):
+- Reviews (12):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
+- arranger.md | 2026-05-06 | HEADPHONE | 오스트리안 오디오 어레인저(Arranger)
+- cadentia3.md | 2026-04-30 | SPEAKER | Audio First Designs Cadentia3
 - cambridgelr.md | 2026-03-06 | SPEAKER | 캠브리지오디오 L/R 북셸프 스피커
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
+- pd20.md | 2026-04-10 | DAP | 조작하는 맛이 있다. 아스텔앤컨 PD20
 - pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
 - r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
+- sonusfaber.md | 2026-05-24 | SPEAKER | 소너스파베르 아이다2 & 아마티 수프림
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (26):
+- Columns (29):
+- headphonestycolumn1.md | 2026-03-31 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(1)
+- headphonestycolumn2.md | 2026-04-06 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(2)
+- headphonestycolumn3.md | 2026-04-08 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(3)
 - hifi-headfi-100days-day1.md | 2026-02-21 | COLUMN | [100일 프로젝트] Day 1 - Hi-Fi와 Head-Fi는 무엇이 다를까
 - hifi-headfi-100days-day10.md | 2026-03-03 | COLUMN | [100일 프로젝트] Day 10 - PCM 오디오가 소리를 담는 방식
 - hifi-headfi-100days-day11.md | 2026-03-04 | COLUMN | [100일 프로젝트] Day 11 - 손실압축(MP3/AAC) 원리와 한계
@@ -172,48 +198,46 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-03-30 19:24:29 KST
+- 업데이트 시각: 2026-05-26 21:52:18 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-03-28 | 3a5ed3b | Add Fosi Audio S3 article and images
-- 콘텐츠 개수: articles=19, reviews=8, columns=26
+- 마지막 커밋: 2026-05-24 | d5203b8 | Add Quartet Upscaler article and images
+- 콘텐츠 개수: articles=38, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/image-prompts/hifi-headfi-100days-day26-image-prompts.md
-- A  content/columns/posts/hifi-headfi-100days-day26.md
-- A  public/posts/columns/100.png
-- A  public/posts/columns/101.png
-- A  public/posts/columns/102.png
-- A  public/posts/columns/103.png
+- A  content/articles/momentum5.md
+- A  public/posts/articles/momentum5/1.png
+- A  public/posts/articles/momentum5/2.jpg
+- A  public/posts/articles/momentum5/3.jpg
 
 ### 최근 커밋 (최신 30개)
+- 2026-05-24 | d5203b8 | Add Quartet Upscaler article and images
+- 2026-05-24 | 33ebfa9 | Add Sonus Faber review and images
+- 2026-05-20 | 7538444 | Add Design One article and images
+- 2026-05-20 | 64d4af8 | Add Lunisse article and images
+- 2026-05-16 | bdd674e | Add Shanling MG200 article and images
+- 2026-05-15 | ce02e1d | Add Evo One article and images
+- 2026-05-15 | bfd284f | Add Roon anniversary article and image
+- 2026-05-14 | e867fd7 | Add Sony 1000X article and images
+- 2026-05-14 | d87c2af | Add Royco listening event and calendar image
+- 2026-05-12 | 9fb8812 | Add Chimera article and images
+- 2026-05-07 | 4aec380 | Add Maxwell 2 ReSkin article and images
+- 2026-05-06 | da96d8e | Add HiPlay article and Arranger review
+- 2026-05-01 | 9679dde | Add Apple Bluetooth article and images
+- 2026-04-30 | cc7bbf4 | Add May audio event and calendar image
+- 2026-04-30 | 4090a46 | Add Cadentia3 review and images
+- 2026-04-30 | 5a8ccae | Add Schiit Buf article and images
+- 2026-04-25 | e6fac4b | Add KOSS A/550 article and images
+- 2026-04-24 | ca319a7 | Add Wilson Audio Autobiography article and images
+- 2026-04-23 | 385ea33 | Add Brise Audio Ibuki article and images
+- 2026-04-20 | 8eb75a4 | Add APOS K1K article and images
+- 2026-04-15 | 7083930 | Add Cadentia 3 article and images
+- 2026-04-14 | 57ab0f8 | Add April audio events and calendar image
+- 2026-04-14 | 90ef057 | Add Noble Luban article and images
+- 2026-04-10 | 7d03239 | Add PD20 review and images
+- 2026-04-08 | 218e441 | Add Headphonesty column 3 and images
+- 2026-04-06 | 4b4cc05 | Add Headphonesty column 2 and images
+- 2026-03-31 | 3f5e01c | Add Headphonesty column 1 and images
+- 2026-03-30 | ffbe4f7 | Add finalized Day 26 column and images
 - 2026-03-28 | 3a5ed3b | Add Fosi Audio S3 article and images
 - 2026-03-27 | 98b1fd7 | Add finalized Day 25 column and images
-- 2026-03-25 | 2f51abf | Add VC-E mini article and images
-- 2026-03-24 | 2b8a7fd | Add finalized Day 24 column and images
-- 2026-03-24 | 0c8cff1 | Add Sonova article and image
-- 2026-03-22 | 68646da | Add finalized Day 23 column and images
-- 2026-03-21 | 23ad894 | Add Node Audio Atom article and images
-- 2026-03-20 | e5e9c73 | Add finalized Day 22 column and images
-- 2026-03-20 | c7b0a21 | Fix review schema itemReviewed type for place posts
-- 2026-03-19 | f42b056 | Add Michi Prestige article and images
-- 2026-03-18 | a332d21 | Add finalized Day 21 column and images
-- 2026-03-17 | 7646727 | Refine header subcopy and homepage SEO signals
-- 2026-03-17 | 54f154c | Add AirPods Max 2 article and images
-- 2026-03-16 | bd320a9 | Add finalized Day 20 column and images
-- 2026-03-16 | 3c0ca6e | Add S400 MK3 article and images
-- 2026-03-15 | a34ba71 | Add finalized Day 19 column and images
-- 2026-03-15 | 7a7cdab | Add R10 Arrete review post and images
-- 2026-03-13 | 3dcb8f4 | Add AB92 article and media assets
-- 2026-03-13 | b64c8d4 | Add finalized Day 18 column and images
-- 2026-03-12 | bb49fb6 | Add finalized Day 17 column and images
-- 2026-03-12 | 799f0b7 | Add STELLA review draft and renamed images
-- 2026-03-10 | e24d109 | Add finalized Day 16 column and images
-- 2026-03-09 | 9c40023 | Add finalized Day 15 column and images
-- 2026-03-08 | bd044e0 | Refine home article list layout and spacing
-- 2026-03-08 | bfb08ff | Add finalized Day 14 column and images
-- 2026-03-07 | 4114e1e | Revise Pink Faun review content
-- 2026-03-07 | f04aeca | Add Pink Faun review post and images
-- 2026-03-07 | e1bbaa3 | Add Meze Astru article and images
-- 2026-03-07 | 8224489 | Update tags for Day 2-13 columns
-- 2026-03-07 | 469fd7f | Refine Day 13 column final manuscript
