@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (38):
+- Articles (39):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -115,6 +115,7 @@
 - hiplay.md | 2026-05-06 | NETWORK | 무선 전송에 대한 화웨이의 대답, 하이플레이(HiPlay)
 - ibuki.md | 2026-04-23 | EARPHONE | 브리즈 오디오 이부키(IBUKI)
 - k1k.md | 2026-04-20 | HEADPHONE | APOS K1K
+- liberty5pro.md | 2026-05-28 | EARPHONE | 앤커 사운드코어 리버티5 시리즈
 - lunisse.md | 2026-05-20 | EARPHONE | 미아톤 루니스(Lunisse)
 - meze_astru.md | 2026-03-07 | IEM | Meze Astru
 - mg200.md | 2026-05-16 | EARPHONE | 샨링 다크스페이스 MG200
@@ -198,19 +199,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-05-26 21:52:18 KST
+- 업데이트 시각: 2026-05-28 10:01:17 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-05-24 | d5203b8 | Add Quartet Upscaler article and images
-- 콘텐츠 개수: articles=38, reviews=12, columns=29
+- 마지막 커밋: 2026-05-26 | db5d507 | Add Momentum 5 article and images
+- 콘텐츠 개수: articles=39, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/momentum5.md
-- A  public/posts/articles/momentum5/1.png
-- A  public/posts/articles/momentum5/2.jpg
-- A  public/posts/articles/momentum5/3.jpg
+- A  content/articles/liberty5pro.md
+- A  public/posts/articles/liberty5pro/1.jpeg
+- A  public/posts/articles/liberty5pro/2.png
+- A  public/posts/articles/liberty5pro/3.jpeg
 
 ### 최근 커밋 (최신 30개)
+- 2026-05-26 | db5d507 | Add Momentum 5 article and images
 - 2026-05-24 | d5203b8 | Add Quartet Upscaler article and images
 - 2026-05-24 | 33ebfa9 | Add Sonus Faber review and images
 - 2026-05-20 | 7538444 | Add Design One article and images
@@ -240,4 +242,3 @@
 - 2026-03-31 | 3f5e01c | Add Headphonesty column 1 and images
 - 2026-03-30 | ffbe4f7 | Add finalized Day 26 column and images
 - 2026-03-28 | 3a5ed3b | Add Fosi Audio S3 article and images
-- 2026-03-27 | 98b1fd7 | Add finalized Day 25 column and images
