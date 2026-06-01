@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (39):
+- Articles (40):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -132,6 +132,7 @@
 - s400mk3.md | 2026-03-16 | SPEAKER | Buchardt Audio S400 MK3
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
 - sonova.md | 2026-03-24 | HEADPHONE | 소노바, 젠하이저 매각 발표
+- sp4000t.md | 2026-06-01 | DAP | 아스텔앤컨 SP4000T
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
 - Reviews (12):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
@@ -199,19 +200,21 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-05-28 10:01:17 KST
+- 업데이트 시각: 2026-06-01 21:30:04 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-05-26 | db5d507 | Add Momentum 5 article and images
-- 콘텐츠 개수: articles=39, reviews=12, columns=29
+- 마지막 커밋: 2026-05-28 | f7efbd3 | Add Liberty 5 Pro article and images
+- 콘텐츠 개수: articles=40, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/liberty5pro.md
-- A  public/posts/articles/liberty5pro/1.jpeg
-- A  public/posts/articles/liberty5pro/2.png
-- A  public/posts/articles/liberty5pro/3.jpeg
+- A  content/articles/sp4000t.md
+- A  public/posts/articles/sp4000t/1.png
+- A  public/posts/articles/sp4000t/2.png
+- A  public/posts/articles/sp4000t/3.png
+- A  public/posts/articles/sp4000t/4.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-05-28 | f7efbd3 | Add Liberty 5 Pro article and images
 - 2026-05-26 | db5d507 | Add Momentum 5 article and images
 - 2026-05-24 | d5203b8 | Add Quartet Upscaler article and images
 - 2026-05-24 | 33ebfa9 | Add Sonus Faber review and images
@@ -241,4 +244,3 @@
 - 2026-04-06 | 4b4cc05 | Add Headphonesty column 2 and images
 - 2026-03-31 | 3f5e01c | Add Headphonesty column 1 and images
 - 2026-03-30 | ffbe4f7 | Add finalized Day 26 column and images
-- 2026-03-28 | 3a5ed3b | Add Fosi Audio S3 article and images
