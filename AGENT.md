@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (40):
+- Articles (41):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -104,6 +104,7 @@
 - applebluetooth.md | 2026-05-01 | BLUETOOTH | 블루투스 코덱에 대한 애플의 입장
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
 - autobiography.md | 2026-04-24 | SPEAKER | 윌슨 오디오 오토바이오그라피(Autobiography)
+- autoeq.md | 2026-06-02 | HIFI | SVS AUTO EQ
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - buf.md | 2026-04-30 | ACC | Schiit Buf
 - cadentia3.md | 2026-04-15 | SPEAKER | Audio First Designs Cadentia 3
@@ -200,20 +201,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-06-01 21:30:04 KST
+- 업데이트 시각: 2026-06-02 22:49:28 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-05-28 | f7efbd3 | Add Liberty 5 Pro article and images
-- 콘텐츠 개수: articles=40, reviews=12, columns=29
+- 마지막 커밋: 2026-06-01 | 7684be1 | Add SP4000T article and images
+- 콘텐츠 개수: articles=41, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/sp4000t.md
-- A  public/posts/articles/sp4000t/1.png
-- A  public/posts/articles/sp4000t/2.png
-- A  public/posts/articles/sp4000t/3.png
-- A  public/posts/articles/sp4000t/4.png
+- A  content/articles/autoeq.md
+- A  public/posts/articles/autoeq/1.png
+- A  public/posts/articles/autoeq/2.jpg
+- A  public/posts/articles/autoeq/3.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-06-01 | 7684be1 | Add SP4000T article and images
 - 2026-05-28 | f7efbd3 | Add Liberty 5 Pro article and images
 - 2026-05-26 | db5d507 | Add Momentum 5 article and images
 - 2026-05-24 | d5203b8 | Add Quartet Upscaler article and images
@@ -243,4 +244,3 @@
 - 2026-04-08 | 218e441 | Add Headphonesty column 3 and images
 - 2026-04-06 | 4b4cc05 | Add Headphonesty column 2 and images
 - 2026-03-31 | 3f5e01c | Add Headphonesty column 1 and images
-- 2026-03-30 | ffbe4f7 | Add finalized Day 26 column and images
