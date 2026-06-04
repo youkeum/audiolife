@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (41):
+- Articles (42):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -135,6 +135,7 @@
 - sonova.md | 2026-03-24 | HEADPHONE | 소노바, 젠하이저 매각 발표
 - sp4000t.md | 2026-06-01 | DAP | 아스텔앤컨 SP4000T
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
+- wiimbar.md | 2026-06-04 | SOUNDBAR | 윔(WiiM) 바(Bar)
 - Reviews (12):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - arranger.md | 2026-05-06 | HEADPHONE | 오스트리안 오디오 어레인저(Arranger)
@@ -201,19 +202,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-06-02 22:49:28 KST
+- 업데이트 시각: 2026-06-04 09:41:20 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-06-01 | 7684be1 | Add SP4000T article and images
-- 콘텐츠 개수: articles=41, reviews=12, columns=29
+- 마지막 커밋: 2026-06-02 | 2f7206d | Add SVS Auto EQ article and images
+- 콘텐츠 개수: articles=42, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/autoeq.md
-- A  public/posts/articles/autoeq/1.png
-- A  public/posts/articles/autoeq/2.jpg
-- A  public/posts/articles/autoeq/3.png
+- A  content/articles/wiimbar.md
+- A  public/posts/articles/wiimbar/1.png
+- A  public/posts/articles/wiimbar/2.png
+- A  public/posts/articles/wiimbar/3.jpg
 
 ### 최근 커밋 (최신 30개)
+- 2026-06-02 | 2f7206d | Add SVS Auto EQ article and images
 - 2026-06-01 | 7684be1 | Add SP4000T article and images
 - 2026-05-28 | f7efbd3 | Add Liberty 5 Pro article and images
 - 2026-05-26 | db5d507 | Add Momentum 5 article and images
@@ -243,4 +245,3 @@
 - 2026-04-10 | 7d03239 | Add PD20 review and images
 - 2026-04-08 | 218e441 | Add Headphonesty column 3 and images
 - 2026-04-06 | 4b4cc05 | Add Headphonesty column 2 and images
-- 2026-03-31 | 3f5e01c | Add Headphonesty column 1 and images
