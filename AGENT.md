@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (42):
+- Articles (43):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -103,6 +103,7 @@
 - airpodmax2.md | 2026-03-17 | HEADPHONE | 에어팟 맥스2
 - applebluetooth.md | 2026-05-01 | BLUETOOTH | 블루투스 코덱에 대한 애플의 입장
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
+- arta.md | 2026-06-04 | HEADPHONE | 메제(MEZE) 아르타(ARTA)
 - autobiography.md | 2026-04-24 | SPEAKER | 윌슨 오디오 오토바이오그라피(Autobiography)
 - autoeq.md | 2026-06-02 | HIFI | SVS AUTO EQ
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
@@ -202,19 +203,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-06-04 09:41:20 KST
+- 업데이트 시각: 2026-06-04 11:17:15 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-06-02 | 2f7206d | Add SVS Auto EQ article and images
-- 콘텐츠 개수: articles=42, reviews=12, columns=29
+- 마지막 커밋: 2026-06-04 | 402e003 | Add WiiM Bar article and images
+- 콘텐츠 개수: articles=43, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/wiimbar.md
-- A  public/posts/articles/wiimbar/1.png
-- A  public/posts/articles/wiimbar/2.png
-- A  public/posts/articles/wiimbar/3.jpg
+- A  content/articles/arta.md
+- A  public/posts/articles/arta/1.png
+- A  public/posts/articles/arta/2.png
+- A  public/posts/articles/arta/3.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-06-04 | 402e003 | Add WiiM Bar article and images
 - 2026-06-02 | 2f7206d | Add SVS Auto EQ article and images
 - 2026-06-01 | 7684be1 | Add SP4000T article and images
 - 2026-05-28 | f7efbd3 | Add Liberty 5 Pro article and images
@@ -244,4 +246,3 @@
 - 2026-04-14 | 90ef057 | Add Noble Luban article and images
 - 2026-04-10 | 7d03239 | Add PD20 review and images
 - 2026-04-08 | 218e441 | Add Headphonesty column 3 and images
-- 2026-04-06 | 4b4cc05 | Add Headphonesty column 2 and images
