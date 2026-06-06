@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (43):
+- Articles (46):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -111,14 +111,17 @@
 - cadentia3.md | 2026-04-15 | SPEAKER | Audio First Designs Cadentia 3
 - chimera.md | 2026-05-12 | EARPHONE | 캠프파이어 오디오 키메라(Chimera)
 - designone.md | 2026-05-20 | CDP | YBA 디자인 원(Design One)
+- dragonflycopper.md | 2026-06-05 | USB DAC | 오디오퀘스트 드래곤플라이 코퍼(Dragonfly Copper)
 - evoone.md | 2026-05-15 | DAP | 에보아리아(EvoAria) 에보원(Evo One)
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - fosi_s3.md | 2026-03-28 | STREAMER | 포시 오디오 S3
+- golink2max.md | 2026-06-06 | USB DAC | iFi 고 링크2 맥스(GO Link 2 Max)
 - hiplay.md | 2026-05-06 | NETWORK | 무선 전송에 대한 화웨이의 대답, 하이플레이(HiPlay)
 - ibuki.md | 2026-04-23 | EARPHONE | 브리즈 오디오 이부키(IBUKI)
 - k1k.md | 2026-04-20 | HEADPHONE | APOS K1K
 - liberty5pro.md | 2026-05-28 | EARPHONE | 앤커 사운드코어 리버티5 시리즈
 - lunisse.md | 2026-05-20 | EARPHONE | 미아톤 루니스(Lunisse)
+- ma2375.md | 2026-06-04 | HIFI | 매킨토시 진공관 인티앰프, MA2375
 - meze_astru.md | 2026-03-07 | IEM | Meze Astru
 - mg200.md | 2026-05-16 | EARPHONE | 샨링 다크스페이스 MG200
 - michiprestige.md | 2026-03-19 | HIFI | 로텔 미치 프레스티지
@@ -203,19 +206,26 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-06-04 11:17:15 KST
+- 업데이트 시각: 2026-06-06 21:40:14 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-06-04 | 402e003 | Add WiiM Bar article and images
-- 콘텐츠 개수: articles=43, reviews=12, columns=29
+- 마지막 커밋: 2026-06-04 | fb5635a | Add Meze Arta article and images
+- 콘텐츠 개수: articles=46, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/arta.md
-- A  public/posts/articles/arta/1.png
-- A  public/posts/articles/arta/2.png
-- A  public/posts/articles/arta/3.png
+- A  content/articles/dragonflycopper.md
+- A  content/articles/golink2max.md
+- A  public/posts/articles/dragonflycopper/1.jpg
+- A  public/posts/articles/dragonflycopper/2.jpg
+- A  public/posts/articles/dragonflycopper/3.jpg
+- A  public/posts/articles/golink2max/1.png
+- A  public/posts/articles/golink2max/2.png
+- A  public/posts/articles/golink2max/3.png
+- ?? content/articles/ma2375.md
+- ?? public/posts/articles/ma2375/
 
 ### 최근 커밋 (최신 30개)
+- 2026-06-04 | fb5635a | Add Meze Arta article and images
 - 2026-06-04 | 402e003 | Add WiiM Bar article and images
 - 2026-06-02 | 2f7206d | Add SVS Auto EQ article and images
 - 2026-06-01 | 7684be1 | Add SP4000T article and images
@@ -245,4 +255,3 @@
 - 2026-04-14 | 57ab0f8 | Add April audio events and calendar image
 - 2026-04-14 | 90ef057 | Add Noble Luban article and images
 - 2026-04-10 | 7d03239 | Add PD20 review and images
-- 2026-04-08 | 218e441 | Add Headphonesty column 3 and images
