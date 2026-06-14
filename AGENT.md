@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (46):
+- Articles (47):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -138,6 +138,7 @@
 - s550.md | 2026-03-04 | HEADPHONE | 그라도 S550
 - sonova.md | 2026-03-24 | HEADPHONE | 소노바, 젠하이저 매각 발표
 - sp4000t.md | 2026-06-01 | DAP | 아스텔앤컨 SP4000T
+- trailliiultra.md | 2026-06-14 | EARPHONE | 오리올루스 트라일리 울트라 IEM 시스템
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
 - wiimbar.md | 2026-06-04 | SOUNDBAR | 윔(WiiM) 바(Bar)
 - Reviews (12):
@@ -206,25 +207,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-06-06 21:40:14 KST
+- 업데이트 시각: 2026-06-14 19:41:49 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-06-04 | fb5635a | Add Meze Arta article and images
-- 콘텐츠 개수: articles=46, reviews=12, columns=29
+- 마지막 커밋: 2026-06-06 | 931f6f7 | Add DragonFly Copper and GO Link 2 Max articles
+- 콘텐츠 개수: articles=47, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/dragonflycopper.md
-- A  content/articles/golink2max.md
-- A  public/posts/articles/dragonflycopper/1.jpg
-- A  public/posts/articles/dragonflycopper/2.jpg
-- A  public/posts/articles/dragonflycopper/3.jpg
-- A  public/posts/articles/golink2max/1.png
-- A  public/posts/articles/golink2max/2.png
-- A  public/posts/articles/golink2max/3.png
+- A  content/articles/trailliiultra.md
+- A  public/posts/articles/trailliiultra/1.png
+- A  public/posts/articles/trailliiultra/2.png
+- A  public/posts/articles/trailliiultra/3.png
 - ?? content/articles/ma2375.md
 - ?? public/posts/articles/ma2375/
 
 ### 최근 커밋 (최신 30개)
+- 2026-06-06 | 931f6f7 | Add DragonFly Copper and GO Link 2 Max articles
 - 2026-06-04 | fb5635a | Add Meze Arta article and images
 - 2026-06-04 | 402e003 | Add WiiM Bar article and images
 - 2026-06-02 | 2f7206d | Add SVS Auto EQ article and images
@@ -254,4 +252,3 @@
 - 2026-04-15 | 7083930 | Add Cadentia 3 article and images
 - 2026-04-14 | 57ab0f8 | Add April audio events and calendar image
 - 2026-04-14 | 90ef057 | Add Noble Luban article and images
-- 2026-04-10 | 7d03239 | Add PD20 review and images
