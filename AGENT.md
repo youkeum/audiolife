@@ -93,13 +93,14 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (47):
+- Articles (48):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
 - SL1500CS.md | 2026-02-24 | TURNTABLE | 테크닉스 SL-1500CS
 - a550.md | 2026-04-25 | HEADPHONE | 코스(KOSS) A/550
 - ab92.md | 2026-03-13 | HEADPHONE | ARCTEC AB92
+- aimusic.md | 2026-06-30 | MUSIC | AI 시대의 스트리밍과 저작권 정책
 - airpodmax2.md | 2026-03-17 | HEADPHONE | 에어팟 맥스2
 - applebluetooth.md | 2026-05-01 | BLUETOOTH | 블루투스 코덱에 대한 애플의 입장
 - arnika.md | 2026-02-20 | HEADPHONE | 헤드폰에 들어 있는 유해 물질들
@@ -207,21 +208,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-06-14 19:41:49 KST
+- 업데이트 시각: 2026-06-30 12:12:13 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-06-06 | 931f6f7 | Add DragonFly Copper and GO Link 2 Max articles
-- 콘텐츠 개수: articles=47, reviews=12, columns=29
+- 마지막 커밋: 2026-06-14 | 35700f2 | Add Traillii Ultra article and images
+- 콘텐츠 개수: articles=48, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/trailliiultra.md
-- A  public/posts/articles/trailliiultra/1.png
-- A  public/posts/articles/trailliiultra/2.png
-- A  public/posts/articles/trailliiultra/3.png
+- A  content/articles/aimusic.md
+- A  public/posts/articles/aimusic/1.png
 - ?? content/articles/ma2375.md
 - ?? public/posts/articles/ma2375/
 
 ### 최근 커밋 (최신 30개)
+- 2026-06-14 | 35700f2 | Add Traillii Ultra article and images
 - 2026-06-06 | 931f6f7 | Add DragonFly Copper and GO Link 2 Max articles
 - 2026-06-04 | fb5635a | Add Meze Arta article and images
 - 2026-06-04 | 402e003 | Add WiiM Bar article and images
@@ -251,4 +251,3 @@
 - 2026-04-20 | 8eb75a4 | Add APOS K1K article and images
 - 2026-04-15 | 7083930 | Add Cadentia 3 article and images
 - 2026-04-14 | 57ab0f8 | Add April audio events and calendar image
-- 2026-04-14 | 90ef057 | Add Noble Luban article and images
