@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (48):
+- Articles (49):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -107,6 +107,7 @@
 - arta.md | 2026-06-04 | HEADPHONE | 메제(MEZE) 아르타(ARTA)
 - autobiography.md | 2026-04-24 | SPEAKER | 윌슨 오디오 오토바이오그라피(Autobiography)
 - autoeq.md | 2026-06-02 | HIFI | SVS AUTO EQ
+- broen.md | 2026-07-09 | NETWORK | 페럼(Ferrum)의 네트워크 트랜스포트, 브로엔(Broen)
 - buds4pro.md | 2026-02-26 | IEM | 삼성 갤럭시 버즈4 프로
 - buf.md | 2026-04-30 | ACC | Schiit Buf
 - cadentia3.md | 2026-04-15 | SPEAKER | Audio First Designs Cadentia 3
@@ -208,19 +209,19 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-06-30 13:28:26 KST
+- 업데이트 시각: 2026-07-09 09:40:24 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-06-30 | d6dcff3 | Add AI music streaming article
-- 콘텐츠 개수: articles=48, reviews=12, columns=29
+- 마지막 커밋: 2026-06-30 | 59994a3 | Add MA2375 article and images
+- 콘텐츠 개수: articles=49, reviews=12, columns=29
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/ma2375.md
-- A  public/posts/articles/ma2375/1.jpg
-- A  public/posts/articles/ma2375/2.jpg
-- A  public/posts/articles/ma2375/3.jpg
+- A  content/articles/broen.md
+- A  public/posts/articles/broen/1.jpeg
+- A  public/posts/articles/broen/2.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-06-30 | 59994a3 | Add MA2375 article and images
 - 2026-06-30 | d6dcff3 | Add AI music streaming article
 - 2026-06-14 | 35700f2 | Add Traillii Ultra article and images
 - 2026-06-06 | 931f6f7 | Add DragonFly Copper and GO Link 2 Max articles
@@ -250,4 +251,3 @@
 - 2026-04-24 | ca319a7 | Add Wilson Audio Autobiography article and images
 - 2026-04-23 | 385ea33 | Add Brise Audio Ibuki article and images
 - 2026-04-20 | 8eb75a4 | Add APOS K1K article and images
-- 2026-04-15 | 7083930 | Add Cadentia 3 article and images
