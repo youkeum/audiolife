@@ -156,7 +156,7 @@
 - sonusfaber.md | 2026-05-24 | SPEAKER | 소너스파베르 아이다2 & 아마티 수프림
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
-- Columns (29):
+- Columns (30):
 - headphonestycolumn1.md | 2026-03-31 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(1)
 - headphonestycolumn2.md | 2026-04-06 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(2)
 - headphonestycolumn3.md | 2026-04-08 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(3)
@@ -186,6 +186,7 @@
 - hifi-headfi-100days-day7.md | 2026-02-27 | COLUMN | [100일 프로젝트] Day 7 - 데시벨(dB) 완전 기초
 - hifi-headfi-100days-day8.md | 2026-02-28 | COLUMN | [100일 프로젝트] Day 8 - 샘플링레이트가 의미하는 것
 - hifi-headfi-100days-day9.md | 2026-03-02 | COLUMN | [100일 프로젝트] Day 9 - 비트뎁스와 다이내믹레인지의 관계
+- luminate.md | 2026-07-20 | COLUMN | CD 판매량으로 확인 가능한 BTS의 위상
 
 ## 8) 재시작 체크리스트
 1. `npm install` 후 `npm run dev` 실행
@@ -209,18 +210,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-07-09 09:40:24 KST
+- 업데이트 시각: 2026-07-21 11:49:02 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-06-30 | 59994a3 | Add MA2375 article and images
-- 콘텐츠 개수: articles=49, reviews=12, columns=29
+- 마지막 커밋: 2026-07-09 | 29f0a13 | Add Ferrum Broen article and images
+- 콘텐츠 개수: articles=49, reviews=12, columns=30
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/broen.md
-- A  public/posts/articles/broen/1.jpeg
-- A  public/posts/articles/broen/2.png
+- A  content/columns/posts/luminate.md
+- A  public/posts/columns/117.png
+- A  public/posts/columns/118.png
+- A  public/posts/columns/119.png
+- A  public/posts/columns/120.png
+- A  public/posts/columns/121.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-07-09 | 29f0a13 | Add Ferrum Broen article and images
 - 2026-06-30 | 59994a3 | Add MA2375 article and images
 - 2026-06-30 | d6dcff3 | Add AI music streaming article
 - 2026-06-14 | 35700f2 | Add Traillii Ultra article and images
@@ -250,4 +255,3 @@
 - 2026-04-25 | e6fac4b | Add KOSS A/550 article and images
 - 2026-04-24 | ca319a7 | Add Wilson Audio Autobiography article and images
 - 2026-04-23 | 385ea33 | Add Brise Audio Ibuki article and images
-- 2026-04-20 | 8eb75a4 | Add APOS K1K article and images
