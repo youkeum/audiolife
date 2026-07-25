@@ -139,6 +139,17 @@ function withYoutubeEmbeds(markdown: string): string {
   });
 }
 
+function withLocalVideoEmbeds(markdown: string): string {
+  const videoImage = /!\[([^\]]*)]\(([^)\s]+\.(?:mp4|mov|MP4|MOV))(?:\s+"[^"]*")?\)/g;
+
+  return markdown.replace(videoImage, (_match, alt: string, src: string) => {
+    const label = escapeHtml(alt || "Video");
+    const url = escapeHtml(src);
+
+    return `<video class="local-video" controls preload="metadata" playsinline aria-label="${label}"><source src="${url}"></video>`;
+  });
+}
+
 function escapeHtml(value: string): string {
   return value
     .replaceAll("&", "&amp;")
@@ -346,7 +357,8 @@ export async function getPostBySlug(type: PostType, slug: string): Promise<Post>
   const { meta, content } = parseFile(type, `${slug}.md`);
   const contentWithoutCover = removeFirstImage(content);
   const markdownWithEmbeds = withYoutubeEmbeds(contentWithoutCover);
-  const markdownWithCards = await withLinkCards(markdownWithEmbeds);
+  const markdownWithVideos = withLocalVideoEmbeds(markdownWithEmbeds);
+  const markdownWithCards = await withLinkCards(markdownWithVideos);
   const markdownWithBreaks = withSoftLineBreaks(markdownWithCards);
   const processed = await remark().use(html, { sanitize: false }).process(markdownWithBreaks);
 

@@ -212,21 +212,18 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-07-25 10:40:18 KST
+- 업데이트 시각: 2026-07-25 10:45:33 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-07-25 | b3fdc12 | Add Yena Audio review and media
+- 마지막 커밋: 2026-07-25 | 4bd757b | Configure Git LFS for video files
 - 콘텐츠 개수: articles=50, reviews=13, columns=30
 
 ### 워킹트리 상태
-- A  .gitattributes
-- M  .githooks/post-checkout
-- M  .githooks/post-commit
-- M  .githooks/post-merge
-- A  .githooks/pre-push
 -  M AGENT.md
-- M  public/posts/reviews/yena/5.mp4
+- M  app/globals.css
+- M  lib/content.ts
 
 ### 최근 커밋 (최신 30개)
+- 2026-07-25 | 4bd757b | Configure Git LFS for video files
 - 2026-07-25 | b3fdc12 | Add Yena Audio review and media
 - 2026-07-25 | b36a738 | Add Quad Elegan article and images
 - 2026-07-21 | 06cad1f | Add Luminate CD sales column
@@ -256,4 +253,3 @@
 - 2026-05-01 | 9679dde | Add Apple Bluetooth article and images
 - 2026-04-30 | cc7bbf4 | Add May audio event and calendar image
 - 2026-04-30 | 4090a46 | Add Cadentia3 review and images
-- 2026-04-30 | 5a8ccae | Add Schiit Buf article and images
