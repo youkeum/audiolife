@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (49):
+- Articles (50):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -114,6 +114,7 @@
 - chimera.md | 2026-05-12 | EARPHONE | 캠프파이어 오디오 키메라(Chimera)
 - designone.md | 2026-05-20 | CDP | YBA 디자인 원(Design One)
 - dragonflycopper.md | 2026-06-05 | USB DAC | 오디오퀘스트 드래곤플라이 코퍼(Dragonfly Copper)
+- elegan.md | 2026-07-25 | SPEAKER | 쿼드(QUAD) Elegan1 & 2
 - evoone.md | 2026-05-15 | DAP | 에보아리아(EvoAria) 에보원(Evo One)
 - final_dx10000cl.md | 2026-02-12 | HEADPHONE | final DX10000CL
 - fosi_s3.md | 2026-03-28 | STREAMER | 포시 오디오 S3
@@ -210,21 +211,20 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-07-21 11:49:02 KST
+- 업데이트 시각: 2026-07-25 10:21:52 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-07-09 | 29f0a13 | Add Ferrum Broen article and images
-- 콘텐츠 개수: articles=49, reviews=12, columns=30
+- 마지막 커밋: 2026-07-21 | 06cad1f | Add Luminate CD sales column
+- 콘텐츠 개수: articles=50, reviews=12, columns=30
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/columns/posts/luminate.md
-- A  public/posts/columns/117.png
-- A  public/posts/columns/118.png
-- A  public/posts/columns/119.png
-- A  public/posts/columns/120.png
-- A  public/posts/columns/121.png
+- A  content/articles/elegan.md
+- A  public/posts/articles/elegan/1.jpg
+- A  public/posts/articles/elegan/2.jpg
+- A  public/posts/articles/elegan/3.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-07-21 | 06cad1f | Add Luminate CD sales column
 - 2026-07-09 | 29f0a13 | Add Ferrum Broen article and images
 - 2026-06-30 | 59994a3 | Add MA2375 article and images
 - 2026-06-30 | d6dcff3 | Add AI music streaming article
@@ -254,4 +254,3 @@
 - 2026-04-30 | 5a8ccae | Add Schiit Buf article and images
 - 2026-04-25 | e6fac4b | Add KOSS A/550 article and images
 - 2026-04-24 | ca319a7 | Add Wilson Audio Autobiography article and images
-- 2026-04-23 | 385ea33 | Add Brise Audio Ibuki article and images
