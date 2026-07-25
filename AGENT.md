@@ -144,7 +144,7 @@
 - trailliiultra.md | 2026-06-14 | EARPHONE | 오리올루스 트라일리 울트라 IEM 시스템
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
 - wiimbar.md | 2026-06-04 | SOUNDBAR | 윔(WiiM) 바(Bar)
-- Reviews (12):
+- Reviews (13):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - arranger.md | 2026-05-06 | HEADPHONE | 오스트리안 오디오 어레인저(Arranger)
 - cadentia3.md | 2026-04-30 | SPEAKER | Audio First Designs Cadentia3
@@ -157,6 +157,7 @@
 - sonusfaber.md | 2026-05-24 | SPEAKER | 소너스파베르 아이다2 & 아마티 수프림
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
+- yena.md | 2026-07-23 | AV | 돌비 애트모스와 다른 오로3D의 매력
 - Columns (30):
 - headphonestycolumn1.md | 2026-03-31 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(1)
 - headphonestycolumn2.md | 2026-04-06 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(2)
@@ -211,19 +212,22 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-07-25 10:21:52 KST
+- 업데이트 시각: 2026-07-25 10:34:06 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-07-21 | 06cad1f | Add Luminate CD sales column
-- 콘텐츠 개수: articles=50, reviews=12, columns=30
+- 마지막 커밋: 2026-07-25 | b36a738 | Add Quad Elegan article and images
+- 콘텐츠 개수: articles=50, reviews=13, columns=30
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/articles/elegan.md
-- A  public/posts/articles/elegan/1.jpg
-- A  public/posts/articles/elegan/2.jpg
-- A  public/posts/articles/elegan/3.png
+- A  content/reviews/yena.md
+- A  public/posts/reviews/yena/1.jpg
+- A  public/posts/reviews/yena/2.jpg
+- A  public/posts/reviews/yena/3.jpg
+- A  public/posts/reviews/yena/4.png
+- A  public/posts/reviews/yena/5.mp4
 
 ### 최근 커밋 (최신 30개)
+- 2026-07-25 | b36a738 | Add Quad Elegan article and images
 - 2026-07-21 | 06cad1f | Add Luminate CD sales column
 - 2026-07-09 | 29f0a13 | Add Ferrum Broen article and images
 - 2026-06-30 | 59994a3 | Add MA2375 article and images
@@ -253,4 +257,3 @@
 - 2026-04-30 | 4090a46 | Add Cadentia3 review and images
 - 2026-04-30 | 5a8ccae | Add Schiit Buf article and images
 - 2026-04-25 | e6fac4b | Add KOSS A/550 article and images
-- 2026-04-24 | ca319a7 | Add Wilson Audio Autobiography article and images
