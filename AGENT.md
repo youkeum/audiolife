@@ -144,8 +144,9 @@
 - trailliiultra.md | 2026-06-14 | EARPHONE | 오리올루스 트라일리 울트라 IEM 시스템
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
 - wiimbar.md | 2026-06-04 | SOUNDBAR | 윔(WiiM) 바(Bar)
-- Reviews (13):
+- Reviews (14):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
+- ap80promax.md | 2026-07-28 | DAP | 하이디즈 AP80 PRO MAX
 - arranger.md | 2026-05-06 | HEADPHONE | 오스트리안 오디오 어레인저(Arranger)
 - cadentia3.md | 2026-04-30 | SPEAKER | Audio First Designs Cadentia3
 - cambridgelr.md | 2026-03-06 | SPEAKER | 캠브리지오디오 L/R 북셸프 스피커
@@ -212,17 +213,25 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-07-25 10:45:33 KST
+- 업데이트 시각: 2026-07-28 08:35:23 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-07-25 | 4bd757b | Configure Git LFS for video files
-- 콘텐츠 개수: articles=50, reviews=13, columns=30
+- 마지막 커밋: 2026-07-25 | 1d6f0e3 | Render local video embeds with controls
+- 콘텐츠 개수: articles=50, reviews=14, columns=30
 
 ### 워킹트리 상태
 -  M AGENT.md
-- M  app/globals.css
-- M  lib/content.ts
+- A  content/reviews/ap80promax.md
+- A  public/posts/reviews/ap80promax/1.png
+- A  public/posts/reviews/ap80promax/2.png
+- A  public/posts/reviews/ap80promax/3.png
+- A  public/posts/reviews/ap80promax/4.png
+- A  public/posts/reviews/ap80promax/5.png
+- A  public/posts/reviews/ap80promax/6.png
+- A  public/posts/reviews/ap80promax/7.png
+- A  public/posts/reviews/ap80promax/8.png
 
 ### 최근 커밋 (최신 30개)
+- 2026-07-25 | 1d6f0e3 | Render local video embeds with controls
 - 2026-07-25 | 4bd757b | Configure Git LFS for video files
 - 2026-07-25 | b3fdc12 | Add Yena Audio review and media
 - 2026-07-25 | b36a738 | Add Quad Elegan article and images
@@ -252,4 +261,3 @@
 - 2026-05-06 | da96d8e | Add HiPlay article and Arranger review
 - 2026-05-01 | 9679dde | Add Apple Bluetooth article and images
 - 2026-04-30 | cc7bbf4 | Add May audio event and calendar image
-- 2026-04-30 | 4090a46 | Add Cadentia3 review and images
