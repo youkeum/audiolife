@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (50):
+- Articles (74):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -129,6 +129,30 @@
 - mg200.md | 2026-05-16 | EARPHONE | 샨링 다크스페이스 MG200
 - michiprestige.md | 2026-03-19 | HIFI | 로텔 미치 프레스티지
 - momentum5.md | 2026-05-26 | HEADPHONE | 젠하이저 모멘텀5 와이어리스
+- naver-224363090008.md | 2026-07-30 | SPEAKER | 소리를 형상으로, KEF LS LUXE
+- naver-224367863183.md | 2026-08-04 | DAP | 아스텔앤컨 PD5 발표
+- naver-224372804331.md | 2026-08-09 | DAP | 홍콩 AV쇼에 등장한 PD5 실물 사진
+- naver-224374834566.md | 2026-08-11 | HEADPHONE | 보스 QC 2세대, 보급형인데? 응, 가격이 깡패야.
+- naver-224374902431.md | 2026-08-11 | DAP | 아스텔앤컨 가격 인상 예정(10월 1일부터)
+- naver-224374981970.md | 2026-08-11 | AMP | 출시 일주일 만에 2000대가 넘게 팔린 모노 앰프
+- naver-224378620276.md | 2026-08-14 | AMP | 피오가 슬슬 하이파이 시장도 넘보고 있습니다. EA13 진공관 앰프 출시
+- naver-224379375769.md | 2026-08-15 | DAC | 라이브(LAiV) 하모니 DAC2가 나왔습니다.
+- naver-224381436762.md | 2026-08-17 | TURNTABLE | 과연 무슨 제품일까요? 에소테릭 티저 이미지
+- naver-224383199490.md | 2026-08-19 | EVENT | 11월에 올해 첫 국내 하이파이 오디오쇼가 열립니다.
+- naver-224385283258.md | 2026-08-21 | EARPHONE | 젠하이저 MTW5, 드디어 무선 이어폰도 배터리 교체가 가능합니다.
+- naver-224386373319.md | 2026-08-22 | TURNTABLE | 에소테릭 티저는 역시나 턴테이블이었습니다.
+- naver-224402934753.md | 2026-09-06 | DAP | SP4000 1.04 펌웨어 업데이트
+- naver-224403581476.md | 2026-09-07 | MUSIC | CD의 조용한 진격
+- naver-224407747173.md | 2026-09-11 | EVENT | 캔잼 서울 일정 공개..?
+- naver-224408823238.md | 2026-09-11 | DAC | iFi는 버브라운을 참 좋아해요. iDSD GR2
+- naver-224412176280.md | 2026-09-15 | ACC | 이런 케이블이 나올 때가 됐지, iFi GO 케이블
+- naver-224420912986.md | 2026-09-23 | DAC | YBA에서 만든 포터블 DAC/AMP, VIBE P1
+- naver-224426969963.md | 2026-09-30 | ACC | 스피커의 좌우 진동과 전후 진동, IsoAcoustics 가이아 네오
+- naver-224430981622.md | 2026-10-04 | DAC | 아니, 일반판 출시한 지 얼마나 됐다고.. iDSD GR2 MT
+- naver-224440431483.md | 2026-10-13 | DAP | 잘 만든 폼팩터는 언제 봐도 질리지 않는다. 포시 오디오 네오(Neo)
+- naver-224441374375.md | 2026-10-14 | TURNTABLE | 레가(rega)의 새로운 엔트리 턴테이블, 리플레이(Replay)
+- naver-224442777680.md | 2026-10-15 | TURNTABLE | 캠브리지 오디오에서도 턴테이블이 나왔습니다. 스피라(Spira)
+- naver-224443570659.md | 2026-10-16 | DAP | 이게 얼마 만이야, 소니의 신형 워크맨 등장. NW-WMZM3
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - noble_luban.md | 2026-04-14 | EARPHONE | 노블 오디오 루반(Lu Ban)
 - nodeaudioatom.md | 2026-03-21 | SPEAKER | Node Audio Atom
@@ -144,7 +168,7 @@
 - trailliiultra.md | 2026-06-14 | EARPHONE | 오리올루스 트라일리 울트라 IEM 시스템
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
 - wiimbar.md | 2026-06-04 | SOUNDBAR | 윔(WiiM) 바(Bar)
-- Reviews (14):
+- Reviews (28):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - ap80promax.md | 2026-07-28 | DAP | 하이디즈 AP80 PRO MAX
 - arranger.md | 2026-05-06 | HEADPHONE | 오스트리안 오디오 어레인저(Arranger)
@@ -152,6 +176,20 @@
 - cambridgelr.md | 2026-03-06 | SPEAKER | 캠브리지오디오 L/R 북셸프 스피커
 - glv.md | 2026-02-01 | TURNTABLE | 턴테이블과 관련한 재미있는 경험들
 - hc5.md | 2026-02-18 | DAC | 이게... 되네? 아스텔앤컨 HC5
+- naver-224366993184.md | 2026-08-03 | SOFTWARE | 윈앰프(WINAMP)가 아직 살아 있었군요.
+- naver-224373356270.md | 2026-08-09 | SOFTWARE | amoenus externus, 쓸 만한 가상 음장 프로그램
+- naver-224376399580.md | 2026-08-12 | HEADPHONE | 저는 마크레빈슨에 한 표요. 무선 헤드폰의 블루투스 코덱 지원 문제
+- naver-224378988107.md | 2026-08-14 | DAP | 플래그십의 바탕 위에 더해진 세 가지 진공관의 질감, 아스텔앤컨 SP4000T & 클라루스
+- naver-224384249293.md | 2026-08-20 | STREAMING | 프레스토 뮤직 스트리밍 서비스만의 장점은 무엇일까
+- naver-224394610014.md | 2026-08-30 | DAC | 램피제이터의 새로운 플래그십 DAC, 아프로디테 DAC를 듣고 왔습니다.
+- naver-224397859686.md | 2026-09-01 | ACC | 이어팁은 소리를 얼마나 바꿀까, 엘로이트 벨벳 3종 비교
+- naver-224398517959.md | 2026-09-02 | SOFTWARE | Lysoniq 설치했습니다.
+- naver-224412887902.md | 2026-09-15 | EARPHONE | 유저가 노력할수록 보답하는 이어폰, 브리즈 오디오 이부키
+- naver-224415413435.md | 2026-09-17 | HEADPHONE | 프로와 컨슈머의 경계를 허물다 - 오디지 MM-520
+- naver-224429208802.md | 2026-10-02 | DAC | 편리함과 음질의 접점, 타임이어 BTE-9 & ODA 이오스(AEOS)
+- naver-224433470187.md | 2026-10-06 | EARPHONE | 화려함보다는 정교함을, - 캠프파이어 오디오 키메라
+- naver-224437065078.md | 2026-10-10 | LISTENING SPACE | 천변풍경에 다녀왔습니다.
+- naver-224441108934.md | 2026-10-14 | DAP | 익숙한 아스텔앤컨을 더 작게, 아스텔앤컨 PD5
 - pd20.md | 2026-04-10 | DAP | 조작하는 맛이 있다. 아스텔앤컨 PD20
 - pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
 - r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
@@ -213,24 +251,211 @@
 ---
 
 ## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: 2026-07-28 08:35:23 KST
+- 업데이트 시각: 2026-10-19 18:31:23 KST
 - 현재 브랜치: main
-- 마지막 커밋: 2026-07-25 | 1d6f0e3 | Render local video embeds with controls
-- 콘텐츠 개수: articles=50, reviews=14, columns=30
+- 마지막 커밋: 2026-07-28 | 44a5ae1 | Add AP80 Pro Max review and images
+- 콘텐츠 개수: articles=74, reviews=28, columns=30
 
 ### 워킹트리 상태
 -  M AGENT.md
-- A  content/reviews/ap80promax.md
-- A  public/posts/reviews/ap80promax/1.png
-- A  public/posts/reviews/ap80promax/2.png
-- A  public/posts/reviews/ap80promax/3.png
-- A  public/posts/reviews/ap80promax/4.png
-- A  public/posts/reviews/ap80promax/5.png
-- A  public/posts/reviews/ap80promax/6.png
-- A  public/posts/reviews/ap80promax/7.png
-- A  public/posts/reviews/ap80promax/8.png
+- A  content/articles/naver-224363090008.md
+- A  content/articles/naver-224367863183.md
+- A  content/articles/naver-224372804331.md
+- A  content/articles/naver-224374834566.md
+- A  content/articles/naver-224374902431.md
+- A  content/articles/naver-224374981970.md
+- A  content/articles/naver-224378620276.md
+- A  content/articles/naver-224379375769.md
+- A  content/articles/naver-224381436762.md
+- A  content/articles/naver-224383199490.md
+- A  content/articles/naver-224385283258.md
+- A  content/articles/naver-224386373319.md
+- A  content/articles/naver-224402934753.md
+- A  content/articles/naver-224403581476.md
+- A  content/articles/naver-224407747173.md
+- A  content/articles/naver-224408823238.md
+- A  content/articles/naver-224412176280.md
+- A  content/articles/naver-224420912986.md
+- A  content/articles/naver-224426969963.md
+- A  content/articles/naver-224430981622.md
+- A  content/articles/naver-224440431483.md
+- A  content/articles/naver-224441374375.md
+- A  content/articles/naver-224442777680.md
+- A  content/articles/naver-224443570659.md
+- A  content/reviews/naver-224366993184.md
+- A  content/reviews/naver-224373356270.md
+- A  content/reviews/naver-224376399580.md
+- A  content/reviews/naver-224378988107.md
+- A  content/reviews/naver-224384249293.md
+- A  content/reviews/naver-224394610014.md
+- A  content/reviews/naver-224397859686.md
+- A  content/reviews/naver-224398517959.md
+- A  content/reviews/naver-224412887902.md
+- A  content/reviews/naver-224415413435.md
+- A  content/reviews/naver-224429208802.md
+- A  content/reviews/naver-224433470187.md
+- A  content/reviews/naver-224437065078.md
+- A  content/reviews/naver-224441108934.md
+- A  public/posts/articles/naver-224363090008/1.jpg
+- A  public/posts/articles/naver-224363090008/2.png
+- A  public/posts/articles/naver-224363090008/3.png
+- A  public/posts/articles/naver-224367863183/1.jpg
+- A  public/posts/articles/naver-224367863183/2.jpg
+- A  public/posts/articles/naver-224372804331/1.jpg
+- A  public/posts/articles/naver-224374834566/1.jpg
+- A  public/posts/articles/naver-224374834566/2.jpg
+- A  public/posts/articles/naver-224374902431/1.png
+- A  public/posts/articles/naver-224374981970/1.png
+- A  public/posts/articles/naver-224374981970/2.png
+- A  public/posts/articles/naver-224374981970/3.png
+- A  public/posts/articles/naver-224378620276/1.jpg
+- A  public/posts/articles/naver-224378620276/2.jpg
+- A  public/posts/articles/naver-224379375769/1.jpg
+- A  public/posts/articles/naver-224379375769/2.jpg
+- A  public/posts/articles/naver-224379375769/3.jpg
+- A  public/posts/articles/naver-224379375769/4.png
+- A  public/posts/articles/naver-224381436762/1.png
+- A  public/posts/articles/naver-224381436762/2.png
+- A  public/posts/articles/naver-224381436762/3.png
+- A  public/posts/articles/naver-224383199490/1.jpg
+- A  public/posts/articles/naver-224385283258/1.jpg
+- A  public/posts/articles/naver-224385283258/2.jpg
+- A  public/posts/articles/naver-224385283258/3.jpg
+- A  public/posts/articles/naver-224386373319/1.jpg
+- A  public/posts/articles/naver-224386373319/2.png
+- A  public/posts/articles/naver-224386373319/3.jpg
+- A  public/posts/articles/naver-224402934753/1.jpg
+- A  public/posts/articles/naver-224403581476/1.png
+- A  public/posts/articles/naver-224403581476/2.png
+- A  public/posts/articles/naver-224403581476/3.png
+- A  public/posts/articles/naver-224407747173/1.png
+- A  public/posts/articles/naver-224408823238/1.png
+- A  public/posts/articles/naver-224408823238/2.png
+- A  public/posts/articles/naver-224408823238/3.jpg
+- A  public/posts/articles/naver-224412176280/1.jpg
+- A  public/posts/articles/naver-224412176280/2.jpg
+- A  public/posts/articles/naver-224412176280/3.jpg
+- A  public/posts/articles/naver-224420912986/1.png
+- A  public/posts/articles/naver-224420912986/2.png
+- A  public/posts/articles/naver-224420912986/3.png
+- A  public/posts/articles/naver-224426969963/1.png
+- A  public/posts/articles/naver-224426969963/2.png
+- A  public/posts/articles/naver-224426969963/3.jpg
+- A  public/posts/articles/naver-224430981622/1.png
+- A  public/posts/articles/naver-224430981622/2.png
+- A  public/posts/articles/naver-224440431483/1.jpg
+- A  public/posts/articles/naver-224440431483/2.jpg
+- A  public/posts/articles/naver-224441374375/1.jpg
+- A  public/posts/articles/naver-224441374375/2.jpg
+- A  public/posts/articles/naver-224441374375/3.jpg
+- A  public/posts/articles/naver-224442777680/1.jpg
+- A  public/posts/articles/naver-224442777680/2.jpg
+- A  public/posts/articles/naver-224442777680/3.jpg
+- A  public/posts/articles/naver-224442777680/4.jpg
+- A  public/posts/articles/naver-224443570659/1.jpg
+- A  public/posts/articles/naver-224443570659/2.jpg
+- A  public/posts/articles/naver-224443570659/3.png
+- A  public/posts/articles/naver-224443570659/4.jpg
+- A  public/posts/articles/naver-224443570659/5.jpg
+- A  public/posts/reviews/naver-224366993184/1.png
+- A  public/posts/reviews/naver-224366993184/2.png
+- A  public/posts/reviews/naver-224366993184/3.png
+- A  public/posts/reviews/naver-224373356270/1.png
+- A  public/posts/reviews/naver-224373356270/2.png
+- A  public/posts/reviews/naver-224373356270/3.png
+- A  public/posts/reviews/naver-224376399580/1.jpg
+- A  public/posts/reviews/naver-224376399580/2.jpg
+- A  public/posts/reviews/naver-224378988107/1.png
+- A  public/posts/reviews/naver-224378988107/10.png
+- A  public/posts/reviews/naver-224378988107/11.png
+- A  public/posts/reviews/naver-224378988107/2.png
+- A  public/posts/reviews/naver-224378988107/3.png
+- A  public/posts/reviews/naver-224378988107/4.png
+- A  public/posts/reviews/naver-224378988107/5.png
+- A  public/posts/reviews/naver-224378988107/6.png
+- A  public/posts/reviews/naver-224378988107/7.png
+- A  public/posts/reviews/naver-224378988107/8.png
+- A  public/posts/reviews/naver-224378988107/9.png
+- A  public/posts/reviews/naver-224384249293/1.png
+- A  public/posts/reviews/naver-224384249293/2.png
+- A  public/posts/reviews/naver-224384249293/3.png
+- A  public/posts/reviews/naver-224384249293/4.png
+- A  public/posts/reviews/naver-224384249293/5.png
+- A  public/posts/reviews/naver-224384249293/6.png
+- A  public/posts/reviews/naver-224384249293/7.png
+- A  public/posts/reviews/naver-224384249293/8.jpg
+- A  public/posts/reviews/naver-224394610014/1.jpg
+- A  public/posts/reviews/naver-224394610014/2.jpg
+- A  public/posts/reviews/naver-224394610014/3.jpg
+- A  public/posts/reviews/naver-224394610014/4.jpg
+- A  public/posts/reviews/naver-224394610014/5.jpg
+- A  public/posts/reviews/naver-224394610014/6.jpg
+- A  public/posts/reviews/naver-224397859686/1.png
+- A  public/posts/reviews/naver-224397859686/2.png
+- A  public/posts/reviews/naver-224397859686/3.png
+- A  public/posts/reviews/naver-224397859686/4.png
+- A  public/posts/reviews/naver-224397859686/5.png
+- A  public/posts/reviews/naver-224397859686/6.png
+- A  public/posts/reviews/naver-224397859686/7.png
+- A  public/posts/reviews/naver-224397859686/8.png
+- A  public/posts/reviews/naver-224397859686/9.png
+- A  public/posts/reviews/naver-224398517959/1.jpg
+- A  public/posts/reviews/naver-224398517959/2.jpg
+- A  public/posts/reviews/naver-224398517959/3.png
+- A  public/posts/reviews/naver-224412887902/1.jpg
+- A  public/posts/reviews/naver-224412887902/2.jpg
+- A  public/posts/reviews/naver-224412887902/3.jpg
+- A  public/posts/reviews/naver-224412887902/4.jpg
+- A  public/posts/reviews/naver-224412887902/5.jpg
+- A  public/posts/reviews/naver-224412887902/6.jpg
+- A  public/posts/reviews/naver-224412887902/7.jpg
+- A  public/posts/reviews/naver-224412887902/8.jpg
+- A  public/posts/reviews/naver-224415413435/1.jpg
+- A  public/posts/reviews/naver-224415413435/2.jpg
+- A  public/posts/reviews/naver-224415413435/3.jpg
+- A  public/posts/reviews/naver-224415413435/4.jpg
+- A  public/posts/reviews/naver-224415413435/5.jpg
+- A  public/posts/reviews/naver-224415413435/6.jpg
+- A  public/posts/reviews/naver-224415413435/7.jpg
+- A  public/posts/reviews/naver-224415413435/8.jpg
+- A  public/posts/reviews/naver-224415413435/9.jpg
+- A  public/posts/reviews/naver-224429208802/1.jpg
+- A  public/posts/reviews/naver-224429208802/10.jpg
+- A  public/posts/reviews/naver-224429208802/11.jpg
+- A  public/posts/reviews/naver-224429208802/2.jpg
+- A  public/posts/reviews/naver-224429208802/3.jpg
+- A  public/posts/reviews/naver-224429208802/4.jpg
+- A  public/posts/reviews/naver-224429208802/5.jpg
+- A  public/posts/reviews/naver-224429208802/6.jpg
+- A  public/posts/reviews/naver-224429208802/7.jpg
+- A  public/posts/reviews/naver-224429208802/8.jpg
+- A  public/posts/reviews/naver-224429208802/9.jpg
+- A  public/posts/reviews/naver-224433470187/1.jpg
+- A  public/posts/reviews/naver-224433470187/2.jpg
+- A  public/posts/reviews/naver-224433470187/3.jpg
+- A  public/posts/reviews/naver-224433470187/4.jpg
+- A  public/posts/reviews/naver-224433470187/5.jpg
+- A  public/posts/reviews/naver-224433470187/6.jpg
+- A  public/posts/reviews/naver-224433470187/7.jpg
+- A  public/posts/reviews/naver-224433470187/8.jpg
+- A  public/posts/reviews/naver-224437065078/1.jpg
+- A  public/posts/reviews/naver-224437065078/2.jpg
+- A  public/posts/reviews/naver-224437065078/3.jpg
+- A  public/posts/reviews/naver-224437065078/4.jpg
+- A  public/posts/reviews/naver-224437065078/5.jpg
+- A  public/posts/reviews/naver-224441108934/1.jpg
+- A  public/posts/reviews/naver-224441108934/10.jpg
+- A  public/posts/reviews/naver-224441108934/2.jpg
+- A  public/posts/reviews/naver-224441108934/3.jpg
+- A  public/posts/reviews/naver-224441108934/4.jpg
+- A  public/posts/reviews/naver-224441108934/5.jpg
+- A  public/posts/reviews/naver-224441108934/6.jpg
+- A  public/posts/reviews/naver-224441108934/7.jpg
+- A  public/posts/reviews/naver-224441108934/8.jpg
+- A  public/posts/reviews/naver-224441108934/9.jpg
 
 ### 최근 커밋 (최신 30개)
+- 2026-07-28 | 44a5ae1 | Add AP80 Pro Max review and images
 - 2026-07-25 | 1d6f0e3 | Render local video embeds with controls
 - 2026-07-25 | 4bd757b | Configure Git LFS for video files
 - 2026-07-25 | b3fdc12 | Add Yena Audio review and media
@@ -260,4 +485,3 @@
 - 2026-05-07 | 4aec380 | Add Maxwell 2 ReSkin article and images
 - 2026-05-06 | da96d8e | Add HiPlay article and Arranger review
 - 2026-05-01 | 9679dde | Add Apple Bluetooth article and images
-- 2026-04-30 | cc7bbf4 | Add May audio event and calendar image
