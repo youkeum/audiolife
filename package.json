@@ -11,7 +11,7 @@
     "prisma:migrate": "prisma migrate dev",
     "test": "node --test tests/*.test.cjs",
     "content:check": "node scripts/check-content.mjs",
-    "prebuild": "npm run content:check"
+    "prebuild": "npm run content:check && node scripts/generate-image-dimensions.mjs"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
