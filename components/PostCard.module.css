@@ -1,0 +1,7 @@
+.card { min-width: 0; padding-bottom: 20px; border-bottom: 1px solid #333; }
+.meta { font-size: .75rem; color: #aaa; margin-top: 16px; }
+.card h2 { font-size: 1.2rem; line-height: 1.45; margin: 10px 0; word-break: keep-all; overflow-wrap: anywhere; }
+.card p { font-size: .9rem; line-height: 1.7; color: #bbb; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.card a:hover h2 { color: #e7a477; }
+.tags { display: flex; gap: 8px 12px; flex-wrap: wrap; margin-top: 14px; font-size: .75rem; color: #c79e80; }
+.tags a { padding: 4px 0; }

@@ -1,5 +1,7 @@
 import { getPostBasePath, type PostMeta } from "@/lib/content";
 
+import { SITE_DESCRIPTION } from "./site";
+
 export const SITE_URL = "https://audiolife.kr";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph-image`;
 
@@ -21,7 +23,7 @@ export function createWebSiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "AudioLife",
-    description: "하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진",
+    description: SITE_DESCRIPTION,
     url: SITE_URL,
     inLanguage: "ko-KR",
     potentialAction: {

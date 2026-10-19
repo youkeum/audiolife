@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ABOUT",
+  alternates: { canonical: "https://audiolife.kr/about" },
   description: "AudioLife 소개 및 리뷰 의뢰 안내"
 };
 

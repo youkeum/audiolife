@@ -4,14 +4,10 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-NOW="$(date '+%Y-%m-%d %H:%M:%S %Z')"
-BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo '-')"
-LAST_COMMIT="$(git log -1 --date=short --pretty=format:'%ad | %h | %s' 2>/dev/null || echo '-')"
-
 count_md_files() {
   local dir="$1"
   if [[ -d "$dir" ]]; then
-    find "$dir" -maxdepth 1 -type f -name '*.md' ! -name '_template.md' | wc -l | tr -d ' '
+    find "$dir" -maxdepth 1 -type f -name '*.md' ! -name '_*.md' | wc -l | tr -d ' '
   else
     echo "0"
   fi
@@ -21,13 +17,6 @@ ARTICLE_COUNT="$(count_md_files "content/articles")"
 REVIEW_COUNT="$(count_md_files "content/reviews")"
 COLUMN_COUNT="$(count_md_files "content/columns/posts")"
 
-if git diff --quiet && git diff --cached --quiet; then
-  WORKTREE_STATUS="- clean"
-else
-  WORKTREE_STATUS="$(git status --short | sed 's/^/- /')"
-fi
-
-RECENT_COMMITS="$(git log --date=short --pretty=format:'- %ad | %h | %s' -n 30)"
 ROUTE_FILES="$(rg --files app | sort | sed 's/^/- /')"
 
 collect_content_index() {
@@ -37,7 +26,7 @@ collect_content_index() {
   for file in "$dir"/*.md; do
     local name
     name="$(basename "$file")"
-    if [[ "$name" == "_template.md" ]]; then
+    if [[ "$name" == _*.md ]]; then
       continue
     fi
     local title date category
@@ -145,7 +134,7 @@ ${COLUMN_INDEX}
 
 ## 8) 재시작 체크리스트
 1. \`npm install\` 후 \`npm run dev\` 실행
-2. \`AGENT.md\`의 "현재 상태"와 "최근 커밋"으로 마지막 작업 지점 확인
+2. \`git status --short\`와 \`git log -1 --oneline\`으로 마지막 작업 지점 확인
 3. 컬럼 작성 시 \`content/columns/AGENT.MD\` -> \`.../WRITING_GUIDE.MD\` -> \`.../hifi-headfi-100days-curriculum.md\` 순으로 확인
 4. 새 글 작성 시 \`content/articles/*.md\` / \`content/reviews/*.md\` / \`content/columns/posts/*.md\` + \`public/posts/.../\` 이미지 동시 반영
 5. 인증/댓글 기능 수정 시 \`app/api/*\`, \`lib/auth.ts\`, \`prisma/schema.prisma\` 영향 범위 확인
@@ -156,7 +145,7 @@ ${COLUMN_INDEX}
 - 자동 갱신 스크립트: \`scripts/update-agent-md.sh\`
 - Git 훅 연동:
   - \`pre-commit\`: 커밋 전에 AGENT.md 갱신 후 자동 스테이징
-  - \`post-commit\`: 커밋 직후 AGENT.md 다시 갱신(최신 HEAD 정보 반영)
+  - \`post-commit\`: 커밋 직후 AGENT.md 다시 갱신
   - \`post-merge\`: 머지 직후 AGENT.md 갱신
   - \`post-checkout\`: 브랜치 이동/체크아웃 후 AGENT.md 갱신
 - 훅 경로 설정: \`git config core.hooksPath .githooks\`
@@ -164,15 +153,9 @@ ${COLUMN_INDEX}
 
 ---
 
-## 10) 현재 상태 (자동 갱신)
-- 업데이트 시각: ${NOW}
-- 현재 브랜치: ${BRANCH}
-- 마지막 커밋: ${LAST_COMMIT}
+## 10) 현재 상태 확인
 - 콘텐츠 개수: articles=${ARTICLE_COUNT}, reviews=${REVIEW_COUNT}, columns=${COLUMN_COUNT}
-
-### 워킹트리 상태
-${WORKTREE_STATUS}
-
-### 최근 커밋 (최신 30개)
-${RECENT_COMMITS}
+- 현재 브랜치: \`git branch --show-current\`
+- 마지막 커밋: \`git log -1 --oneline\`
+- 워킹트리 상태: \`git status --short\`
 EOF

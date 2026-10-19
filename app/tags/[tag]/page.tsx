@@ -1,53 +1,20 @@
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import PostCard from "@/components/PostCard";
-import { getAllTags, getPostBasePath, getPostsByTag } from "@/lib/content";
-import { SITE_URL } from "@/lib/seo";
-
-type Props = {
-  params: { tag: string };
-};
-
-export async function generateStaticParams() {
-  return getAllTags().map((tag) => ({ tag }));
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const encodedTag = encodeURIComponent(params.tag);
-  const canonicalUrl = `${SITE_URL}/tags/${encodedTag}`;
+import PostArchive from "@/components/PostArchive";
+import { getPostsByTag } from "@/lib/content";
+import { archiveHref, archiveState, type ArchiveQuery } from "@/lib/archive";
+type Props = { params: { tag: string }; searchParams: ArchiveQuery };
+export function generateMetadata({ params, searchParams }: Props): Metadata {
   const posts = getPostsByTag(params.tag);
-
-  return {
-    title: `#${params.tag} 태그`,
-    description: `'#${params.tag}' 태그 글 ${posts.length}개`,
-    alternates: {
-      canonical: canonicalUrl
-    },
-    openGraph: {
-      type: "website",
-      url: canonicalUrl,
-      title: `#${params.tag} 태그 | AudioLife`,
-      description: `'#${params.tag}' 관련 오디오 글 모음`,
-      siteName: "AudioLife",
-      locale: "ko_KR"
-    }
+  const state = archiveState(posts, searchParams);
+  return { title: `태그: ${params.tag}${state.page > 1 ? ` - ${state.page}페이지` : ""}`,
+    description: `${params.tag} 관련 오디오 글 모음`,
+    alternates: { canonical: `https://audiolife.kr${archiveHref(`/tags/${encodeURIComponent(params.tag)}`, state)}` },
+    robots: { index: posts.length >= 3 && !state.q && !state.category, follow: true }
   };
 }
-
-export default function TagPage({ params }: Props) {
-  const posts = getPostsByTag(params.tag);
-
-  return (
-    <>
-      <h1 className="page-title">태그: #{params.tag}</h1>
-      <section className="grid">
-        {posts.map((post) => (
-          <PostCard
-            key={`${post.type}-${post.slug}`}
-            post={post}
-            basePath={getPostBasePath(post.type)}
-          />
-        ))}
-      </section>
-    </>
-  );
+export default function Page({ params, searchParams }: Props) {
+  const posts = getPostsByTag(params.tag).sort((a, b) => b.date.localeCompare(a.date));
+  if (!posts.length) notFound();
+  return <PostArchive query={searchParams} collection={{ posts, path: `/tags/${encodeURIComponent(params.tag)}`, title: `태그: ${params.tag}`, description: "관심 있는 주제의 리뷰, 기사와 컬럼을 모았습니다." }} />;
 }

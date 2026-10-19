@@ -3,6 +3,8 @@ import path from "node:path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { optimizeContentImages } from "./images";
+import { cache } from "react";
 
 export type PostType = "reviews" | "articles" | "columns";
 export type PostBasePath = "/reviews" | "/articles" | "/columns";
@@ -11,6 +13,7 @@ export type PostMeta = {
   slug: string;
   title: string;
   date: string;
+  updated?: string;
   excerpt: string;
   bodyPreview?: string;
   category: string;
@@ -29,6 +32,7 @@ export type Post = PostMeta & {
 type Frontmatter = {
   title: string;
   date: string;
+  updated?: string;
   excerpt: string;
   category: string;
   tags: string[];
@@ -330,6 +334,7 @@ function parseFile(type: PostType, fileName: string): { meta: PostMeta; content:
       type,
       title: frontmatter.title,
       date: frontmatter.date,
+      updated: frontmatter.updated,
       excerpt: frontmatter.excerpt,
       bodyPreview: extractPreviewText(content),
       category: frontmatter.category,
@@ -353,9 +358,9 @@ export function getAllPosts(type: PostType): PostMeta[] {
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getPostBySlug(type: PostType, slug: string): Promise<Post> {
+export const getPostBySlug = cache(async (type: PostType, slug: string): Promise<Post> => {
   const { meta, content } = parseFile(type, `${slug}.md`);
-  const contentWithoutCover = removeFirstImage(content);
+  const contentWithoutCover = extractFirstImagePath(content) === meta.coverImage ? removeFirstImage(content) : content;
   const markdownWithEmbeds = withYoutubeEmbeds(contentWithoutCover);
   const markdownWithVideos = withLocalVideoEmbeds(markdownWithEmbeds);
   const markdownWithCards = await withLinkCards(markdownWithVideos);
@@ -364,9 +369,9 @@ export async function getPostBySlug(type: PostType, slug: string): Promise<Post>
 
   return {
     ...meta,
-    contentHtml: processed.toString()
+    contentHtml: await optimizeContentImages(processed.toString())
   };
-}
+});
 
 export function getAllCategories() {
   const entries = getAllEntries();

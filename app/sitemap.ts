@@ -33,21 +33,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const reviewRoutes: MetadataRoute.Sitemap = getAllPosts("reviews").map((post) => ({
     url: `${baseUrl}/reviews/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated ?? post.date),
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
   const articleRoutes: MetadataRoute.Sitemap = getAllPosts("articles").map((post) => ({
     url: `${baseUrl}/articles/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated ?? post.date),
     changeFrequency: "monthly",
     priority: 0.8
   }));
 
   const columnRoutes: MetadataRoute.Sitemap = getAllPosts("columns").map((post) => ({
     url: `${baseUrl}/columns/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: new Date(post.updated ?? post.date),
     changeFrequency: "weekly",
     priority: 0.85
   }));

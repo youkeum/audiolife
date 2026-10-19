@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import AuthProvider from "@/components/AuthProvider";
-import HeaderSearch from "@/components/HeaderSearch";
-import TopAuthMenu from "@/components/TopAuthMenu";
+import SiteHeader from "@/components/SiteHeader";
 import "./globals.css";
+import { SITE_DESCRIPTION } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://audiolife.kr"),
@@ -10,14 +10,11 @@ export const metadata: Metadata = {
     default: "AudioLife",
     template: "%s | AudioLife"
   },
-  description: "AudioLife는 하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진입니다.",
-  alternates: {
-    canonical: "https://audiolife.kr"
-  },
+  description: SITE_DESCRIPTION,
   keywords: ["오디오", "헤드폰", "스피커", "DAC", "앰프", "오디오 리뷰", "오디오 기사", "오디오 컬럼"],
   openGraph: {
     title: "AudioLife",
-    description: "AudioLife는 하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진입니다.",
+    description: SITE_DESCRIPTION,
     url: "https://audiolife.kr",
     siteName: "AudioLife",
     locale: "ko_KR",
@@ -34,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AudioLife",
-    description: "AudioLife는 하이파이·헤드파이 리뷰, 오디오 업계 기사, 입문부터 심화까지의 오디오 컬럼을 제공하는 한국어 오디오 웹매거진입니다.",
+    description: SITE_DESCRIPTION,
     images: ["/opengraph-image"]
   },
   verification: {
@@ -62,35 +59,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <AuthProvider>
-          <header className="topbar">
-            <div className="container topbar-container topbar-wrap">
-              <div className="brand-wrap">
-                <a className="brand" href="/">
-                  <img className="brand-logo" src="/logo" alt="AudioLife logo" />
-                  AudioLife
-                </a>
-                <p className="brand-subcopy">
-                  하이파이·헤드파이 리뷰, 오디오 업계 기사, 오디오 컬럼을 제공하는 한국어 오디오 웹매거진
-                </p>
-              </div>
-              <nav className="nav" aria-label="주요 메뉴">
-                <div className="nav-links">
-                  <a href="/reviews">REVIEWS</a>
-                  <a href="/articles">ARTICLES</a>
-                  <a href="/columns">COLUMNS</a>
-                  <a href="/calendar">CALENDAR</a>
-                  <a href="/about">ABOUT</a>
-                </div>
-                <div className="nav-utilities">
-                  <TopAuthMenu />
-                  <HeaderSearch />
-                </div>
-              </nav>
-            </div>
-          </header>
-          <main className="container">{children}</main>
+          <a className="skip-link" href="#main-content">본문으로 건너뛰기</a>
+          <SiteHeader />
+          <main id="main-content" className="container">{children}</main>
           <footer>
-            <div className="container">© {new Date().getFullYear()} AudioLife. Built for audiolife.kr</div>
+            <div className="container site-footer"><span>© {new Date().getFullYear()} AudioLife</span><nav aria-label="하단 메뉴"><a href="/about">소개·문의</a><a href="https://blog.naver.com/audiolife-" target="_blank" rel="noreferrer">네이버 블로그</a><a href="https://www.youtube.com/@portablewave" target="_blank" rel="noreferrer">YouTube</a></nav></div>
           </footer>
         </AuthProvider>
       </body>

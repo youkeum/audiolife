@@ -1,192 +1,70 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts, getPostBasePath, getPostTypeLabel } from "@/lib/content";
-import { createItemListJsonLd, createOrganizationJsonLd, createWebSiteJsonLd } from "@/lib/seo";
+import PostImage from "@/components/PostImage";
+import { getAllPosts, getPostBasePath, getPostTypeLabel, type PostMeta } from "@/lib/content";
+import { createOrganizationJsonLd, createWebSiteJsonLd } from "@/lib/seo";
+import { HOME_ARCHIVE_COUNT, SITE_DESCRIPTION } from "@/lib/site";
+import { hasDistinctExcerpt } from "@/lib/presentation";
+import styles from "./home.module.css";
+
+export const metadata: Metadata = {
+  title: { absolute: "AudioLife | 하이파이·헤드파이 리뷰와 오디오 소식" },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: "https://audiolife.kr" }
+};
+
+function PostLink({ post, featured = false }: { post: PostMeta; featured?: boolean }) {
+  return <Link href={`${getPostBasePath(post.type)}/${post.slug}`} className={featured ? styles.feature : styles.card}>
+    {post.coverImage && <PostImage src={post.coverImage} alt={post.title} sizes={featured ? "(max-width: 800px) 94vw, 46vw" : "(max-width: 800px) 46vw, 23vw"} />}
+    <div className={styles.meta}><time dateTime={post.date}>{post.date}</time> · {post.category}</div>
+    <h3>{post.title}</h3>
+    {featured && <p className={styles.summary}>{post.excerpt}</p>}
+  </Link>;
+}
 
 export default function HomePage() {
-  const latestReviews = getAllPosts("reviews");
-  const latestArticles = getAllPosts("articles");
-  const latestColumns = getAllPosts("columns");
-  const latestMixed = [...latestReviews, ...latestArticles, ...latestColumns].sort((a, b) => (a.date < b.date ? 1 : -1));
-  const latestPost = latestMixed[0];
-  const featureReview = latestReviews[0];
-  const featureArticle = latestArticles[0];
-  const reviewList = latestReviews.slice(1, 8);
-  const articleList = latestArticles.slice(1, 8);
-  const columnHighlights = latestColumns.slice(0, 4);
-  const webSiteJsonLd = createWebSiteJsonLd();
-  const organizationJsonLd = createOrganizationJsonLd();
-  const homeItemListJsonLd = createItemListJsonLd({
-    name: "AudioLife 최신 포스트",
-    description: "AudioLife의 최신 리뷰/기사/컬럼 목록",
-    path: "/",
-    posts: latestMixed.slice(0, 12)
-  });
+  const reviews = getAllPosts("reviews");
+  const articles = getAllPosts("articles");
+  const columns = getAllPosts("columns");
+  const latest = [...reviews, ...articles, ...columns].sort((a, b) => b.date.localeCompare(a.date))[0];
+  return <div className={styles.home}>
+    {[createWebSiteJsonLd(), createOrganizationJsonLd()].map((schema, index) => <script key={index} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />)}
+    {latest && <Link className={styles.hero} href={`${getPostBasePath(latest.type)}/${latest.slug}`}>
+      <div className={styles.heroText}>
+        <p className={styles.kicker}>LATEST POST</p>
+        <h1>{latest.title}</h1>
+        <div className={styles.meta}>{getPostTypeLabel(latest.type)} · <time dateTime={latest.date}>{latest.date}</time></div>
+        <p className={styles.summary}>{latest.excerpt}</p>
+        <span className={styles.read}>자세히 읽기 →</span>
+      </div>
+      {latest.coverImage && <PostImage src={latest.coverImage} alt={latest.title} priority className={styles.heroImage} sizes="(max-width: 800px) 94vw, 55vw" />}
+    </Link>}
 
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeItemListJsonLd) }} />
-      {latestPost ? (
-        <Link
-          className="magazine-hero hero-latest"
-          href={`${getPostBasePath(latestPost.type)}/${latestPost.slug}`}
-          style={
-            latestPost.coverImage
-              ? {
-                  backgroundImage:
-                    `linear-gradient(110deg, rgba(5,5,5,0.88) 10%, rgba(20,10,5,0.52) 55%, rgba(12,7,5,0.82) 100%), url(${latestPost.coverImage})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center"
-                }
-              : undefined
-          }
-        >
-          <p className="magazine-kicker">LATEST POST</p>
-          <h1>{latestPost.title}</h1>
-          <p className="hero-meta">{getPostTypeLabel(latestPost.type)} · {latestPost.date}</p>
-          <p className="hero-excerpt">{latestPost.excerpt}</p>
-        </Link>
-      ) : (
-        <section className="magazine-hero">
-          <h1>최신 글이 아직 없습니다.</h1>
-        </section>
-      )}
-
-      <section className="banner-row" aria-label="배너 영역">
-        <a
-          className="banner-slot"
-          href="https://blog.naver.com/audiolife-"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img className="banner-image" src="/banners/banner1.jpg" alt="AudioLife Naver Blog" />
-        </a>
-        <a
-          className="banner-slot"
-          href="https://www.youtube.com/@portablewave"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img className="banner-image" src="/banners/banner2.jpg" alt="PortableWave YouTube" />
-        </a>
-        <a className="banner-slot" href="/about">
-          <span>SPONSOR BANNER 03</span>
-        </a>
+    <div className={styles.editorial}>
+      <section aria-labelledby="reviews-heading">
+        <div className={styles.heading}><h2 id="reviews-heading">LATEST REVIEWS</h2><Link href="/reviews">리뷰 전체 보기 →</Link></div>
+        {reviews[0] && <PostLink post={reviews[0]} featured />}
+        <div className={styles.reviewGrid}>{reviews.slice(1, HOME_ARCHIVE_COUNT + 1).map(post => <PostLink key={post.slug} post={post} />)}</div>
       </section>
-
-      <section className="latest-columns-strip" aria-label="최신 컬럼">
-        <div className="latest-columns-head">
-          <h2>LATEST COLUMNS</h2>
-          <Link href="/columns">ALL COLUMNS</Link>
-        </div>
-
-        <div className="latest-columns-grid">
-          {columnHighlights.map((post) => (
-            <Link key={post.slug} href={`/columns/${post.slug}`} className="latest-column-card">
-              {post.coverImage ? (
-                <img className="latest-column-image" src={post.coverImage} alt={post.title} />
-              ) : (
-                <div className="latest-column-fallback">{post.category.toUpperCase()}</div>
-              )}
-              <div className="latest-column-body">
-                <div className="meta">{post.date}</div>
-                <h3>{post.title}</h3>
-              </div>
-            </Link>
-          ))}
-          {columnHighlights.length === 0 ? <p>등록된 컬럼이 없습니다.</p> : null}
-        </div>
+      <section aria-labelledby="articles-heading">
+        <div className={styles.heading}><h2 id="articles-heading">LATEST ARTICLES</h2><Link href="/articles">기사 전체 보기 →</Link></div>
+        {articles[0] && <PostLink post={articles[0]} featured />}
+        <div className={styles.newsList}>{articles.slice(1, HOME_ARCHIVE_COUNT + 1).map(post => <Link key={post.slug} className={styles.news} href={`/articles/${post.slug}`}>
+          <div className={styles.newsMeta}><time dateTime={post.date}>{post.date}</time><span>{post.category}</span></div>
+          <div className={styles.newsText}><h3>{post.title}{hasDistinctExcerpt(post) && <span> - {post.excerpt}</span>}</h3><p>{post.bodyPreview || post.excerpt}</p></div>
+          {post.coverImage && <PostImage src={post.coverImage} alt={post.title} sizes="(max-width: 800px) 22vw, 160px" />}
+        </Link>)}</div>
       </section>
+    </div>
 
-      <section className="magazine-grid">
-        <div className="mag-col">
-          <div className="mag-col-head">
-            <h2>LATEST REVIEWS</h2>
-            <Link href="/reviews">ALL REVIEWS</Link>
-          </div>
-
-          {featureReview ? (
-            <Link className="mag-feature" href={`/reviews/${featureReview.slug}`}>
-              {featureReview.coverImage ? (
-                <img className="mag-thumb-image" src={featureReview.coverImage} alt={featureReview.title} />
-              ) : (
-                <div className="mag-thumb">{featureReview.category.toUpperCase()}</div>
-              )}
-              <div className="meta">{featureReview.date}</div>
-              <h3>{featureReview.title}</h3>
-              <p className="description">{featureReview.excerpt}</p>
-            </Link>
-          ) : null}
-
-          <div className="review-archive-grid">
-            {reviewList.map((post) => (
-              <Link
-                key={post.slug}
-                className="review-archive-card"
-                href={`/reviews/${post.slug}`}
-              >
-                {post.coverImage ? (
-                  <img className="review-archive-thumb" src={post.coverImage} alt={post.title} />
-                ) : (
-                  <div className="review-archive-fallback">{post.category.toUpperCase()}</div>
-                )}
-                <div className="review-archive-body">
-                  <div className="meta">{post.date}</div>
-                  <h3>{post.title}</h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div className="mag-col">
-          <div className="mag-col-head">
-            <h2>LATEST ARTICLES</h2>
-            <Link href="/articles">ALL ARTICLES</Link>
-          </div>
-
-          {featureArticle ? (
-            <Link className="mag-feature" href={`/articles/${featureArticle.slug}`}>
-              {featureArticle.coverImage ? (
-                <img className="mag-thumb-image" src={featureArticle.coverImage} alt={featureArticle.title} />
-              ) : (
-                <div className="mag-thumb">{featureArticle.category.toUpperCase()}</div>
-              )}
-              <div className="meta">{featureArticle.date}</div>
-              <h3>{featureArticle.title}</h3>
-              <p className="description">{featureArticle.excerpt}</p>
-            </Link>
-          ) : null}
-
-          <div className="article-archive-list">
-            {articleList.map((post) => (
-              <Link
-                key={post.slug}
-                className="article-archive-item"
-                href={`/articles/${post.slug}`}
-              >
-                <div className="article-archive-meta">
-                  <span>{post.date}</span>
-                  <span>{post.category}</span>
-                </div>
-                <div className="article-archive-body">
-                  <h3>
-                    {post.title}
-                    <span> - {post.excerpt}</span>
-                  </h3>
-                  <p className="article-archive-content">{post.bodyPreview ?? post.excerpt}</p>
-                </div>
-                {post.coverImage ? (
-                  <img className="article-archive-thumb" src={post.coverImage} alt={post.title} />
-                ) : (
-                  <div className="article-archive-fallback">{post.category.toUpperCase()}</div>
-                )}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  );
+    <section aria-labelledby="columns-heading">
+      <div className={styles.heading}><h2 id="columns-heading">COLUMNS & GUIDES</h2><Link href="/columns">컬럼 전체 보기 →</Link></div>
+      <div className={styles.columnGrid}>{columns.slice(0, 4).map(post => <PostLink key={post.slug} post={post} />)}</div>
+    </section>
+    <section className={styles.channels} aria-label="AudioLife 채널">
+      <div><p className={styles.kicker}>MORE FROM AUDIOLIFE</p><h2>음악과 오디오, 더 깊이.</h2></div>
+      <a href="https://blog.naver.com/audiolife-" target="_blank" rel="noreferrer">네이버 블로그 <span>오디오 이야기 더 읽기 ↗</span></a>
+      <a href="https://www.youtube.com/@portablewave" target="_blank" rel="noreferrer">PortableWave <span>YouTube에서 영상 보기 ↗</span></a>
+    </section>
+  </div>;
 }
