@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (76):
+- Articles (77):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -155,6 +155,7 @@
 - naver-224443570659.md | 2026-10-16 | DAP | 소니 신형 워크맨 NW-WM1ZM3·WM1AM3·ZX900 발표
 - naver-224446425962.md | 2026-10-19 | SOFTWARE | 구형 안드로이드 스마트폰을 플레이어로, 리톤(reTONE)
 - naver-224447583798.md | 2026-10-20 | EVENT | 2026 로이코 레코드페어
+- naver-224448842071.md | 2026-10-21 | BLUETOOTH | 드디어 블루투스에도 고음질, 무손실 '표준'이 생기네요
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - noble_luban.md | 2026-04-14 | EARPHONE | 노블 오디오 루반(Lu Ban)
 - nodeaudioatom.md | 2026-03-21 | SPEAKER | Node Audio Atom
@@ -199,7 +200,7 @@
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
 - yena.md | 2026-07-23 | AV | 돌비 애트모스와 다른 오로3D의 매력
-- Columns (30):
+- Columns (31):
 - headphonestycolumn1.md | 2026-03-31 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(1)
 - headphonestycolumn2.md | 2026-04-06 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(2)
 - headphonestycolumn3.md | 2026-04-08 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(3)
@@ -230,6 +231,7 @@
 - hifi-headfi-100days-day8.md | 2026-02-28 | COLUMN | [100일 프로젝트] Day 8 - 샘플링레이트가 의미하는 것
 - hifi-headfi-100days-day9.md | 2026-03-02 | COLUMN | [100일 프로젝트] Day 9 - 비트뎁스와 다이내믹레인지의 관계
 - luminate.md | 2026-07-20 | COLUMN | CD 판매량으로 확인 가능한 BTS의 위상
+- naver-224448855807.md | 2026-10-21 | COLUMN | 피오의 '클래스 A'라는 이름표 - 마케팅 표현, 어디까지 허용할 수 있을까
 
 ## 8) 재시작 체크리스트
 1. `npm install` 후 `npm run dev` 실행
@@ -253,7 +255,7 @@
 ---
 
 ## 10) 현재 상태 확인
-- 콘텐츠 개수: articles=76, reviews=28, columns=30
+- 콘텐츠 개수: articles=77, reviews=28, columns=31
 - 현재 브랜치: `git branch --show-current`
 - 마지막 커밋: `git log -1 --oneline`
 - 워킹트리 상태: `git status --short`
