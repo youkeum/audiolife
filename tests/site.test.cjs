@@ -12,7 +12,18 @@ require.extensions['.ts'] = (module, filename) => {
 const { archiveState, archiveHref, archiveMetadata } = require('../lib/archive.ts');
 const { SITE_NAVIGATION, ARCHIVE_PAGE_SIZE } = require('../lib/site.ts');
 const { optimizeContentImages } = require('../lib/images.ts');
+const { decodeRouteSegment } = require('../lib/route-params.ts');
 const posts = Array.from({ length: 27 }, (_, i) => ({ slug: String(i), title: `Product ${i}`, excerpt: 'Audio review', tags: ['Brand'], category: i % 2 ? 'DAC' : 'DAP' }));
+
+test('taxonomy route segments decode Korean, spaces and special characters once', () => {
+  for (const label of ['포터블오디오', '아스텔앤컨', 'LISTENING SPACE', 'A/B & C+', '100%', 'DAP']) {
+    assert.equal(decodeRouteSegment(encodeURIComponent(label)), label);
+    assert.equal(decodeRouteSegment(label), label);
+  }
+  assert.equal(decodeRouteSegment(encodeURIComponent('청음실'.normalize('NFD'))), '청음실');
+  assert.equal(decodeRouteSegment('%ED%broken'), '%ED%broken');
+  assert.equal(decodeRouteSegment('%2520'), '%20');
+});
 
 test('pagination is bounded and preserves all records exactly once', () => {
   const pages = [1, 2, 3].flatMap(page => archiveState(posts, { page: String(page) }).posts);
