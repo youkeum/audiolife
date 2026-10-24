@@ -14,3 +14,4 @@
 | https://blog.naver.com/audiolife-/224448842071 | `/articles/naver-224448842071` | 2026-10-21 | 2026-10-21 | 3 | 푸시 완료·배포 미확인 | AV Watch 기사·과거 블로그 글 링크와 원문 이미지 3장 보존 |
 | https://blog.naver.com/audiolife-/224450036679 | `/articles/naver-224450036679` | 2026-10-22 | 2026-10-22 | 4 | 푸시 완료·배포 미확인 | 오디오 소식 → 기사(HEADPHONE). 본문·사진 순서 보존, 이쿠스틱스 및 매킨토시 그룹 인수 원문 링크 보존 |
 | https://blog.naver.com/audiolife-/224449849005 | `/articles/naver-224449849005` | 2026-10-22 | 2026-10-22 | 3 | 푸시 완료·배포 미확인 | 오디오 소식 → 기사(STREAMING). 실제 원문 제목의 '기대와는 다릅니다' 보존, BluOS 공식 발표 및 다르코 링크 보존 |
+| https://blog.naver.com/audiolife-/224452121364 | `/articles/naver-224452121364` | 2026-10-24 | 2026-10-24 | 5 | 푸시 완료·배포 미확인 | 사진·비교 그래프 순서, PHILE WEB 기사 및 과거 A8000 블로그 리뷰 링크 보존 |
