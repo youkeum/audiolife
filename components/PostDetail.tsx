@@ -5,6 +5,7 @@ import PostCard from "./PostCard";
 import { getAllPosts, getPostBasePath, type Post } from "@/lib/content";
 import { ARCHIVES } from "@/lib/archive";
 import { hasDistinctExcerpt } from "@/lib/presentation";
+import { categoryPath } from "@/lib/category-route";
 import styles from "./PostDetail.module.css";
 
 export default function PostDetail({ post, schema }: { post: Post; schema: object }) {
@@ -19,7 +20,7 @@ export default function PostDetail({ post, schema }: { post: Post; schema: objec
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
     <article className={styles.article}>
       <header className={styles.header}>
-        <nav className={styles.breadcrumbs} aria-label="현재 위치"><Link href="/">홈</Link><span>/</span><Link href={getPostBasePath(post.type)}>{ARCHIVES[post.type].title}</Link><span>/</span><Link href={`/categories/${encodeURIComponent(post.category)}`}>{post.category}</Link></nav>
+        <nav className={styles.breadcrumbs} aria-label="현재 위치"><Link href="/">홈</Link><span>/</span><Link href={getPostBasePath(post.type)}>{ARCHIVES[post.type].title}</Link><span>/</span><Link href={categoryPath(post.category)}>{post.category}</Link></nav>
         <h1>{post.title}</h1>
         {hasDistinctExcerpt(post) && <p className={styles.intro}>{post.excerpt}</p>}
         <div className={styles.byline}><span>{post.type === "reviews" ? "리뷰어 YK" : "AudioLife"}</span><time dateTime={post.date}>{post.date}</time>{post.updated && post.updated !== post.date && <span>수정 <time dateTime={post.updated}>{post.updated}</time></span>}</div>

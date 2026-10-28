@@ -13,7 +13,56 @@ const { archiveState, archiveHref, archiveMetadata } = require('../lib/archive.t
 const { SITE_NAVIGATION, ARCHIVE_PAGE_SIZE } = require('../lib/site.ts');
 const { optimizeContentImages } = require('../lib/images.ts');
 const { decodeRouteSegment } = require('../lib/route-params.ts');
+const { canonicalCategory, categoryPath, categoryRedirectHref } = require('../lib/category-route.ts');
 const posts = Array.from({ length: 27 }, (_, i) => ({ slug: String(i), title: `Product ${i}`, excerpt: 'Audio review', tags: ['Brand'], category: i % 2 ? 'DAC' : 'DAP' }));
+
+test('category routes use the stored spelling and preserve redirect query values', () => {
+  const categories = ['SPEAKER', 'LISTENING SPACE', 'MixedCase', '청음실'];
+  for (const spelling of ['speaker', 'Speaker', 'SPEAKER']) {
+    assert.equal(canonicalCategory(spelling, categories), 'SPEAKER');
+  }
+  assert.equal(canonicalCategory('mixedcase', categories), 'MixedCase');
+  assert.equal(canonicalCategory('not-a-category', categories), undefined);
+  assert.equal(categoryPath('LISTENING SPACE'), '/categories/LISTENING%20SPACE');
+  assert.equal(categoryPath('청음실'), '/categories/%EC%B2%AD%EC%9D%8C%EC%8B%A4');
+  assert.equal(categoryRedirectHref('SPEAKER', {}), '/categories/SPEAKER');
+  const href = categoryRedirectHref('SPEAKER', { page: '2', q: 'DAC & AMP', category: 'SPEAKER', extra: ['one', 'two'], empty: '', absent: undefined });
+  const url = new URL(href, 'https://audiolife.kr');
+  assert.equal(url.pathname, '/categories/SPEAKER');
+  assert.deepEqual([...url.searchParams], [['page', '2'], ['q', 'DAC & AMP'], ['category', 'SPEAKER'], ['extra', 'one'], ['extra', 'two'], ['empty', '']]);
+});
+
+test('category page redirects variants with 308, keeps canonical pages and rejects unknown categories', () => {
+  const vm = require('node:vm');
+  const entries = Array.from({ length: 27 }, (_, i) => ({ ...posts[i], category: 'SPEAKER', date: '2026-10-28' }));
+  const module = { exports: {} };
+  const code = ts.transpileModule(fs.readFileSync('app/categories/[category]/page.tsx', 'utf8'), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022, jsx: ts.JsxEmit.ReactJSX, esModuleInterop: true }
+  }).outputText;
+  vm.runInNewContext(code, { module, exports: module.exports, require: name => {
+    if (name === '@/lib/content') return { getAllCategories: () => ['SPEAKER', 'LISTENING SPACE'], getPostsByCategory: category => category === 'SPEAKER' ? entries : [] };
+    if (name === '@/components/PostArchive') return { __esModule: true, default: function Archive() {} };
+    if (name.startsWith('@/lib/')) return require(`../${name.slice(2)}.ts`);
+    return require(name);
+  }});
+  const route = module.exports;
+  const query = { page: '2', q: ['Product', 'ignored'], category: 'SPEAKER', extra: ['a', 'b'] };
+  for (const spelling of ['speaker', 'Speaker']) {
+    assert.throws(() => route.default({ params: { category: spelling }, searchParams: query }), error => {
+      assert.equal(error.digest, 'NEXT_REDIRECT;replace;/categories/SPEAKER?page=2&q=Product&q=ignored&category=SPEAKER&extra=a&extra=b;308;');
+      return true;
+    });
+  }
+  const page = route.default({ params: { category: 'SPEAKER' }, searchParams: { page: '2' } });
+  assert.equal(page.props.collection.path, '/categories/SPEAKER');
+  assert.equal(archiveState(page.props.collection.posts, page.props.query).posts.length, 12);
+  const metadata = route.generateMetadata({ params: { category: 'speaker' }, searchParams: { page: '2' } });
+  assert.equal(metadata.alternates.canonical, 'https://audiolife.kr/categories/SPEAKER?page=2');
+  for (const method of [route.default, route.generateMetadata]) {
+    assert.throws(() => method({ params: { category: 'not-a-category' }, searchParams: {} }), error => error.digest === 'NEXT_NOT_FOUND');
+  }
+  assert.throws(() => route.default({ params: { category: 'listening%20space' }, searchParams: {} }), error => error.digest === 'NEXT_REDIRECT;replace;/categories/LISTENING%20SPACE;308;');
+});
 
 test('taxonomy route segments decode Korean, spaces and special characters once', () => {
   for (const label of ['포터블오디오', '아스텔앤컨', 'LISTENING SPACE', 'A/B & C+', '100%', 'DAP']) {

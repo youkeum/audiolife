@@ -3,7 +3,7 @@
 .brand { min-width: 0; margin-right: auto; }
 .brand p { margin: 4px 0 0; color: #555; font-size: .68rem; }
 .desktop { display: flex; align-items: center; gap: clamp(18px, 2.2vw, 36px); }
-.desktop a { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 1rem; padding: 12px 0; }
+.desktop a { font-family: var(--font-body); font-weight: 500; font-size: 1rem; letter-spacing: .04em; padding: 12px 0; }
 .desktop a[aria-current], .mobile a[aria-current] { color: #a34419; }
 .actions { display: flex; align-items: center; gap: 8px; }
 .toggle { display: none; }
