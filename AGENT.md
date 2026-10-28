@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (80):
+- Articles (81):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -159,6 +159,7 @@
 - naver-224449849005.md | 2026-10-22 | STREAMING | BluOS에 애플 뮤직이 들어왔습니다만, 기대와는 다릅니다.
 - naver-224450036679.md | 2026-10-22 | HEADPHONE | 보스(BOSE), 이번엔 스컬캔디를 인수했습니다.
 - naver-224452121364.md | 2026-10-24 | EARPHONE | 베릴륨에서 마그네슘으로, 다시 돌아온 파이널 A8000 DC
+- naver-224457219933.md | 2026-10-29 | HEADPHONE | 아담 오디오에서 만든 오픈형 플래그십 헤드폰, H715 레퍼런스
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - noble_luban.md | 2026-04-14 | EARPHONE | 노블 오디오 루반(Lu Ban)
 - nodeaudioatom.md | 2026-03-21 | SPEAKER | Node Audio Atom
@@ -261,7 +262,7 @@
 ---
 
 ## 10) 현재 상태 확인
-- 콘텐츠 개수: articles=80, reviews=30, columns=32
+- 콘텐츠 개수: articles=81, reviews=30, columns=32
 - 현재 브랜치: `git branch --show-current`
 - 마지막 커밋: `git log -1 --oneline`
 - 워킹트리 상태: `git status --short`
