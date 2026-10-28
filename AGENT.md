@@ -174,7 +174,7 @@
 - trailliiultra.md | 2026-06-14 | EARPHONE | 오리올루스 트라일리 울트라 IEM 시스템
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
 - wiimbar.md | 2026-06-04 | SOUNDBAR | 윔(WiiM) 바(Bar)
-- Reviews (28):
+- Reviews (29):
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - ap80promax.md | 2026-07-28 | DAP | 하이디즈 AP80 PRO MAX
 - arranger.md | 2026-05-06 | HEADPHONE | 오스트리안 오디오 어레인저(Arranger)
@@ -196,6 +196,7 @@
 - naver-224433470187.md | 2026-10-06 | EARPHONE | 화려함보다는 정교함을, 캠프파이어 오디오 키메라
 - naver-224437065078.md | 2026-10-10 | LISTENING SPACE | 고양 천변풍경 청음실 방문기: LP와 아날로그 시스템
 - naver-224441108934.md | 2026-10-14 | DAP | 익숙한 아스텔앤컨을 더 작게, 아스텔앤컨 PD5
+- naver-224457085970.md | 2026-10-28 | SPEAKER | 보다 젊어진 캠브리지오디오, L/R M, X & 스파이라(Spira)
 - pd20.md | 2026-04-10 | DAP | 조작하는 맛이 있다. 아스텔앤컨 PD20
 - pinkfaun.md | 2026-03-07 | DIGITAL TRANSPORT | 핑크펀(Pink Faun) 듀얼 울트라 2.16
 - r10arrete.md | 2026-03-15 | SPEAKER | 오디오벡터 R10 Arrete
@@ -259,7 +260,7 @@
 ---
 
 ## 10) 현재 상태 확인
-- 콘텐츠 개수: articles=80, reviews=28, columns=32
+- 콘텐츠 개수: articles=80, reviews=29, columns=32
 - 현재 브랜치: `git branch --show-current`
 - 마지막 커밋: `git log -1 --oneline`
 - 워킹트리 상태: `git status --short`
