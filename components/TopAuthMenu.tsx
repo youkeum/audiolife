@@ -36,7 +36,6 @@ export default function TopAuthMenu() {
   const providerList = useMemo(() => Object.values(providers ?? {}), [providers]);
   const socialProviders = providerList.filter((provider) => provider.id !== "email");
   const supportsEmailMagicLink = providerList.some((provider) => provider.id === "email");
-  const displayName = session?.user?.name?.trim() || session?.user?.email?.trim() || "회원";
 
   function getProviderIcon(providerId: string, providerName: string) {
     if (providerId === "google") {
@@ -86,9 +85,6 @@ export default function TopAuthMenu() {
   if (status === "authenticated" && session?.user) {
     return (
       <div className="top-auth-user">
-        <span className="top-auth-user-name" title={displayName}>
-          {displayName}
-        </span>
         <div className="top-auth-user-actions">
           <a href="/settings" className="top-auth-settings-link" aria-label="설정" title="설정">
             <span aria-hidden="true">⚙</span>

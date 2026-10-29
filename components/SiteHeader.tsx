@@ -27,7 +27,6 @@ export default function SiteHeader() {
           <Link className="brand" href="/" aria-label="audiolife 홈">
             <img className={styles.wordmark} src="/brand/audiolife-wordmark-v3.webp" alt="audiolife" width={960} height={320} />
           </Link>
-          <p>하이파이·헤드파이 리뷰와 오디오 소식</p>
         </div>
         <nav className={styles.desktop} aria-label="주요 메뉴">
           {SITE_NAVIGATION.map((item) => (

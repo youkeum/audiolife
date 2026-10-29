@@ -1,24 +1,26 @@
 .header { color: #111; font-family: var(--font-body); }
 .inner { width: min(1440px, 94vw); margin: auto; min-height: 96px; padding: 8px 0; display: grid; grid-template-columns: minmax(216px, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(18px, 2vw, 28px); position: relative; }
-.brand { display: grid; justify-items: start; justify-self: start; gap: 4px; }
+.brand { display: grid; justify-items: start; justify-self: start; }
 /* A block link removes the inherited text baseline below the raster wordmark. */
 .brand :global(.brand) { display: block; width: fit-content; font-size: 0; line-height: 0; letter-spacing: normal; }
 .wordmark { display: block; width: 216px; height: 54px; object-fit: cover; }
-.brand p { margin: 0; color: #555; font-size: .6875rem; font-weight: 400; line-height: 1.4; letter-spacing: .015em; white-space: nowrap; }
 .desktop { display: flex; align-items: center; gap: clamp(18px, 2vw, 30px); }
 .desktop a { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--font-heading); font-weight: 600; font-size: .9375rem; line-height: 1; letter-spacing: .02em; padding: 0; white-space: nowrap; }
 .desktop a[aria-current], .mobile a[aria-current] { color: #a34419; }
 .actions, .desktopAuth { display: flex; align-items: center; }
-.actions { justify-self: end; gap: 12px; }
+.actions { justify-self: end; align-self: end; gap: 12px; }
 .header :global(.top-auth-menu) { align-items: center; }
 .header :global(.top-auth-user) { display: flex; align-items: center; gap: 12px; text-align: left; }
-.header :global(.top-auth-user-name) { max-width: 8rem; font-family: var(--font-body); font-size: .8125rem; font-weight: 500; line-height: 1.4; color: #555; }
 .header :global(.top-auth-user-actions) { align-items: center; gap: 6px; }
 .header :global(.top-auth-trigger),
 .header :global(.top-auth-user-actions a),
 .header :global(.top-auth-user-actions button),
 .header :global(.search-trigger),
-.toggle { display: inline-flex; align-items: center; justify-content: center; height: 44px; min-height: 44px; padding: 0 12px; border: 1px solid #333; background: #fafafa; color: #111; font-family: var(--font-body); font-size: .8125rem; font-weight: 500; line-height: 1; letter-spacing: 0; white-space: nowrap; cursor: pointer; }
+.toggle { display: inline-flex; align-items: center; justify-content: center; height: 44px; min-height: 44px; padding: 0 12px; appearance: none; border: 0; border-radius: 0; background: transparent; color: #111; font-family: var(--font-body); font-size: .8125rem; font-weight: 500; line-height: 1; letter-spacing: 0; white-space: nowrap; cursor: pointer; }
+.header :global(.search-trigger) { border: 1px solid #333; background: #fafafa; }
+.header :global(.top-auth-trigger:hover), .header :global(.top-auth-user-actions a:hover), .header :global(.top-auth-user-actions button:hover), .toggle:hover { color: #9b2430; }
+.header :global(.search-trigger:hover) { border-color: #9b2430; color: #9b2430; background: #eee; }
+.header :global(.top-auth-trigger:focus-visible), .header :global(.top-auth-user-actions a:focus-visible), .header :global(.top-auth-user-actions button:focus-visible), .header :global(.search-trigger:focus-visible), .toggle:focus-visible { outline: 2px solid #9b2430; outline-offset: 3px; }
 .header :global(.top-auth-trigger) { min-width: 80px; }
 .header :global(.top-auth-settings-link), .header :global(.search-trigger) { flex: 0 0 44px; width: 44px; min-width: 44px; padding: 0; }
 .header :global(.header-search) { display: flex; align-items: center; }
@@ -33,16 +35,11 @@
   .mobile a { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; min-height: 52px; padding: 14px 0; border-bottom: 1px solid #ddd; }
   .mobile a strong { font-family: var(--font-heading); font-size: 1rem; font-weight: 600; line-height: 1.4; letter-spacing: .02em; }
   .mobile a span { font-family: var(--font-body); font-size: .8125rem; font-weight: 400; line-height: 1.5; color: #666; }
-  .mobileAuth { min-width: 0; padding-top: 18px; }
-  .mobileAuth :global(.top-auth-user) { justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .mobileAuth :global(.top-auth-user-name) { max-width: 100%; }
-  .mobileAuth :global(.top-auth-user-actions) { justify-content: flex-start; flex-wrap: wrap; }
+  .mobileAuth { display: flex; justify-content: flex-end; min-width: 0; padding-top: 18px; }
+  .mobileAuth :global(.top-auth-user) { justify-content: flex-end; flex-wrap: wrap; gap: 12px; }
+  .mobileAuth :global(.top-auth-user-actions) { justify-content: flex-end; flex-wrap: wrap; }
   .mobileAuth :global(.top-auth-settings-link span) { font-size: 1.08rem; line-height: 1; color: inherit; }
-  .brand p { font-size: .625rem; letter-spacing: 0; }
 }
 @media (max-width: 370px) {
-  .inner { min-height: 90px; }
   .wordmark { width: 164px; height: 42px; }
-  .brand p { max-width: 164px; white-space: normal; overflow-wrap: anywhere; }
-  .mobile:not([hidden]) { max-height: calc(100dvh - 90px); }
 }
