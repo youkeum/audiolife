@@ -24,9 +24,8 @@ export default function SiteHeader() {
     }}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <Link className="brand" href="/" aria-label="AudioLife 홈">
-            <img className="brand-logo" src="/logo" alt="" width={34} height={34} />
-            AudioLife
+          <Link className="brand" href="/" aria-label="audiolife 홈">
+            <img className={styles.wordmark} src="/brand/audiolife-wordmark-v3.webp" alt="audiolife" width={960} height={320} />
           </Link>
           <p>하이파이·헤드파이 리뷰와 오디오 소식</p>
         </div>

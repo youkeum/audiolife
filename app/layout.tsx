@@ -7,32 +7,32 @@ import { SITE_DESCRIPTION } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL("https://audiolife.kr"),
   title: {
-    default: "AudioLife",
-    template: "%s | AudioLife"
+    default: "audiolife",
+    template: "%s | audiolife"
   },
   description: SITE_DESCRIPTION,
   keywords: ["오디오", "헤드폰", "스피커", "DAC", "앰프", "오디오 리뷰", "오디오 기사", "오디오 컬럼"],
   openGraph: {
-    title: "AudioLife",
+    title: "audiolife",
     description: SITE_DESCRIPTION,
     url: "https://audiolife.kr",
-    siteName: "AudioLife",
+    siteName: "audiolife",
     locale: "ko_KR",
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/opengraph-image?v=3",
         width: 1200,
         height: 630,
-        alt: "AudioLife - 오디오 경험을 기록하는 아카이브"
+        alt: "audiolife - 오디오 경험을 기록하는 아카이브"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "AudioLife",
+    title: "audiolife",
     description: SITE_DESCRIPTION,
-    images: ["/opengraph-image"]
+    images: ["/opengraph-image?v=3"]
   },
   verification: {
     other: {
@@ -40,9 +40,13 @@ export const metadata: Metadata = {
     }
   },
   icons: {
-    icon: [{ url: "/logo?v=2" }],
-    shortcut: [{ url: "/logo?v=2" }],
-    apple: [{ url: "/logo?v=2" }]
+    icon: [
+      { url: "/brand/audiolife-favicon-v3.ico", sizes: "any" },
+      { url: "/brand/audiolife-icon-16-v3.png", type: "image/png", sizes: "16x16" },
+      { url: "/brand/audiolife-icon-32-v3.png", type: "image/png", sizes: "32x32" }
+    ],
+    shortcut: [{ url: "/brand/audiolife-favicon-v3.ico" }],
+    apple: [{ url: "/brand/audiolife-icon-180-v3.png", sizes: "180x180" }]
   }
 };
 
@@ -63,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteHeader />
           <main id="main-content" className="container">{children}</main>
           <footer>
-            <div className="container site-footer"><span>© {new Date().getFullYear()} AudioLife</span><nav aria-label="하단 메뉴"><a href="/about">소개·문의</a><a href="https://blog.naver.com/audiolife-" target="_blank" rel="noreferrer">네이버 블로그</a><a href="https://www.youtube.com/@portablewave" target="_blank" rel="noreferrer">YouTube</a></nav></div>
+            <div className="container site-footer"><span>© {new Date().getFullYear()} audiolife</span><nav aria-label="하단 메뉴"><a href="/about">소개·문의</a><a href="https://blog.naver.com/audiolife-" target="_blank" rel="noreferrer">네이버 블로그</a><a href="https://www.youtube.com/@portablewave" target="_blank" rel="noreferrer">YouTube</a></nav></div>
           </footer>
         </AuthProvider>
       </body>

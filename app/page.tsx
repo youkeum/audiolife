@@ -8,7 +8,7 @@ import { hasDistinctExcerpt } from "@/lib/presentation";
 import styles from "./home.module.css";
 
 export const metadata: Metadata = {
-  title: { absolute: "AudioLife | 하이파이·헤드파이 리뷰와 오디오 소식" },
+  title: { absolute: "audiolife | 하이파이·헤드파이 리뷰와 오디오 소식" },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "https://audiolife.kr" }
 };
@@ -61,8 +61,8 @@ export default function HomePage() {
       <div className={styles.heading}><h2 id="columns-heading">COLUMNS & GUIDES</h2><Link href="/columns">컬럼 전체 보기 →</Link></div>
       <div className={styles.columnGrid}>{columns.slice(0, 4).map(post => <PostLink key={post.slug} post={post} />)}</div>
     </section>
-    <section className={styles.channels} aria-label="AudioLife 채널">
-      <div><p className={styles.kicker}>MORE FROM AUDIOLIFE</p><h2>음악과 오디오, 더 깊이.</h2></div>
+    <section className={styles.channels} aria-label="audiolife 채널">
+      <div><p className={styles.kicker}>MORE FROM audiolife</p><h2>음악과 오디오, 더 깊이.</h2></div>
       <a href="https://blog.naver.com/audiolife-" target="_blank" rel="noreferrer">네이버 블로그 <span>오디오 이야기 더 읽기 ↗</span></a>
       <a href="https://www.youtube.com/@portablewave" target="_blank" rel="noreferrer">PortableWave <span>YouTube에서 영상 보기 ↗</span></a>
     </section>

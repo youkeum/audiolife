@@ -3,7 +3,7 @@ import { getPostBasePath, type PostMeta } from "@/lib/content";
 import { SITE_DESCRIPTION } from "./site";
 
 export const SITE_URL = "https://audiolife.kr";
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph-image`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph-image?v=3`;
 
 type ItemListOptions = {
   name: string;
@@ -22,7 +22,7 @@ export function createWebSiteJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "AudioLife",
+    name: "audiolife",
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     inLanguage: "ko-KR",
@@ -38,10 +38,10 @@ export function createOrganizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "AudioLife",
+    name: "audiolife",
     description: "오디오 리뷰, 기사, 컬럼 콘텐츠를 발행하는 한국어 오디오 웹매거진",
     url: SITE_URL,
-    logo: `${SITE_URL}/logo?v=2`
+    logo: `${SITE_URL}/brand/audiolife-wordmark-v3.png`
   };
 }
 

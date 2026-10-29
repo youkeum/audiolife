@@ -8,7 +8,7 @@ type Props = {
 };
 
 const SITE_URL = "https://audiolife.kr";
-const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph-image`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/opengraph-image?v=3`;
 
 function toAbsoluteUrl(url?: string): string {
   if (!url) return DEFAULT_OG_IMAGE;
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         url: canonicalUrl,
         title: post.title,
         description: post.excerpt,
-        siteName: "AudioLife",
+        siteName: "audiolife",
         locale: "ko_KR",
         publishedTime: post.date,
         modifiedTime: post.updated ?? post.date,
@@ -81,7 +81,7 @@ export default async function ColumnDetailPage({ params }: Props) {
       mainEntityOfPage: canonicalUrl,
       publisher: {
         "@type": "Organization",
-        name: "AudioLife",
+        name: "audiolife",
         url: SITE_URL
       }
     };

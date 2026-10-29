@@ -23,7 +23,7 @@ export default function PostDetail({ post, schema }: { post: Post; schema: objec
         <nav className={styles.breadcrumbs} aria-label="현재 위치"><Link href="/">홈</Link><span>/</span><Link href={getPostBasePath(post.type)}>{ARCHIVES[post.type].title}</Link><span>/</span><Link href={categoryPath(post.category)}>{post.category}</Link></nav>
         <h1>{post.title}</h1>
         {hasDistinctExcerpt(post) && <p className={styles.intro}>{post.excerpt}</p>}
-        <div className={styles.byline}><span>{post.type === "reviews" ? "리뷰어 YK" : "AudioLife"}</span><time dateTime={post.date}>{post.date}</time>{post.updated && post.updated !== post.date && <span>수정 <time dateTime={post.updated}>{post.updated}</time></span>}</div>
+        <div className={styles.byline}><span>{post.type === "reviews" ? "리뷰어 YK" : "audiolife"}</span><time dateTime={post.date}>{post.date}</time>{post.updated && post.updated !== post.date && <span>수정 <time dateTime={post.updated}>{post.updated}</time></span>}</div>
       </header>
       {post.coverImage && <PostImage src={post.coverImage} alt={post.title} contain priority className={styles.cover} sizes="(max-width: 980px) 94vw, 960px" />}
       <div className={`prose ${styles.prose}`} dangerouslySetInnerHTML={{ __html: post.contentHtml }} />

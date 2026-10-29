@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 export default function SearchPage({ searchParams }: { searchParams: ArchiveQuery }) {
   const posts = [...getAllPosts("reviews"), ...getAllPosts("articles"), ...getAllPosts("columns")].sort((a, b) => b.date.localeCompare(a.date));
-  return <PostArchive query={searchParams} collection={{ posts, path: "/search", title: "통합 검색", description: "제품명, 브랜드와 주제로 AudioLife의 모든 글을 찾아보세요." }} />;
+  return <PostArchive query={searchParams} collection={{ posts, path: "/search", title: "통합 검색", description: "제품명, 브랜드와 주제로 audiolife의 모든 글을 찾아보세요." }} />;
 }

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ABOUT",
   alternates: { canonical: "https://audiolife.kr/about" },
-  description: "AudioLife 소개 및 리뷰 의뢰 안내"
+  description: "audiolife 소개 및 리뷰 의뢰 안내"
 };
 
 export default function AboutPage() {
@@ -11,7 +11,7 @@ export default function AboutPage() {
     <article className="article">
       <h1 className="page-title">ABOUT</h1>
       <p className="description">
-        AudioLife는 실사용 중심의 오디오 리뷰와 산업/문화 기사를 발행하는 개인 매거진입니다.
+        audiolife는 실사용 중심의 오디오 리뷰와 산업/문화 기사를 발행하는 개인 매거진입니다.
       </p>
 
       <div className="prose">
