@@ -211,7 +211,7 @@
 - stella.md | 2026-03-11 | IEM | 아스텔앤컨 & 볼크오디오 스텔라
 - taoc.md | 2026-03-01 | AUDIO RACK | 타옥 ASR III & CSR
 - yena.md | 2026-07-23 | AV | 돌비 애트모스와 다른 오로3D의 매력
-- Columns (33):
+- Columns (34):
 - headphonestycolumn1.md | 2026-03-31 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(1)
 - headphonestycolumn2.md | 2026-04-06 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(2)
 - headphonestycolumn3.md | 2026-04-08 | COLUMN | 당연한 듯, 당연하지 않은 오디오파일을 위한 조언들(3)
@@ -245,6 +245,7 @@
 - naver-224448855807.md | 2026-10-21 | COLUMN | 피오의 '클래스 A'라는 이름표 - 마케팅 표현, 어디까지 허용할 수 있을까
 - naver-224451745572.md | 2026-10-24 | COLUMN | 액티보 BR01 리모컨 키매퍼 앱(안드로이드)
 - naver-224458796605.md | 2026-10-30 | COLUMN | 우리 애플이 달라졌어요.
+- naver-224463296449.md | 2026-11-03 | COLUMN | 헤드파이의 번인, 저는 그냥 하루이틀 기다립니다
 
 ## 8) 재시작 체크리스트
 1. `npm install` 후 `npm run dev` 실행
@@ -268,7 +269,7 @@
 ---
 
 ## 10) 현재 상태 확인
-- 콘텐츠 개수: articles=84, reviews=32, columns=33
+- 콘텐츠 개수: articles=84, reviews=32, columns=34
 - 현재 브랜치: `git branch --show-current`
 - 마지막 커밋: `git log -1 --oneline`
 - 워킹트리 상태: `git status --short`
