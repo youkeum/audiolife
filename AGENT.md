@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (84):
+- Articles (85):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -163,6 +163,7 @@
 - naver-224457988317.md | 2026-10-29 | HEADPHONE | 헤드파이에서의 클래식이란, 오디오테크니카 ATH-AWX7000
 - naver-224459102188.md | 2026-10-30 | EVENT | 명반을 다시 듣는 자리, 버브( VERVE) 70 팝업 전시
 - naver-224460171423.md | 2026-10-31 | HEADPHONE | 소니의 새로운 헤드폰 티저에서 워크맨이 떠오릅니다.
+- naver-224466961501.md | 2026-11-06 | HEADPHONE | 2026년에 돌아온 소니의 레트로 헤드폰, MDR-3R
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - noble_luban.md | 2026-04-14 | EARPHONE | 노블 오디오 루반(Lu Ban)
 - nodeaudioatom.md | 2026-03-21 | SPEAKER | Node Audio Atom
@@ -270,7 +271,7 @@
 ---
 
 ## 10) 현재 상태 확인
-- 콘텐츠 개수: articles=84, reviews=32, columns=35
+- 콘텐츠 개수: articles=85, reviews=32, columns=35
 - 현재 브랜치: `git branch --show-current`
 - 마지막 커밋: `git log -1 --oneline`
 - 워킹트리 상태: `git status --short`
