@@ -11,7 +11,7 @@ require.extensions['.ts'] = (module, filename) => {
 };
 const { archiveState, archiveHref, archiveMetadata } = require('../lib/archive.ts');
 const { SITE_NAVIGATION, ARCHIVE_PAGE_SIZE } = require('../lib/site.ts');
-const { optimizeContentImages } = require('../lib/images.ts');
+const { optimizeContentImages, postImageSources } = require('../lib/images.ts');
 const { decodeRouteSegment } = require('../lib/route-params.ts');
 const { canonicalCategory, categoryPath, categoryRedirectHref } = require('../lib/category-route.ts');
 const posts = Array.from({ length: 27 }, (_, i) => ({ slug: String(i), title: `Product ${i}`, excerpt: 'Audio review', tags: ['Brand'], category: i % 2 ? 'DAC' : 'DAP' }));
@@ -99,23 +99,31 @@ test('retired calendar is absent from navigation', () => {
   assert.equal(SITE_NAVIGATION.some(item => item.href === '/calendar'), false);
   assert.equal(fs.existsSync('app/calendar/page.tsx'), false);
 });
-test('body image optimization preserves alt and fallback images', async () => {
+test('body images use static WebP and preserve alt text and fallback images', async () => {
   const html = '<p><img src="/posts/reviews/HC5/1.jpg" alt="HC5 &amp; audio"></p><img src="https://example.com/a.jpg" alt="Remote"><img src="/missing.jpg" alt="Missing">';
   const result = await optimizeContentImages(html);
   assert.match(result, /alt="HC5 &amp; audio"/);
-  assert.match(result, /srcset="/);
+  assert.match(result, /srcset="\/_post-images\/[a-f0-9]{24}-360\.webp 360w/);
+  assert.doesNotMatch(result, /_next\/image/);
   assert.match(result, /width="\d+" height="\d+"/);
   assert.match(result, /src="https:\/\/example.com\/a.jpg"/);
   assert.match(result, /src="\/missing.jpg"/);
   assert.equal((result.match(/loading="lazy"/g) || []).length, 3);
 });
 
-test('RoomMagic article images retain their direct URL and dimensions', async () => {
+test('cover images share responsive static sources and preserve original fallbacks', () => {
   const src = '/posts/articles/naver-224475592139/2.jpg';
-  const result = await optimizeContentImages(`<img src="${src}" alt="RoomMagic">`);
-  assert.ok(result.includes(`src="${src}"`));
-  assert.match(result, /width="900" height="1951"/);
-  assert.doesNotMatch(result, /srcset=|_next\/image/);
+  const sizes = '94vw';
+  const image = postImageSources(src, sizes);
+  assert.match(image.srcSet, /360w.*720w/);
+  assert.equal(image.sizes, sizes);
+  assert.equal(image.width, 900);
+  assert.equal(image.height, 1951);
+
+  for (const original of ['/posts/missing.jpg', '/posts/animated.gif', 'https://example.com/photo.jpg']) {
+    assert.equal(postImageSources(original, sizes).src, original);
+    assert.equal(postImageSources(original, sizes).srcSet, undefined);
+  }
 });
 
 test('imported excerpts are not repeated above the same body opening', () => {

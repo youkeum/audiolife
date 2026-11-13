@@ -369,7 +369,7 @@ export const getPostBySlug = cache(async (type: PostType, slug: string): Promise
 
   return {
     ...meta,
-    contentHtml: await optimizeContentImages(processed.toString())
+    contentHtml: optimizeContentImages(processed.toString())
   };
 });
 

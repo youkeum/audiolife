@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { servesImageDirectly } from "@/lib/images";
+import { postImageSources } from "@/lib/images";
 import styles from "./PostImage.module.css";
 
 type Props = {
@@ -14,9 +13,9 @@ type Props = {
 export default function PostImage({ src, alt, className = "", sizes = "(max-width: 640px) 94vw, (max-width: 980px) 46vw, 380px", priority = false, contain = false }: Props) {
   return (
     <span className={`${styles.frame} ${className}`}>
-      <Image src={src} alt={alt} fill sizes={sizes} priority={priority} quality={75}
-        unoptimized={!src.startsWith("/") || src.startsWith("//") || servesImageDirectly(src)}
-        style={{ objectFit: contain ? "contain" : "cover" }} />
+      <img {...postImageSources(src, sizes)} alt={alt} className={styles.image}
+        loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : undefined}
+        decoding="async" style={{ objectFit: contain ? "contain" : "cover" }} />
     </span>
   );
 }
