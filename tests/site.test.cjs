@@ -110,6 +110,14 @@ test('body image optimization preserves alt and fallback images', async () => {
   assert.equal((result.match(/loading="lazy"/g) || []).length, 3);
 });
 
+test('RoomMagic article images retain their direct URL and dimensions', async () => {
+  const src = '/posts/articles/naver-224475592139/2.jpg';
+  const result = await optimizeContentImages(`<img src="${src}" alt="RoomMagic">`);
+  assert.ok(result.includes(`src="${src}"`));
+  assert.match(result, /width="900" height="1951"/);
+  assert.doesNotMatch(result, /srcset=|_next\/image/);
+});
+
 test('imported excerpts are not repeated above the same body opening', () => {
   const { hasDistinctExcerpt } = require('../lib/presentation.ts');
   assert.equal(hasDistinctExcerpt({ excerpt: '첫 문단입니다...', bodyPreview: '첫 문단입니다. 그 다음 내용입니다.' }), false);

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { servesImageDirectly } from "@/lib/images";
 import styles from "./PostImage.module.css";
 
 type Props = {
@@ -14,7 +15,7 @@ export default function PostImage({ src, alt, className = "", sizes = "(max-widt
   return (
     <span className={`${styles.frame} ${className}`}>
       <Image src={src} alt={alt} fill sizes={sizes} priority={priority} quality={75}
-        unoptimized={!src.startsWith("/") || src.startsWith("//")}
+        unoptimized={!src.startsWith("/") || src.startsWith("//") || servesImageDirectly(src)}
         style={{ objectFit: contain ? "contain" : "cover" }} />
     </span>
   );
