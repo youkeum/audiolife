@@ -54,6 +54,35 @@
   .channels { grid-template-columns: 1fr; gap: 8px; }
   .news { gap: 12px; }
 }
+@media (max-width: 600px) and (pointer: coarse) {
+  .news:has(> .cardImage) {
+    display: block;
+    position: relative;
+    isolation: isolate;
+    padding: 16px 13px;
+  }
+  .news > .cardImage {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+    border-radius: 0;
+  }
+  .news > .cardImage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgb(20 19 17 / 88%), rgb(20 19 17 / 66%));
+    pointer-events: none;
+  }
+  .news:has(> .cardImage) .newsText {
+    position: relative;
+    z-index: 1;
+  }
+  .news:has(> .cardImage) .listSummary { color: #f2eeea; }
+  .news:has(> .cardImage) .meta { color: #ddd8d2; }
+  .editorial .news:has(> .cardImage) .category { color: #ff9a92; }
+}
 @media (max-width: 480px) {
   .reviewGrid { gap: 24px 14px; }
   .card h3 { font-size: 1rem; line-height: 1.6; }

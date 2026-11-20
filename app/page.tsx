@@ -60,7 +60,7 @@ export default function HomePage() {
             <h3>{post.title}</h3>
             <p className={styles.listSummary}>{post.excerpt}</p>
           </div>
-          {post.coverImage && <PostImage src={post.coverImage} alt={post.title} className={styles.cardImage} sizes="(max-width: 800px) 22vw, 160px" />}
+          {post.coverImage && <PostImage src={post.coverImage} alt={post.title} className={styles.cardImage} sizes="(max-width: 600px) and (pointer: coarse) 94vw, (max-width: 800px) 22vw, 160px" />}
         </Link>)}</div>
       </section>
     </div>
