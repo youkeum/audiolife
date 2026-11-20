@@ -39,9 +39,6 @@
   .editorial .feature { grid-row: 2; }
   .reviewGrid, .newsList { grid-row: 3; }
   .newsList { grid-auto-rows: 1fr; }
-  .news { align-content: center; grid-template-columns: minmax(0, 1fr) var(--article-photo-width, 26%); }
-  .news > .cardImage { aspect-ratio: var(--article-photo-ratio, 3 / 2); background: transparent; }
-  .news > .cardImage img { object-fit: contain; }
 }
 @media (max-width: 800px) {
   .home { gap: 36px; padding-top: 18px; }

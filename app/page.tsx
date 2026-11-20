@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PostImage from "@/components/PostImage";
-import HomeArticleCard from "@/components/HomeArticleCard";
 import { getAllPosts, getPostBasePath, getPostTypeLabel, type PostMeta } from "@/lib/content";
 import { createOrganizationJsonLd, createWebSiteJsonLd } from "@/lib/seo";
 import { HOME_ARCHIVE_COUNT, SITE_DESCRIPTION } from "@/lib/site";
@@ -55,14 +54,14 @@ export default function HomePage() {
       <section aria-labelledby="articles-heading">
         <div className={styles.heading}><h2 id="articles-heading">LATEST ARTICLES</h2><Link href="/articles">기사 전체 보기 →</Link></div>
         {articles[0] && <PostLink post={articles[0]} featured />}
-        <div className={styles.newsList}>{articles.slice(1, HOME_ARCHIVE_COUNT + 1).map(post => <HomeArticleCard key={post.slug} className={styles.news} href={`/articles/${post.slug}`}>
+        <div className={styles.newsList}>{articles.slice(1, HOME_ARCHIVE_COUNT + 1).map(post => <Link key={post.slug} className={styles.news} href={`/articles/${post.slug}`}>
           <div className={styles.newsText}>
             <CardMeta date={post.date} category={post.category} />
             <h3>{post.title}</h3>
             <p className={styles.listSummary}>{post.excerpt}</p>
           </div>
-          {post.coverImage && <PostImage src={post.coverImage} alt={post.title} className={styles.cardImage} sizes="(max-width: 600px) and (pointer: coarse) 94vw, (max-width: 800px) 22vw, (max-width: 1279px) 280px, 400px" />}
-        </HomeArticleCard>)}</div>
+          {post.coverImage && <PostImage src={post.coverImage} alt={post.title} className={styles.cardImage} sizes="(max-width: 600px) and (pointer: coarse) 94vw, (max-width: 800px) 22vw, 160px" />}
+        </Link>)}</div>
       </section>
     </div>
 
