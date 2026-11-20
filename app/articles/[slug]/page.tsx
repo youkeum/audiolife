@@ -4,7 +4,7 @@ import PostDetail from "@/components/PostDetail";
 import { getAllPosts, getPostBySlug } from "@/lib/content";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 const SITE_URL = "https://audiolife.kr";
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const post = await getPostBySlug("articles", params.slug);
+    const { slug } = await params;
+    const post = await getPostBySlug("articles", slug);
     const canonicalUrl = `${SITE_URL}/articles/${post.slug}`;
     const ogImage = toAbsoluteUrl(post.coverImage);
 
@@ -65,7 +66,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArticleDetailPage({ params }: Props) {
   try {
-    const post = await getPostBySlug("articles", params.slug);
+    const { slug } = await params;
+    const post = await getPostBySlug("articles", slug);
     const canonicalUrl = `${SITE_URL}/articles/${post.slug}`;
     const ogImage = toAbsoluteUrl(post.coverImage);
     const articleJsonLd = {

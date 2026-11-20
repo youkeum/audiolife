@@ -4,7 +4,7 @@ import PostDetail from "@/components/PostDetail";
 import { getAllPosts, getPostBySlug } from "@/lib/content";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 const SITE_URL = "https://audiolife.kr";
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
-    const post = await getPostBySlug("reviews", params.slug);
+    const { slug } = await params;
+    const post = await getPostBySlug("reviews", slug);
     const canonicalUrl = `${SITE_URL}/reviews/${post.slug}`;
     const ogImage = toAbsoluteUrl(post.coverImage);
 
@@ -65,7 +66,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ReviewDetailPage({ params }: Props) {
   try {
-    const post = await getPostBySlug("reviews", params.slug);
+    const { slug } = await params;
+    const post = await getPostBySlug("reviews", slug);
     const canonicalUrl = `${SITE_URL}/reviews/${post.slug}`;
     const ogImage = toAbsoluteUrl(post.coverImage);
     const itemType = post.reviewItemType === "Place" ? "LocalBusiness" : "Product";
