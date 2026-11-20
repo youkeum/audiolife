@@ -10,9 +10,24 @@ async function read(path, expected = 200) {
 function canonical(html) {
   return decode(html.match(/<link rel="canonical" href="([^"]+)"/)?.[1] || '');
 }
+const staticWebp = /^\/_post-images\/[a-f0-9]{24}-\d+\.webp$/;
+function responsiveWebp(html, label) {
+  for (const [tag] of html.matchAll(/<img\b[^>]*>/gi)) {
+    const src = tag.match(/\ssrc="([^"]+)"/i)?.[1];
+    const srcset = tag.match(/\ssrcset="([^"]+)"/i)?.[1];
+    if (!src || !srcset || !tag.includes('loading="lazy"')) continue;
+    const variants = srcset.split(',').map(entry => entry.trim().split(/\s+/)[0]);
+    const webp = variants.filter(url => staticWebp.test(url));
+    if (!webp.length) continue;
+    assert.ok(variants.includes(src) && variants.every(url => staticWebp.test(url) || url === src),
+      `${label}: unexpected srcset paths`);
+    return webp;
+  }
+  assert.fail(`${label}: lazy responsive static WebP missing`);
+}
 const home = await read('/');
 assert.ok(!home.includes('href="/calendar"'), 'Calendar link remains');
-assert.ok(home.includes('srcSet=') && home.includes('loading="lazy"'), 'Responsive thumbnails missing');
+const thumbnails = responsiveWebp(home, 'Home thumbnail');
 await read('/calendar', 404);
 assert.equal(canonical(await read('/about')), 'https://audiolife.kr/about');
 const articles = await read('/articles');
@@ -40,10 +55,15 @@ const reviewPath = paths.find(path => path.startsWith('/reviews/'));
 const review = await read(reviewPath);
 assert.ok(review.includes('리뷰어 YK'));
 assert.ok(review.includes('함께 읽으면 좋은 글'));
-assert.ok(review.includes('srcset=') && review.includes('decoding="async"'), 'Body image variants missing');
-const thumb = decode(home.match(/src="([^"]*\/_next\/image\?[^"]+)"/)?.[1] || '');
-assert.ok(thumb);
-const image = await fetch(new URL(thumb, base), { headers: { accept: 'image/webp' }, signal: AbortSignal.timeout(20000) });
-assert.equal(image.status, 200);
-assert.match(image.headers.get('content-type') || '', /^image\//);
-console.log(`PASS: ${paths.length} sitemap pages, pagination, search/filter, metadata, calendar removal, body/thumbnail image delivery`);
+const body = review.match(/<div class="prose [^"]+">([\s\S]*?)<nav [^>]*aria-label="관련 태그"/)?.[1] || '';
+const bodyImages = responsiveWebp(body, 'Review body');
+const imagePaths = new Set([...thumbnails, ...bodyImages]);
+await Promise.all([...imagePaths].map(async path => {
+  const response = await fetch(new URL(path, base), { signal: AbortSignal.timeout(20000) });
+  assert.equal(response.status, 200, `${path}: HTTP ${response.status}`);
+  assert.match(response.headers.get('content-type') || '', /^image\/webp\b/, path);
+  const bytes = Buffer.from(await response.arrayBuffer());
+  assert.equal(bytes.toString('ascii', 0, 4), 'RIFF', path);
+  assert.equal(bytes.toString('ascii', 8, 12), 'WEBP', path);
+}));
+console.log(`PASS: ${paths.length} sitemap pages, pagination, search/filter, metadata, calendar removal, ${imagePaths.size} static WebP variants`);
