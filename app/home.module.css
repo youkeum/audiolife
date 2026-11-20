@@ -39,6 +39,8 @@
   .editorial .feature { grid-row: 2; }
   .reviewGrid, .newsList { grid-row: 3; }
   .newsList { grid-auto-rows: 1fr; }
+  .news { align-content: center; }
+  .news > .cardImage { align-self: stretch; aspect-ratio: auto; }
 }
 @media (max-width: 800px) {
   .home { gap: 36px; padding-top: 18px; }
