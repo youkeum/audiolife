@@ -1,5 +1,6 @@
 .header { color: #111; font-family: var(--font-body); }
-.inner { width: min(1440px, 94vw); margin: auto; min-height: 96px; padding: 8px 0; display: grid; grid-template-columns: minmax(216px, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(18px, 2vw, 28px); position: relative; }
+/* The 1px topbar border completes the 80px header. */
+.inner { width: min(1440px, 94vw); margin: auto; min-height: 79px; padding: 8px 0; display: grid; grid-template-columns: minmax(216px, 1fr) auto minmax(0, 1fr); align-items: center; gap: clamp(18px, 2vw, 28px); position: relative; }
 .brand { display: grid; justify-items: start; justify-self: start; }
 /* A block link removes the inherited text baseline below the raster wordmark. */
 .brand :global(.brand) { display: block; width: fit-content; font-size: 0; line-height: 0; letter-spacing: normal; }
@@ -26,7 +27,7 @@
 .header :global(.header-search) { display: flex; align-items: center; }
 .toggle, .mobile { display: none; }
 @media (max-width: 1280px) {
-  .inner { min-height: 80px; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+  .inner { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
   .wordmark { width: 184px; height: 46px; }
   .desktop, .desktopAuth { display: none; }
   .actions { gap: 8px; }

@@ -1,7 +1,7 @@
 :root {
   --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --font-heading: "Noto Serif KR", "AppleMyungjo", "Batang", serif;
-  --bg: #090909;
+  --bg: #141311;
   --surface: #141414;
   --surface-soft: #1b1b1b;
   --text: #efefef;
@@ -18,14 +18,13 @@ html,
 body {
   margin: 0;
   overflow-x: hidden;
-  background: #050505;
+  background: var(--bg);
 }
 
 body {
   font-family: var(--font-body);
   line-height: 1.75;
   color: var(--text);
-  background: #050505;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -837,7 +836,7 @@ footer {
   padding: 20px 0;
   color: #888;
   font-size: 0.88rem;
-  background: #050505;
+  background: var(--bg);
 }
 
 .link-card {

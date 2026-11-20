@@ -4,7 +4,6 @@ import PostImage from "@/components/PostImage";
 import { getAllPosts, getPostBasePath, getPostTypeLabel, type PostMeta } from "@/lib/content";
 import { createOrganizationJsonLd, createWebSiteJsonLd } from "@/lib/seo";
 import { HOME_ARCHIVE_COUNT, SITE_DESCRIPTION } from "@/lib/site";
-import { hasDistinctExcerpt } from "@/lib/presentation";
 import styles from "./home.module.css";
 
 export const metadata: Metadata = {
@@ -13,12 +12,18 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://audiolife.kr" }
 };
 
-function PostLink({ post, featured = false }: { post: PostMeta; featured?: boolean }) {
+function CardMeta({ date, category }: Pick<PostMeta, "date" | "category">) {
+  return <div className={styles.meta}>
+    <time dateTime={date}>{date}</time> · <span className={styles.category}>{category}</span>
+  </div>;
+}
+
+function PostLink({ post, featured = false, showSummary = false }: { post: PostMeta; featured?: boolean; showSummary?: boolean }) {
   return <Link href={`${getPostBasePath(post.type)}/${post.slug}`} className={featured ? styles.feature : styles.card}>
     {post.coverImage && <PostImage src={post.coverImage} alt={post.title} sizes={featured ? "(max-width: 800px) 94vw, 46vw" : "(max-width: 800px) 46vw, 23vw"} />}
-    <div className={styles.meta}><time dateTime={post.date}>{post.date}</time> · {post.category}</div>
+    <CardMeta date={post.date} category={post.category} />
     <h3>{post.title}</h3>
-    {featured && <p className={styles.summary}>{post.excerpt}</p>}
+    {(featured || showSummary) && <p className={featured ? styles.summary : styles.listSummary}>{post.excerpt}</p>}
   </Link>;
 }
 
@@ -44,14 +49,17 @@ export default function HomePage() {
       <section aria-labelledby="reviews-heading">
         <div className={styles.heading}><h2 id="reviews-heading">LATEST REVIEWS</h2><Link href="/reviews">리뷰 전체 보기 →</Link></div>
         {reviews[0] && <PostLink post={reviews[0]} featured />}
-        <div className={styles.reviewGrid}>{reviews.slice(1, HOME_ARCHIVE_COUNT + 1).map(post => <PostLink key={post.slug} post={post} />)}</div>
+        <div className={styles.reviewGrid}>{reviews.slice(1, HOME_ARCHIVE_COUNT + 1).map(post => <PostLink key={post.slug} post={post} showSummary />)}</div>
       </section>
       <section aria-labelledby="articles-heading">
         <div className={styles.heading}><h2 id="articles-heading">LATEST ARTICLES</h2><Link href="/articles">기사 전체 보기 →</Link></div>
         {articles[0] && <PostLink post={articles[0]} featured />}
         <div className={styles.newsList}>{articles.slice(1, HOME_ARCHIVE_COUNT + 1).map(post => <Link key={post.slug} className={styles.news} href={`/articles/${post.slug}`}>
-          <div className={styles.newsMeta}><time dateTime={post.date}>{post.date}</time><span>{post.category}</span></div>
-          <div className={styles.newsText}><h3>{post.title}{hasDistinctExcerpt(post) && <span> - {post.excerpt}</span>}</h3><p>{post.bodyPreview || post.excerpt}</p></div>
+          <div className={styles.newsText}>
+            <CardMeta date={post.date} category={post.category} />
+            <h3>{post.title}</h3>
+            <p className={styles.listSummary}>{post.excerpt}</p>
+          </div>
           {post.coverImage && <PostImage src={post.coverImage} alt={post.title} sizes="(max-width: 800px) 22vw, 160px" />}
         </Link>)}</div>
       </section>
