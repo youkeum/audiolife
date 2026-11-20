@@ -20,7 +20,7 @@ function CardMeta({ date, category }: Pick<PostMeta, "date" | "category">) {
 
 function PostLink({ post, featured = false, showSummary = false }: { post: PostMeta; featured?: boolean; showSummary?: boolean }) {
   return <Link href={`${getPostBasePath(post.type)}/${post.slug}`} className={featured ? styles.feature : styles.card}>
-    {post.coverImage && <PostImage src={post.coverImage} alt={post.title} sizes={featured ? "(max-width: 800px) 94vw, 46vw" : "(max-width: 800px) 46vw, 23vw"} />}
+    {post.coverImage && <PostImage src={post.coverImage} alt={post.title} className={styles.cardImage} sizes={featured ? "(max-width: 800px) 94vw, 46vw" : "(max-width: 800px) 46vw, 23vw"} />}
     <CardMeta date={post.date} category={post.category} />
     <h3>{post.title}</h3>
     {(featured || showSummary) && <p className={featured ? styles.summary : styles.listSummary}>{post.excerpt}</p>}
@@ -60,7 +60,7 @@ export default function HomePage() {
             <h3>{post.title}</h3>
             <p className={styles.listSummary}>{post.excerpt}</p>
           </div>
-          {post.coverImage && <PostImage src={post.coverImage} alt={post.title} sizes="(max-width: 800px) 22vw, 160px" />}
+          {post.coverImage && <PostImage src={post.coverImage} alt={post.title} className={styles.cardImage} sizes="(max-width: 800px) 22vw, 160px" />}
         </Link>)}</div>
       </section>
     </div>
