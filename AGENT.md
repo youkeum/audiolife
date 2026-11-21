@@ -27,6 +27,7 @@
 
 ## 4) 핵심 구조 맵
 - 앱 라우트(실제 파일 기준):
+- app/about/about.module.css
 - app/about/page.tsx
 - app/admin/comments/page.tsx
 - app/admin/email/page.tsx
