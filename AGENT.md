@@ -93,7 +93,7 @@
 - 도메인 정책(`middleware.ts`): `www.audiolife.kr` -> `audiolife.kr` 308 리다이렉트
 
 ## 7) 현재 콘텐츠 인덱스
-- Articles (91):
+- Articles (92):
 - 1000x.md | 2026-05-14 | HEADPHONE | 소니 1000X 콜렉션(The ColleXion)
 - 1000xm6.md | 2026-02-17 | IEM | 소니 WF-1000XM6 등장
 - Ecoute_th2.md | 2026-02-12 | HEADPHONE | Écoute TH2
@@ -170,6 +170,7 @@
 - naver-224475592139.md | 2026-11-13 | SPEAKER | 캠브리지 룸매직, 직접 써보니
 - naver-224476259638.md | 2026-11-13 | EVENT | LP 디깅도 하고- 매지코도 듣고- 로이코 레코드페어
 - naver-224481966724.md | 2026-11-18 | HEADPHONE | 무선'도' 되는 그라도 - 그라도 GW200
+- naver-224486137849.md | 2026-11-21 | CDP | 턴테이블처럼 CD가 도는 틴에이지 엔지니어링 EP/BC–1
 - neoidsd3.md | 2026-02-19 | DAC | ifi NEO iDSD3
 - noble_luban.md | 2026-04-14 | EARPHONE | 노블 오디오 루반(Lu Ban)
 - nodeaudioatom.md | 2026-03-21 | SPEAKER | Node Audio Atom
@@ -283,7 +284,7 @@
 ---
 
 ## 10) 현재 상태 확인
-- 콘텐츠 개수: articles=91, reviews=35, columns=38
+- 콘텐츠 개수: articles=92, reviews=35, columns=38
 - 현재 브랜치: `git branch --show-current`
 - 마지막 커밋: `git log -1 --oneline`
 - 워킹트리 상태: `git status --short`
