@@ -188,7 +188,8 @@
 - trailliiultra.md | 2026-06-14 | EARPHONE | 오리올루스 트라일리 울트라 IEM 시스템
 - vcemini.md | 2026-03-25 | VINYL | 프로젝트 오디오 VC-E mini
 - wiimbar.md | 2026-06-04 | SOUNDBAR | 윔(WiiM) 바(Bar)
-- Reviews (35):
+- Reviews (36):
+- 224493605789.md | 2026-11-26 | SPEAKER | 캠브리지오디오 L/R M, 서브우퍼 없이 어디까지 들을 수 있을까
 - RS275.md | 2026-03-03 | HEADPHONE | 젠하이저 RS275
 - ap80promax.md | 2026-07-28 | DAP | 하이디즈 AP80 PRO MAX
 - arranger.md | 2026-05-06 | HEADPHONE | 오스트리안 오디오 어레인저(Arranger)
@@ -288,7 +289,7 @@
 ---
 
 ## 10) 현재 상태 확인
-- 콘텐츠 개수: articles=93, reviews=35, columns=40
+- 콘텐츠 개수: articles=93, reviews=36, columns=40
 - 현재 브랜치: `git branch --show-current`
 - 마지막 커밋: `git log -1 --oneline`
 - 워킹트리 상태: `git status --short`
